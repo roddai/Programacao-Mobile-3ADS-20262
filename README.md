@@ -4,7 +4,7 @@ Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
 - Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- RA: -------
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data

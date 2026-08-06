@@ -19,6 +19,6 @@ Este é o repositório da disciplina **Programação Mobile**.
 ## 📷 Screenshot
 
 ## 📦 APK
-O APK de projetos pode ser encontrado na pasta `app/build/outputs/apk/debug/`
+O APK de projetos pode ser encontrado na pasta `app/build/outputs/apk/debug/`.
 
 ---

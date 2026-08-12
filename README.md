@@ -3,8 +3,8 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Lucas Pereira de Souza
+- RA: 23011167
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data

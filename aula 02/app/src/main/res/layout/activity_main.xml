@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo_principal"
+        android:layout_width="224dp"
+        android:layout_height="35dp"
+
+        android:layout_marginTop="30dp"
+
+        android:text="LIVRARIA FECAP"
+        android:textSize="28dp"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/livro1"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/livro1"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="143dp"
+        app:layout_constraintEnd_toStartOf="@id/livro2"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo_principal"
+
+    <ImageView
+        android:id="@+id/livro2"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/livro2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="135dp"
+        app:layout_constraintEnd_toStartOf="@id/livro3"
+
+        app:layout_constraintStart_toEndOf="@id/livro1"
+        app:layout_constraintTop_toBottomOf="@id/titulo_principal" />
+
+
+    <ImageView
+        android:id="@+id/livro3"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/livro3"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="141dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@id/livro2"
+        app:layout_constraintTop_toBottomOf="@id/titulo_principal"
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

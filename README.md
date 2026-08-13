@@ -8,7 +8,7 @@ Este é o repositório da disciplina **Programação Mobile**.
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data
-- Data da criação: 11/08/2026
+- Data da criação: 13/08/2026
 
 ## 📂 Estrutura do projeto
 

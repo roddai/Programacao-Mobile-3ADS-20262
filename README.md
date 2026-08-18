@@ -3,8 +3,8 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Dandara Monike Santos Oliveira
+- RA: 25027244
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data

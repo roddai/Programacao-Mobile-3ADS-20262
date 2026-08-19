@@ -57,6 +57,7 @@
         app:srcCompat="@drawable/LOGOFECAP" />
 
     <Button
+        android:id="@+id/Botao"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +65,51 @@
         app:layout_constraintTop_toBottomOf="@id/Img2"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
-        android:text="Confirmar"
+        android:text="Confirmar"/>
+
+    <TextView
+        android:id="@+id/Redes_sociais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acesse nossas redes sociais!"
+        android:textStyle="italic"
+        android:textColor="#0023FF"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Botao" />
+
+    <ImageView
+        android:id="@+id/Instagram"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Redes_sociais"
+        app:srcCompat="@drawable/Instagram_logo" />
+
+    <ImageView
+        android:id="@+id/Linkedin"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/Instagram"
+        app:layout_constraintTop_toBottomOf="@id/Redes_sociais"
+        app:srcCompat="@drawable/Linkedin_logo" />
+
+    <ImageView
+        android:id="@+id/Logo_x"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/Instagram"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Redes_sociais"
+        app:srcCompat="@drawable/Logo_x" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

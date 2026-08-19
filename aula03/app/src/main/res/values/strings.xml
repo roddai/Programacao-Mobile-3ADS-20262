@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">aula03-exercicio</string>
+    <string name="welcome_msg">Bem-vindo ao meu app!</string>
+    <string name="hint_name">Digite seu nome aqui</string>
+    <string name="hint_password">Digite sua senha aqui</string>
+    <string name="btn_confirm">Confirmar</string>
+    <string name="social_msg">Siga-nos nas redes sociais</string>
+    <string name="desc_logo">Logotipo do app</string>
+    <string name="desc_instagram">Instagram</string>
+    <string name="desc_x">X (Twitter)</string>
+    <string name="desc_linkedin">LinkedIn</string>
+    <string name="cursive_msg">Ajustes no textView</string>
 </resources>

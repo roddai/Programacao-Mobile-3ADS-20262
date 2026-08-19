@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textobem"
+        android:layout_width="304dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:text="Bem vindo ao meu APP!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_marginTop="100dp"
+        app:layout_constraintBottom_toTopOf="@id/editnome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textosiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="748dp"
+        android:fontFamily="cursive"
+        android:text="Siga nas redes sociais"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editnome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editnome"
+        android:layout_width="284dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="200dp"
+        android:background="@android:color/transparent"
+        android:hint="Digite seu nome aqui!"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textobem" />
+
+    <EditText
+        android:id="@+id/editsenha"
+        android:layout_width="284dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="200dp"
+        android:background="@android:color/transparent"
+        android:hint="Digite sua senha aqui!"
+        android:inputType="numberPassword"
+        android:layout_marginTop="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textobem"
+        android:maxLength="8"/>
+
+    <ImageView
+        android:id="@+id/logofecap"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textobem"
+        app:srcCompat="@drawable/fecap" />
+
+    <ImageView
+        android:id="@+id/x"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintstart_toEndOf="@id/linkedin"
+        app:layout_constraintStart_toEndOf="@id/instagram"
+        app:layout_constraintTop_toBottomOf="@+id/textobem"
+        app:srcCompat="@drawable/fecap" />
+
+    <ImageView
+        android:id="@+id/linkedin"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintstart_toEndOf="@id/linkedin"
+        app:layout_constraintStart_toEndOf="@id/instagram"
+        app:layout_constraintTop_toBottomOf="@+id/textobem"
+        app:srcCompat="@drawable/fecap" />
+
+    <ImageView
+        android:id="@+id/instagram"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@id/x"
+        app:layout_constraintTop_toBottomOf="@+id/textobem"
+        app:srcCompat="@drawable/fecap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

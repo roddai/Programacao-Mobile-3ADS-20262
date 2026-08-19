@@ -101,3 +101,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="@id/instagram" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

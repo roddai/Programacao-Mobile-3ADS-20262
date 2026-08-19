@@ -10,71 +10,77 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Bem-vindo ao meu app!"
+        android:textStyle="bold"
+        android:textColor="@color/Roxo"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_fecap"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:srcCompat="@drawable/fecap" />
+
     <EditText
         android:id="@+id/Nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="25dp"
         android:hint="Digite seu nome aqui"
         android:inputType="text"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="372dp"
-        android:backgroundTint="@color/Roxo"
-        android:text="Confirmar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/img_fecap" />
 
     <EditText
         android:id="@+id/Senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="24dp"
         android:hint="Digite sua senha aqui"
         android:inputType="numberPassword"
         android:maxLength="8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/Nome" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Bem-vindo ao meu app!"
-        android:textStyle="bold"
-        android:textColor="@color/Roxo"
-        android:textSize="24dp"
+    <Button
+        android:id="@+id/Botao"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/Roxo"
+        android:text="Confirmar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/Senha" />
 
     <TextView
         android:id="@+id/redesSociais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="588dp"
+        android:layout_marginTop="80dp"
         android:text="Siga-nos nas redes Sociais"
         android:textColor="@color/black"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
         android:fontFamily="cursive"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/Botao" />
 
     <ImageView
         android:id="@+id/img_insta"
@@ -82,7 +88,6 @@
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintEnd_toStartOf="@id/img_x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/redesSociais"
@@ -109,16 +114,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/img_x"
         app:layout_constraintTop_toBottomOf="@id/redesSociais"/>
-
-    <ImageView
-        android:id="@+id/img_fecap"
-        android:layout_width="88dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toStartOf="@id/img_linkedin"
-        app:layout_constraintStart_toEndOf="@id/img_insta"
-        app:layout_constraintTop_toBottomOf="@id/textView"
-        app:srcCompat="@drawable/fecap" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

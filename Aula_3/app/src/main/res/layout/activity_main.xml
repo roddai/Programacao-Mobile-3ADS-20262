@@ -11,13 +11,10 @@
         android:id="@+id/textobem"
         android:layout_width="304dp"
         android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        android:text="Bem vindo ao meu APP!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:text="Bem-vindo ao meu APP!"
         android:textAlignment="center"
         android:textSize="25dp"
-        app:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@id/editnome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,51 +23,47 @@
         android:id="@+id/textosiga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="748dp"
         android:fontFamily="cursive"
         android:text="Siga nas redes sociais"
         android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/editnome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/button" />
 
     <EditText
         android:id="@+id/editnome"
-        android:layout_width="284dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="200dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="200dp"
         android:background="@android:color/transparent"
         android:hint="Digite seu nome aqui!"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textobem" />
 
     <EditText
         android:id="@+id/editsenha"
-        android:layout_width="284dp"
-        android:layout_height="37dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="200dp"
         android:background="@android:color/transparent"
         android:hint="Digite sua senha aqui!"
         android:inputType="numberPassword"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textobem"
+        app:layout_constraintTop_toBottomOf="@+id/editnome"
         android:maxLength="8"/>
 
     <ImageView
         android:id="@+id/logofecap"
         android:layout_width="100dp"
         android:layout_height="140dp"
-        android:layout_marginEnd="148dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textobem"
         app:srcCompat="@drawable/fecap" />
 
@@ -81,10 +74,10 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
-        app:layout_constraintstart_toEndOf="@id/linkedin"
+        app:layout_constraintEnd_toStartOf="@id/linkedin"
         app:layout_constraintStart_toEndOf="@id/instagram"
-        app:layout_constraintTop_toBottomOf="@+id/textobem"
-        app:srcCompat="@drawable/fecap" />
+        app:layout_constraintTop_toBottomOf="@+id/textosiga"
+        app:srcCompat="@drawable/x" />
 
     <ImageView
         android:id="@+id/linkedin"
@@ -93,10 +86,10 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
-        app:layout_constraintstart_toEndOf="@id/linkedin"
-        app:layout_constraintStart_toEndOf="@id/instagram"
-        app:layout_constraintTop_toBottomOf="@+id/textobem"
-        app:srcCompat="@drawable/fecap" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/x"
+        app:layout_constraintTop_toBottomOf="@+id/textosiga"
+        app:srcCompat="@drawable/linkedin" />
 
     <ImageView
         android:id="@+id/instagram"
@@ -105,8 +98,22 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/x"
-        app:layout_constraintTop_toBottomOf="@+id/textobem"
-        app:srcCompat="@drawable/fecap" />
+        app:layout_constraintTop_toBottomOf="@+id/textosiga"
+        app:srcCompat="@drawable/instagram" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="270dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="150dp"
+        android:text="Confirmar"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:backgroundTint="#3B7ABD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editsenha"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

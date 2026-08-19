@@ -3,17 +3,100 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:layout_margin="40dp"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/titulo"
+        android:layout_width="325dp"
+        android:layout_height="39dp"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Bem-vindo ao meu app"
+        android:textColor="@color/blue"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logofecap"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/fecaplogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        tools:layout_editor_absoluteX="144dp" />
+
+    <TextView
+        android:id="@+id/input"
+        android:layout_width="310dp"
+        android:layout_height="35dp"
+        android:hint="Digite seu nome aqui"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/logofecap" />
+
+    <Button
+        android:id="@+id/botao"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Entrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input"/>
+
+    <TextView
+        android:id="@+id/siga"
+        android:layout_width="310dp"
+        android:layout_height="35dp"
+        android:textColor="@color/black"
+        android:text="Siga-nos nas redes sociais"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/botao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="125dp"
+        />
+
+    <ImageView
+        android:id="@+id/logotwitter"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/twitterlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/siga" />
+
+    <ImageView
+        android:id="@+id/logoinstagram"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/instagramlogo"
+        app:layout_constraintEnd_toEndOf="@id/logotwitter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/siga"/>
+
+    <ImageView
+        android:id="@+id/logolinkedin"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/linkedinlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/logotwitter"
+        app:layout_constraintTop_toBottomOf="@id/siga"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

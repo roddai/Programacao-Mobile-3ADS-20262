@@ -52,7 +52,7 @@
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/caixaTexto" /
+        app:layout_constraintTop_toBottomOf="@id/caixaTexto" />
 
     <Button
         android:id="@+id/botao"
@@ -71,41 +71,44 @@
         android:id="@+id/textoBaixo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:text="Siga-nos nas redes sociais"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="25dp"
+        android:fontFamily="cursive"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="629dp" />
+        app:layout_constraintTop_toBottomOf="@id/botao" />
 
     <ImageView
         android:id="@+id/xLogo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         app:srcCompat="@drawable/xLogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textoBaixo" />
+        app:layout_constraintEnd_toStartOf="@id/linkedinLogo"
+        app:layout_constraintStart_toEndOf="@id/instaLogo"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <ImageView
         android:id="@+id/instaLogo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         app:srcCompat="@drawable/instaLogo"
         app:layout_constraintEnd_toStartOf="@id/xLogo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textoBaixo" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <ImageView
         android:id="@+id/linkedinLogo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         app:srcCompat="@drawable/linkedinLogo"
-        app:layout_constraintStart_toEndOf="@id/textoBaixo"
-        app:layout_constraintTop_toBottomOf="@id/textoBaixo" />
+        app:layout_constraintStart_toEndOf="@id/xLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

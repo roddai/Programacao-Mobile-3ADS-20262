@@ -86,7 +86,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="15dp"
-        app:srcCompat="@drawable/xLogo"
+        app:srcCompat="@drawable/x"
         app:layout_constraintEnd_toStartOf="@id/linkedinLogo"
         app:layout_constraintStart_toEndOf="@id/instaLogo"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -96,7 +96,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="15dp"
-        app:srcCompat="@drawable/instaLogo"
+        app:srcCompat="@drawable/insta"
         app:layout_constraintEnd_toStartOf="@id/xLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -106,7 +106,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="15dp"
-        app:srcCompat="@drawable/linkedinLogo"
+        app:srcCompat="@drawable/linked"
         app:layout_constraintStart_toEndOf="@id/xLogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

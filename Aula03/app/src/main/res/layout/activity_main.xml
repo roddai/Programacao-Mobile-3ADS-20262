@@ -68,7 +68,7 @@
         android:layout_marginTop="490dp"
         android:text="Siga-nos nas redes sociais"
         android:textSize="28dp"
-        android:textColor="@color/blue"
+        android:textColor="@color/black"
         android:fontFamily="cursive"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundo"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginTop="160dp"
         android:text="Bem-vindo ao meu app!"
         android:textSize="30dp"
+        android:textStyle="bold"
         android:textColor="@color/azulTitulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,9 +34,44 @@
         android:id="@+id/caixaTexto"
         android:layout_width="280dp"
         android:layout_height="50dp"
+        android:layout_marginTop="25dp"
         android:hint="Digite sua senha aqui"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fecapLogo" />
+
+    <TextView
+        android:id="@+id/textoBaixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siga-nos nas redes sociais"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="629dp" />
+
+    <ImageView
+        android:id="@+id/xLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/xLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textoBaixo" />
+
+    <Button
+        android:id="@+id/botao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Confirmar"
+        android:backgroundTint="@color/azulTitulo"
+        app:cornerRadius="15dp"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="409dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

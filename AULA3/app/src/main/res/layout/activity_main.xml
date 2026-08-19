@@ -102,7 +102,7 @@
         app:srcCompat="@drawable/Linkedin_logo" />
 
     <ImageView
-        android:id="@+id/Logo_x"
+        android:id="@+id/logo"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"

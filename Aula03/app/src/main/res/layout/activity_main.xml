@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Siga-nos nas redes sociais"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="90dp"
         android:textSize="16dp"
         android:textColor="#000000"
         android:textStyle="bold"

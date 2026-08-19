@@ -8,12 +8,114 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textobem"
+        android:layout_width="304dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:text="Bem vindo ao meu app!"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@id/editnome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editnome"
+        android:layout_width="284dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="200dp"
+        android:background="@android:color/transparent"
+        android:hint="Digite seu nome aqui"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textobem" />
+
+    <EditText
+        android:id="@+id/editsenha"
+        android:layout_width="284dp"
+        android:layout_height="37dp"
+        android:background="@android:color/transparent"
+        android:hint="Digite sua senha aqui"
+        android:inputType="numberPassword"
+        android:layout_marginTop="20dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editnome"
+        android:maxLength="8" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textobem"
+
+        app:srcCompat="@drawable/fecap" />
+    <TextView
+        android:id="@+id/textorede"
+        android:layout_width="304dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="70dp"
+        android:text="Siga-me nas redes social!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="cursive"
+       />
+    <Button
+        android:id="@+id/botao"
+        android:layout_width="115dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="250dp"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/instagram"
+        android:layout_width="63dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/twitter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textorede"
+        app:srcCompat="@drawable/instagram" />
+
+    <ImageView
+        android:id="@+id/linkedin"
+        android:layout_width="63dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/twitter"
+        app:layout_constraintTop_toBottomOf="@id/textorede"
+        app:srcCompat="@drawable/linkedin" />
+
+    <ImageView
+        android:id="@+id/twitter"
+        android:layout_width="63dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toStartOf="@id/linkedin"
+
+        app:layout_constraintStart_toEndOf="@id/instagram"
+        app:layout_constraintTop_toBottomOf="@id/textorede"
+        app:srcCompat="@drawable/twitter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

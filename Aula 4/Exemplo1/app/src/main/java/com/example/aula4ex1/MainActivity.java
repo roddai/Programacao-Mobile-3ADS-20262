@@ -35,6 +35,5 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(v -> textInfo.setText(livro1.getInfo()));
         button2.setOnClickListener(v -> textInfo.setText(livro2.getInfo()));
         button3.setOnClickListener(v -> textInfo.setText(livro3.getInfo()));
-
     }
 }

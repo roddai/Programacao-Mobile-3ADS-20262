@@ -1,24 +1,33 @@
 package com.example.projetoaula042;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.Button;
+import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.view.View;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText editNome;
+    private Button btnEnviar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        editNome = findViewById(R.id.editNome); // onde digitamos nosso nome
+        btnEnviar = findViewById(R.id.btnEnviar); // botão
+
+        btnEnviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nomeDigitado = editNome.getText().toString();
+
+                Intent irParaSegundaTela = new Intent(MainActivity.this, SegundaActivity.class);
+                irParaSegundaTela.putExtra("nomeUsuario", nomeDigitado);
+                startActivity(irParaSegundaTela);
+            }
         });
     }
 }

@@ -1,10 +1,11 @@
 package com.example.aula04exemplo2;
 
+
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.R;
+
 
 public class SegundaActivity extends AppCompatActivity {
 

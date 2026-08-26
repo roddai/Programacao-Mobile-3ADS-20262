@@ -16,9 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //FindViewById localiza ql view utilizar com base no Id dela
         editNome = findViewById(R.id.editNome); // onde digitamos nosso nome
         btnEnviar = findViewById(R.id.btnEnviar); // botão
 
+        //Faz com q o botão fique esperando para ser clicado
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

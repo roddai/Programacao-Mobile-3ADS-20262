@@ -28,11 +28,8 @@ public class ResultadoSobrepesoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent;
+                finish();
 
-                intent = new Intent(ResultadoSobrepesoActivity.this,MainActivity.class);
-
-                startActivity(intent);
             }
         });
     }

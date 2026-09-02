@@ -28,11 +28,8 @@ public class ResultadoObesidadeClasse2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent;
+                finish();
 
-                intent = new Intent(ResultadoObesidadeClasse2Activity.this,MainActivity.class);
-
-                startActivity(intent);
             }
         });
     }

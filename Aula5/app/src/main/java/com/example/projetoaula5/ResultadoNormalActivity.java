@@ -28,11 +28,8 @@ public class ResultadoNormalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent;
+                finish();
 
-                intent = new Intent(ResultadoNormalActivity.this,MainActivity.class);
-
-                startActivity(intent);
             }
         });
     }

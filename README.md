@@ -3,8 +3,8 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Luccas Covre Araujo
+- RA: 25028294
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data
@@ -19,6 +19,6 @@ Este é o repositório da disciplina **Programação Mobile**.
 ## 📷 Screenshot
 
 ## 📦 APK
-O APK de projetos pode ser encontrado na pasta `app/build/outputs/apk/debug/`
+O APK de projetos pode ser encontrado na pasta `app/build/outputs/apk/debug/`.
 
 ---

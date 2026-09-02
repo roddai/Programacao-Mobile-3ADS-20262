@@ -21,6 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ResultadoAbaixoDoPesoActivity"/>
+        <activity android:name=".ResultadoNormalActivity"/>
+        <activity android:name=".ResultadoSobrepesoActivity"/>
+        <activity android:name=".ResultadoObesidadeClasse1Activity"/>
+        <activity android:name=".ResultadoObesidadeClasse2Activity"/>
     </application>
 
 </manifest>

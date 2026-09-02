@@ -20,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+            <activity android:name=".ResultadoAbaixoDoPesoActivity" />
+            <activity android:name=".ResultadoNormalActivity" />
+            <activity android:name=".ResultadoObesidadeClasse1Activity" />
+            <activity android:name=".ResultadoObesidadeClasse2Activity" />
+            <activity android:name=".ResultadoSobrepesoActivity" />
     </application>
 
 </manifest>

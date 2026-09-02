@@ -43,15 +43,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent;
 
                 if (imc < 18.5) {
-                    Intent = new Intent(MainActivity.this, ResultadoAbaixoDoPesoActivity.class);
+                    intent = new Intent(MainActivity.this, ResultadoAbaixoDoPesoActivity.class);
+                } else if(imc < 24.9){
+                    intent = new Intent(MainActivity.this, ResultadoNormalActivity.class);
+                } else if(imc < 29.9){
+                    intent = new Intent(MainActivity.this, ResultadoSobrepesoActivity.class);
+                } else if (imc < 39.9) {
+                    intent = new Intent(MainActivity.this, ResultadoObesidadeClasse1Activity.class);
                 } else {
-                    Intent = new Intent(MainActivity.this, ResultadoObesidadeClasse2Activity.class)
+                    intent = new Intent(MainActivity.this, ResultadoObesidadeClasse2Activity.class);
                 }
-
-                /*Abaixo de 18,5:
-                Abaixo do peso 18,5 a 24,9
-                 */
-
+                startActivity(intent);
             }
         });
     }

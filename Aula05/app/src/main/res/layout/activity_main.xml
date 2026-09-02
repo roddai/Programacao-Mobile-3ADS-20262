@@ -44,6 +44,7 @@
         android:id="@+id/btnCalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/lapis"
         android:text="Calcular IMC"
         android:textSize="20dp"
         android:layout_marginTop="20dp"

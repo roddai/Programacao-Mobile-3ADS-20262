@@ -1,7 +1,10 @@
 package com.example.aula5;
 
 import android.os.Bundle;
-
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.content.Intent;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -9,6 +12,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText editPeso, editAltura;
+    Button btnCalcular;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +25,28 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        editPeso = findViewById(R.id.editPeso);
+        editAltura = findViewById(R.id.editAltura);
+        btnCalcular = findViewById(R.id.btnCalcular);
+
+        btnCalcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double peso = Double.parseDouble(editPeso.getText().toString());
+                double Altura = Double.parseDouble(editAltura.getText().toString());
+                double imc = peso / (Altura * Altura);
+
+                Intent  intent;
+
+                if (imc < 18.5) {
+                    intent = new Intent(MainActivity.this, ResultadoAbaixoDoPesoActivity.class);
+                } else {
+                        intent = new Intent(MainActivity.this, ResultadoAbaixoDoPesoActivity.class);
+                }
+                startActivity(intent);
+            }
         });
     }
 }

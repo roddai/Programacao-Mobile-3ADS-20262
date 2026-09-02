@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 double peso = Double.parseDouble(editPeso.getText().toString());
                 double altura = Double.parseDouble(editAltura.getText().toString());
-                double imc = peso / (altura + altura);
+                double imc = peso / (altura * altura);
 
                 Intent intent;
 
@@ -43,12 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 startActivity(intent);
             }
-
-            /*Abaixo do 18,5:
-                Abaixo do peso18,5 a 24,9:
-                Peso normal ou adequado25,0 a 29,9:
-                Sobrepeso30,0 a 39,9: Obesidade
-                Acima de 40,0 Obesidade grave*/
         });
     }
 }

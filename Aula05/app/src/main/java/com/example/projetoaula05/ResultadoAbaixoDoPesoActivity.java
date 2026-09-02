@@ -15,6 +15,13 @@ public class ResultadoAbaixoDoPesoActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_resultado_abaixo_peso);
 
+        btnVoltar = findViewById(R.id.btnVoltar);
 
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

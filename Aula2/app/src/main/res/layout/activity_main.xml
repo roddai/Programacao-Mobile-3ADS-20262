@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo_principal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+      android:text="Livraria FECAP"
+      android:textSize="28dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_Livro1"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/livro1"
+        app:layout_constraintEnd_toStartOf="@id/img_Livro2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo_principal"/>
+
+    <ImageView
+        android:id="@+id/img_Livro2"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/livro2"
+        app:layout_constraintEnd_toStartOf="@id/img_Livro3"
+        app:layout_constraintStart_toEndOf="@id/img_Livro1"
+        app:layout_constraintTop_toBottomOf="@id/titulo_principal"/>
+
+    <ImageView
+        android:id="@+id/img_Livro3"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/livro3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_Livro2"
+        app:layout_constraintTop_toBottomOf="@id/titulo_principal"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

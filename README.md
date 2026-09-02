@@ -3,8 +3,8 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Álvaro Palazzin
+- RA: 25028302
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data

@@ -22,5 +22,19 @@ public class ResultadoSobrepesoActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_resultado_sobrepeso);
 
+        btnVoltar = findViewById(R.id.btnVoltar);
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent;
+
+                intent = new Intent(ResultadoSobrepesoActivity.this,MainActivity.class);
+
+                startActivity(intent);
+            }
+        });
     }
+
 }

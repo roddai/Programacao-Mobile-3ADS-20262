@@ -22,5 +22,19 @@ public class ResultadoObesidadeClasse1Activity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_resultado_obsedidade1);
 
+        btnVoltar = findViewById(R.id.btnVoltar);
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent;
+
+                intent = new Intent(ResultadoObesidadeClasse1Activity.this,MainActivity.class);
+
+                startActivity(intent);
+            }
+        });
     }
+
 }

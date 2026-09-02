@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">aula5</string>
+    <string name="titulo_imc">Cálculo de IMC</string>
 </resources>

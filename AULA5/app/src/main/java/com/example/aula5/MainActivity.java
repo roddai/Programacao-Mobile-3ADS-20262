@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         editPeso = findViewById(R.id.editPeso);
-        editaltura = findViewById(R.id.editaltura);
-        bntCalcular = findViewById(R.id.bntCalcular);
+        editaltura = findViewById(R.id.editAltura);
+        bntCalcular = findViewById(R.id.btnCalcular);
 
         bntCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,12 +40,17 @@ public class MainActivity extends AppCompatActivity {
 
                 if(imc < 18.5){
                     intent = new Intent(MainActivity.this,ResultadoAbaixoDoPesoActivity.class);
-                } else{
+                } else if(imc < 25){
                     intent = new Intent(MainActivity.this,ResultadoObesidadeClasse1Activity.class);;
+                } else if (imc < 30) {
+                    intent = new Intent(MainActivity.this, ResultadoSobrepesoActivity.class);
+                } else if (imc < 35){
+                    intent = new Intent(MainActivity.this, ResultadoObesidadeClasse1Activity.class);
+                } else {
+                    intent = new Intent(MainActivity.this, ResultadoObesidadeClasse2Activity.class);
                 }
-
                 startActivity(intent);
-            }
-        });
-    }
+                }
+            });
+        }
 }

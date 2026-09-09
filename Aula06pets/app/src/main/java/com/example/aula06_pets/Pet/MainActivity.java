@@ -1,15 +1,12 @@
 package com.example.aula06_pets;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import com.example.aula06_pets.Pet.Pet;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         gato2 = new Pet("Gutin", "manchado", "lulu da panamera", 3,  "23/01/2024");
         gato3 = new Pet("Layla", "preto", "Poodle", 1,  "11/09/2003");
 
-        getText() = findViewById(R.id.textInfo);
 
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
@@ -45,7 +41,14 @@ public class MainActivity extends AppCompatActivity {
         button5.setOnClickListener(v -> textInfo.setText(gato2.getInfo()));
         button6.setOnClickListener(v -> textInfo.setText(gato3.getInfo()));
 
-
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent irParaSegundaTela = new Intent(MainActivity.this, Detalhes.class);
+                irParaSegundaTela.putExtra("detalhes", caes1.getInfo());
+                startActivity(irParaSegundaTela);
+            }
+        });
 
     });
     }

@@ -62,7 +62,7 @@
         app:srcCompat="@drawable/dog3"
         app:layout_constraintTop_toBottomOf="@+id/caes"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/dog3"
@@ -71,7 +71,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="35dp"
         app:srcCompat="@drawable/dog2"
-        app:layout_constraintStart_toEndOf="dog2"
+        app:layout_constraintStart_toEndOf="@+id/dog2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/caes"/>
 

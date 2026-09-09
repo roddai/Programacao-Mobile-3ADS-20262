@@ -3,8 +3,8 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Luis Felipe  S Trindade
+- RA: 22076554
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data

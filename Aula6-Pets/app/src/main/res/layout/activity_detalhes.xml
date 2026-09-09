@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:paddingTop="50dp"
     android:padding="15dp"
-    tools:context=".MainActivity">
+    tools:context=".DetalhesActivity">
 
     <TextView
         android:id="@+id/Escolha"
@@ -23,65 +23,26 @@
         android:id="@+id/Rex"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:backgroundTint="@color/azul"
         android:text="Rex"
-        android:layout_margin="15dp"
-        app:layout_constraintTop_toBottomOf="@id/ImgRex"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/Luna"/>
+        app:layout_constraintTop_toBottomOf="@id/ImgRex" /><![CDATA[
 
-    <Button
-        android:id="@+id/Luna"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/azul"
-        android:text="Luna"
-        android:layout_margin="15dp"
-        app:layout_constraintTop_toBottomOf="@id/ImgLuna"
-        app:layout_constraintStart_toEndOf="@id/Rex"
-        app:layout_constraintEnd_toStartOf="@id/Thor"/>/>
+    />
 
-    <Button
-        android:id="@+id/Thor"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/azul"
-        android:text="Thor"
-        android:layout_margin="15dp"
-        app:layout_constraintTop_toBottomOf="@id/ImgThor"
-        app:layout_constraintStart_toEndOf="@id/Luna"
-        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    ]]>
 
     <ImageView
         android:id="@+id/ImgRex"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/rex"
         android:layout_margin="15dp"
-        app:layout_constraintTop_toBottomOf="@id/Escolha"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ImgLuna"/>
-
-
-    <ImageView
-        android:id="@+id/ImgLuna"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/luna"
-        android:layout_margin="15dp"
         app:layout_constraintTop_toBottomOf="@id/Escolha"
-        app:layout_constraintStart_toEndOf="@id/ImgRex"
-        app:layout_constraintEnd_toStartOf="@id/ImgThor"/>
-
-    <ImageView
-        android:id="@+id/ImgThor"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/thor"
-        android:layout_margin="15dp"
-        app:layout_constraintTop_toBottomOf="@id/Escolha"
-        app:layout_constraintStart_toEndOf="@id/ImgLuna"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:srcCompat="@drawable/rex" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

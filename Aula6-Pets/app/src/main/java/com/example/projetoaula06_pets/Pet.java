@@ -1,11 +1,11 @@
 package com.example.projetoaula06_pets;
 
 public class Pet {
-    public String nome;
-    public String cor;
-    public String raca;
-    public int idade;
-    public String niver;
+    private String nome;
+    private String cor;
+    private String raca;
+    private int idade;
+    private String niver;
 
     public Pet(String nome,String cor,String raca, int idade, String niver)
     {
@@ -16,7 +16,10 @@ public class Pet {
         this.niver = niver;
     }
 
-
+    public String getInfo()
+    {
+        return "HELL YEAH";
+    }
 }
 
 

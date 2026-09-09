@@ -26,6 +26,60 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        Pet bruno = new Pet(
+                "Bruno",
+                "Marrom",
+                "Pequinês",
+                "4 anos",
+                "10/05",
+                R.drawable.bruno
+        );
+
+        Pet luna = new Pet(
+                "Luna",
+                "Branca",
+                "Lulu da Pomerânia",
+                "2 anos",
+                "15/08",
+                R.drawable.cao1
+        );
+
+        Pet madonna = new Pet(
+                "Madonna",
+                "Caramelo",
+                "Beagle",
+                "3 anos",
+                "20/03",
+                R.drawable.cao2
+        );
+
+        Pet mimi = new Pet(
+                "Mimi",
+                "Branca",
+                "Siamês",
+                "1 ano",
+                "12/11",
+                R.drawable.gato1
+        );
+
+        Pet garfield = new Pet(
+                "Garfield",
+                "Laranja",
+                "Persa",
+                "5 anos",
+                "01/06",
+                R.drawable.gato2
+        );
+
+        Pet marcia = new Pet(
+                "Marcia",
+                "Cinza",
+                "Siamês",
+                "3 anos",
+                "25/09",
+                R.drawable.gato3
+        );
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -46,12 +100,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent trocaDeTela = new Intent(MainActivity.this, DetalhesActivity.class);
 
-                trocaDeTela.putExtra("nome", "Bruno");
-                trocaDeTela.putExtra("cor", "Marrom");
-                trocaDeTela.putExtra("raca", "Pequinês");
-                trocaDeTela.putExtra("idade", "4 anos");
-                trocaDeTela.putExtra("aniversario", "10/05");
-                trocaDeTela.putExtra("imagem", R.drawable.bruno);
+                trocaDeTela.putExtra("nome", bruno.getNome());
+                trocaDeTela.putExtra("cor", bruno.getCor());
+                trocaDeTela.putExtra("raca", bruno.getRaca());
+                trocaDeTela.putExtra("idade", bruno.getIdade());
+                trocaDeTela.putExtra("aniversario", bruno.getAniversario());
+                trocaDeTela.putExtra("imagem", bruno.getImagem());
 
                 startActivity(trocaDeTela);
             }
@@ -64,12 +118,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent trocaDeTela = new Intent(MainActivity.this, DetalhesActivity.class);
 
-                trocaDeTela.putExtra("nome", "Luna");
-                trocaDeTela.putExtra("cor", "Branca");
-                trocaDeTela.putExtra("raca", "Lulu da Pomerânia");
-                trocaDeTela.putExtra("idade", "2 anos");
-                trocaDeTela.putExtra("aniversario", "15/08");
-                trocaDeTela.putExtra("imagem", R.drawable.cao1);
+                trocaDeTela.putExtra("nome", luna.getNome());
+                trocaDeTela.putExtra("cor", luna.getCor());
+                trocaDeTela.putExtra("raca", luna.getRaca());
+                trocaDeTela.putExtra("idade", luna.getIdade());
+                trocaDeTela.putExtra("aniversario", luna.getAniversario());
+                trocaDeTela.putExtra("imagem", luna.getImagem());
 
                 startActivity(trocaDeTela);
             }
@@ -82,12 +136,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent trocaDeTela = new Intent(MainActivity.this, DetalhesActivity.class);
 
-                trocaDeTela.putExtra("nome", "Madonna");
-                trocaDeTela.putExtra("cor", "Caramelo");
-                trocaDeTela.putExtra("raca", "Beagle");
-                trocaDeTela.putExtra("idade", "3 anos");
-                trocaDeTela.putExtra("aniversario", "20/03");
-                trocaDeTela.putExtra("imagem", R.drawable.cao2);
+                trocaDeTela.putExtra("nome", madonna.getNome());
+                trocaDeTela.putExtra("cor", madonna.getCor());
+                trocaDeTela.putExtra("raca", madonna.getRaca());
+                trocaDeTela.putExtra("idade", madonna.getIdade());
+                trocaDeTela.putExtra("aniversario", madonna.getAniversario());
+                trocaDeTela.putExtra("imagem", madonna.getImagem());
 
                 startActivity(trocaDeTela);
             }
@@ -100,12 +154,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent trocaDeTela = new Intent(MainActivity.this, DetalhesActivity.class);
 
-                trocaDeTela.putExtra("nome", "Mimi");
-                trocaDeTela.putExtra("cor", "Branca");
-                trocaDeTela.putExtra("raca", "Siamês");
-                trocaDeTela.putExtra("idade", "1 ano");
-                trocaDeTela.putExtra("aniversario", "12/11");
-                trocaDeTela.putExtra("imagem", R.drawable.gato1);
+                trocaDeTela.putExtra("nome", mimi.getNome());
+                trocaDeTela.putExtra("cor", mimi.getCor());
+                trocaDeTela.putExtra("raca", mimi.getRaca());
+                trocaDeTela.putExtra("idade", mimi.getIdade());
+                trocaDeTela.putExtra("aniversario", mimi.getAniversario());
+                trocaDeTela.putExtra("imagem", mimi.getImagem());
 
                 startActivity(trocaDeTela);
             }
@@ -118,12 +172,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent trocaDeTela = new Intent(MainActivity.this, DetalhesActivity.class);
 
-                trocaDeTela.putExtra("nome", "Garfield");
-                trocaDeTela.putExtra("cor", "Laranja");
-                trocaDeTela.putExtra("raca", "Persa");
-                trocaDeTela.putExtra("idade", "5 anos");
-                trocaDeTela.putExtra("aniversario", "01/06");
-                trocaDeTela.putExtra("imagem", R.drawable.gato2);
+                trocaDeTela.putExtra("nome", garfield.getNome());
+                trocaDeTela.putExtra("cor", garfield.getCor());
+                trocaDeTela.putExtra("raca", garfield.getRaca());
+                trocaDeTela.putExtra("idade", garfield.getIdade());
+                trocaDeTela.putExtra("aniversario", garfield.getAniversario());
+                trocaDeTela.putExtra("imagem", garfield.getImagem());
 
                 startActivity(trocaDeTela);
             }
@@ -136,12 +190,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent trocaDeTela = new Intent(MainActivity.this, DetalhesActivity.class);
 
-                trocaDeTela.putExtra("nome", "Marcia");
-                trocaDeTela.putExtra("cor", "Cinza");
-                trocaDeTela.putExtra("raca", "Siamês");
-                trocaDeTela.putExtra("idade", "3 anos");
-                trocaDeTela.putExtra("aniversario", "25/09");
-                trocaDeTela.putExtra("imagem", R.drawable.gato3);
+                trocaDeTela.putExtra("nome", marcia.getNome());
+                trocaDeTela.putExtra("cor", marcia.getCor());
+                trocaDeTela.putExtra("raca", marcia.getRaca());
+                trocaDeTela.putExtra("idade", marcia.getIdade());
+                trocaDeTela.putExtra("aniversario", marcia.getAniversario());
+                trocaDeTela.putExtra("imagem", marcia.getImagem());
 
                 startActivity(trocaDeTela);
             }

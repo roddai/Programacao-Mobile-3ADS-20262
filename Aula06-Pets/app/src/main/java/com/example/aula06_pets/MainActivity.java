@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     Caes cao1, cao2, cao3;
@@ -47,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent irParaSegundaTela = new Intent(MainActivity.this, Detalhes.class);
+                Intent irParaSegundaTela = new Intent(MainActivity.this, DetalhesPetActivity.class);
                 irParaSegundaTela.putExtra("nomePet", cao1.getInfo());
                 startActivity(irParaSegundaTela);
             }
@@ -56,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent irParaSegundaTela = new Intent(MainActivity.this, Detalhes.class);
+                Intent irParaSegundaTela = new Intent(MainActivity.this, DetalhesPetActivity.class);
                 irParaSegundaTela.putExtra("nomePet", cao2.getInfo());
                 startActivity(irParaSegundaTela);
             }
@@ -65,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent irParaSegundaTela = new Intent(MainActivity.this, Detalhes.class);
+                Intent irParaSegundaTela = new Intent(MainActivity.this, DetalhesPetActivity.class);
                 irParaSegundaTela.putExtra("nomePet", cao3.getInfo());
                 startActivity(irParaSegundaTela);
             }
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent irParaSegundaTela = new Intent(MainActivity.this, Detalhes.class);
+                Intent irParaSegundaTela = new Intent(MainActivity.this, DetalhesPetActivity.class);
                 irParaSegundaTela.putExtra("nomePet", gato1.getInfo());
                 startActivity(irParaSegundaTela);
             }
@@ -83,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent irParaSegundaTela = new Intent(MainActivity.this, Detalhes.class);
+                Intent irParaSegundaTela = new Intent(MainActivity.this, DetalhesPetActivity.class);
                 irParaSegundaTela.putExtra("nomePet", gato2.getInfo());
                 startActivity(irParaSegundaTela);
             }
@@ -92,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent irParaSegundaTela = new Intent(MainActivity.this, Detalhes.class);
+                Intent irParaSegundaTela = new Intent(MainActivity.this, DetalhesPetActivity.class);
                 irParaSegundaTela.putExtra("nomePet", gato3.getInfo());
                 startActivity(irParaSegundaTela);
             }

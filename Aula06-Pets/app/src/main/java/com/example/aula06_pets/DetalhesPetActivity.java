@@ -4,20 +4,18 @@ import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Detalhes extends AppCompatActivity {
+public class DetalhesPetActivity extends AppCompatActivity {
 
-    private TextView textInfo;
+    private TextView detalhes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhes);
 
-        textInfo = findViewById(R.id.textIfo);
+        detalhes = findViewById(R.id.detalhes);
+        String nomePet = getIntent().getStringExtra("nomePet");
 
-        // Pegando o nome enviado da MainActivity
-        String nomeRecebido = getIntent().getStringExtra("nomeUsuario");
-
-        textInfo.setText("Olá, " + nomeRecebido + "!");
+        detalhes.setText(nomePet);
     }
 }

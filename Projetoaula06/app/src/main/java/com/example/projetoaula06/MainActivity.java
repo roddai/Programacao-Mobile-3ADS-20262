@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         bntRex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent irParaSegundaTela = new Intent(MainActivity.this, Pet.class);
+                Intent irParaSegundaTela = new Intent(MainActivity.this, Activity_detalhes.class);
                 irParaSegundaTela.putExtra("infoPet", Rex.getInfo());
                 startActivity(irParaSegundaTela);
             };

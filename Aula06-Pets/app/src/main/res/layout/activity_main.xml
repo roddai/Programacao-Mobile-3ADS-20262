@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/bege">
 
     <TextView
         android:id="@+id/title"
@@ -14,6 +15,7 @@
         android:layout_marginTop="30dp"
         android:text="FECAP PET!"
         android:textSize="40dp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Cães"
+        android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/title"
@@ -38,6 +41,7 @@
         android:layout_marginTop="270dp"
         android:text="Gatos"
         android:textSize="25dp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,6 +119,8 @@
         android:layout_marginLeft="20dp"
         android:text="Detalhes"
         android:textStyle="bold"
+        android:textColor="@color/btnLetter"
+        android:backgroundTint="@color/btn"
         app:layout_constraintTop_toBottomOf="@id/dog2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn2"/>
@@ -123,12 +129,15 @@
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:text="Detalhes"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/dog2"
+        android:textColor="@color/btnLetter"
+        android:backgroundTint="@color/btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/dog2" />
 
     <Button
         android:id="@+id/btn3"
@@ -138,6 +147,8 @@
         android:layout_marginRight="20dp"
         android:text="Detalhes"
         android:textStyle="bold"
+        android:textColor="@color/btnLetter"
+        android:backgroundTint="@color/btn"
         app:layout_constraintTop_toBottomOf="@id/dog2"
         app:layout_constraintStart_toEndOf="@id/btn2"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -150,6 +161,8 @@
         android:layout_marginLeft="20dp"
         android:text="Detalhes"
         android:textStyle="bold"
+        android:textColor="@color/btnLetter"
+        android:backgroundTint="@color/btn"
         app:layout_constraintTop_toBottomOf="@id/cat2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn5"/>
@@ -161,6 +174,8 @@
         android:layout_marginTop="5dp"
         android:text="Detalhes"
         android:textStyle="bold"
+        android:textColor="@color/btnLetter"
+        android:backgroundTint="@color/btn"
         app:layout_constraintTop_toBottomOf="@id/cat2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -173,6 +188,8 @@
         android:layout_marginRight="20dp"
         android:text="Detalhes"
         android:textStyle="bold"
+        android:textColor="@color/btnLetter"
+        android:backgroundTint="@color/btn"
         app:layout_constraintTop_toBottomOf="@id/cat2"
         app:layout_constraintStart_toEndOf="@id/btn5"
         app:layout_constraintEnd_toEndOf="parent"/>

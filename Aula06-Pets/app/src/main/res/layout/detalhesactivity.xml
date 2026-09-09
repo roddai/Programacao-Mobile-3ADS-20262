@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,15 +13,56 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="25dp" />
+
+    <ImageView
+        android:id="@+id/imgPet"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:contentDescription="Foto do pet"
+        android:layout_marginBottom="30dp" />
 
     <TextView
-        android:id="@+id/txtDetalhes"
+        android:id="@+id/txtNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Informações do pet"
+        android:text="Nome:"
         android:textSize="22sp"
-        android:gravity="center"
-        android:layout_marginTop="50dp" />
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/txtCor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cor:"
+        android:textSize="22sp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/txtRaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Raça:"
+        android:textSize="22sp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/txtIdade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Idade:"
+        android:textSize="22sp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/txtAniversario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aniversário:"
+        android:textSize="22sp"
+        android:layout_marginBottom="12dp" />
 
 </LinearLayout>

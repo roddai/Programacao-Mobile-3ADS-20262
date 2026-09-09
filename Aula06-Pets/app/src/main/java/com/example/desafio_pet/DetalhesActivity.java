@@ -1,23 +1,50 @@
 package com.example.desafio_pet;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DetalhesActivity extends AppCompatActivity {
 
-    private TextView txtDetalhes;
+    private ImageView imgPet;
+
+    private TextView txtNome;
+    private TextView txtCor;
+    private TextView txtRaca;
+    private TextView txtIdade;
+    private TextView txtAniversario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detalhesactivity);
 
-        txtDetalhes = findViewById(R.id.txtDetalhes);
+        imgPet = findViewById(R.id.imgPet);
 
-        String petRecebido = getIntent().getStringExtra("pet");
+        txtNome = findViewById(R.id.txtNome);
+        txtCor = findViewById(R.id.txtCor);
+        txtRaca = findViewById(R.id.txtRaca);
+        txtIdade = findViewById(R.id.txtIdade);
+        txtAniversario = findViewById(R.id.txtAniversario);
 
-        txtDetalhes.setText(petRecebido);
+
+        String nome = getIntent().getStringExtra("nome");
+        String cor = getIntent().getStringExtra("cor");
+        String raca = getIntent().getStringExtra("raca");
+        String idade = getIntent().getStringExtra("idade");
+        String aniversario = getIntent().getStringExtra("aniversario");
+
+        int imagem = getIntent().getIntExtra("imagem", 0);
+
+
+        txtNome.setText("Nome: " + nome);
+        txtCor.setText("Cor: " + cor);
+        txtRaca.setText("Raça: " + raca);
+        txtIdade.setText("Idade: " + idade);
+        txtAniversario.setText("Aniversário: " + aniversario);
+
+        imgPet.setImageResource(imagem);
     }
 }

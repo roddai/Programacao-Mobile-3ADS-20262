@@ -31,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
         btnCao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Pet Luna = new Pet("Luna","Preta","Dobberman",1,"12 de dezembro");
+                Pet Luna = new Pet("Luna","Preta","Dobberman","1","12 de dezembro");
                 Intent irParaTelaDetalhe = new Intent(MainActivity.this, DetalhesActivity.class);
+                irParaTelaDetalhe.putExtra("Detalhes",Luna.getInfo().toString());
                 startActivity(irParaTelaDetalhe);
             }
         });

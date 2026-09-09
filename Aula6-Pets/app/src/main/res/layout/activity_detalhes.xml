@@ -9,40 +9,36 @@
     android:padding="15dp"
     tools:context=".DetalhesActivity">
 
+    <ImageView
+        android:id="@+id/Img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rex" />
+
     <TextView
-        android:id="@+id/Escolha"
+        android:id="@+id/Detalhes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ESCOLHA SEU CÃO!!!"
+        android:text="DETALHES"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/Img" />
 
     <Button
-        android:id="@+id/Rex"
+        android:id="@+id/Voltar"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:backgroundTint="@color/azul"
         android:text="Rex"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ImgRex" /><![CDATA[
-
-    />
-
-
-
-    ]]>
-
-    <ImageView
-        android:id="@+id/ImgRex"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Escolha"
-        app:srcCompat="@drawable/rex" />
+        app:layout_constraintTop_toBottomOf="@id/Detalhes" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

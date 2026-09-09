@@ -4,10 +4,10 @@ public class Pet {
     private String nome;
     private String cor;
     private String raca;
-    private int idade;
+    private String idade;
     private String niver;
 
-    public Pet(String nome,String cor,String raca, int idade, String niver)
+    public Pet(String nome,String cor,String raca, String idade, String niver)
     {
         this.nome = nome;
         this.cor = cor;
@@ -18,7 +18,7 @@ public class Pet {
 
     public String getInfo()
     {
-        return "HELL YEAH";
+        return "Nome: " + nome + "\nCor: " + cor + "\nraca: " + raca + "\nidade: " + idade + "\nniver: " + niver;
     }
 }
 

@@ -8,12 +8,161 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30sp"
+        android:gravity="center"
+        android:text="FECAP PET!"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/ />
+
+    <TextView
+        android:id="@+id/tituloCachorro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cães"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <ImageView
+        android:id="@+id/imgRex"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/rex"
+        app:layout_constraintEnd_toStartOf="@id/imgThor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloCachorro" />
+
+    <ImageView
+        android:id="@+id/imgThor"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/thor"
+        app:layout_constraintEnd_toStartOf="@id/imgToy"
+        app:layout_constraintStart_toEndOf="@id/imgRex"
+        app:layout_constraintTop_toBottomOf="@id/tituloCachorro" />
+
+    <ImageView
+        android:id="@+id/imgToy"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/toy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgThor"
+        app:layout_constraintTop_toBottomOf="@id/tituloCachorro" />
+
+    <Button
+        android:id="@+id/btnRex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Rex"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/imgRex"
+        app:layout_constraintStart_toStartOf="@id/imgRex"
+        app:layout_constraintTop_toBottomOf="@id/imgRex" />
+
+    <Button
+        android:id="@+id/btnThor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Thor"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/imgThor"
+        app:layout_constraintStart_toStartOf="@id/imgThor"
+        app:layout_constraintTop_toBottomOf="@id/imgThor" />
+
+    <Button
+        android:id="@+id/btnToy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Toy"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/imgToy"
+        app:layout_constraintStart_toStartOf="@id/imgToy"
+        app:layout_constraintTop_toBottomOf="@id/imgToy" />
+
+    <TextView
+        android:id="@+id/tituloGato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gatos"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRex" />
+
+    <ImageView
+        android:id="@+id/imgLuna"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/luna"
+        app:layout_constraintEnd_toStartOf="@id/imgMimi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloGato" />
+
+    <ImageView
+        android:id="@+id/imgMimi"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/mimi"
+        app:layout_constraintEnd_toStartOf="@id/imgFred"
+        app:layout_constraintStart_toEndOf="@id/imgLuna"
+        app:layout_constraintTop_toBottomOf="@id/tituloGato" />
+
+    <ImageView
+        android:id="@+id/imgFred"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/fred"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMimi"
+        app:layout_constraintTop_toBottomOf="@id/tituloGato" />
+
+    <Button
+        android:id="@+id/btnLuna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Luna"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/imgLuna"
+        app:layout_constraintStart_toStartOf="@id/imgLuna"
+        app:layout_constraintTop_toBottomOf="@id/imgLuna" />
+
+    <Button
+        android:id="@+id/btnMimi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Mimi"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/imgMimi"
+        app:layout_constraintStart_toStartOf="@id/imgMimi"
+        app:layout_constraintTop_toBottomOf="@id/imgMimi" />
+
+    <Button
+        android:id="@+id/btnFred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Fred"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/imgFred"
+        app:layout_constraintStart_toStartOf="@id/imgFred"
+        app:layout_constraintTop_toBottomOf="@id/imgFred" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

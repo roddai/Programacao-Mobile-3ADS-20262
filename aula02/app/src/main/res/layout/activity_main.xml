@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="114dp"
+        android:layout_height="166dp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="97dp"
+        tools:srcCompat="@drawable/livro1" />
+
+    <TextView
+        android:id="@+id/titulo_principal"
+        android:layout_marginTop="30dp"
+        android:textSize="32"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LIVRARIA FECAP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="114dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintTop_toTopOf="@id/titulo_principal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:srcCompat="@drawable/livro2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

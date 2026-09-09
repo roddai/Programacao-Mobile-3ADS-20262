@@ -10,7 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetalhesActivity extends AppCompatActivity {
 
-    private TextView viewDetalhes;
+    TextView viewDetalhes;
+    Button btnVolta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,18 @@ public class DetalhesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalhes);
 
         viewDetalhes = findViewById(R.id.Detalhes);
+        btnVolta = findViewById(R.id.Voltar);
+
+        String detalhes = getIntent().getStringExtra("Detalhes");
+
+        viewDetalhes.setText(detalhes);
+
+        btnVolta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 }

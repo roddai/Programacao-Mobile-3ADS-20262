@@ -5,9 +5,9 @@ public class Pet {
     public String cor;
     public String raca;
     public int idade;
-    public int niver;
+    public String niver;
 
-    public Pet(String nome,String cor,String raca, int idade, int niver)
+    public Pet(String nome,String cor,String raca, int idade, String niver)
     {
         this.nome = nome;
         this.cor = cor;
@@ -15,6 +15,8 @@ public class Pet {
         this.idade = idade;
         this.niver = niver;
     }
+
+
 }
 
 

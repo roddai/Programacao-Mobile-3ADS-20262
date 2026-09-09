@@ -32,16 +32,6 @@ public class Pet extends AppCompatActivity {
     public String getInfo() {
         return "nome: " + nome + "\ncor: " + cor + "\nraca: " + raca + "\nidade: " + idade + "\nniver: " + niver;
     }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.pet);
-
-
-
-
-    }
 }
 
 

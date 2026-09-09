@@ -3,9 +3,9 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
-- Curso: ADS – 3º Semestre
+- Nome: José Aguiar
+- RA: 25028150
+- Curso: ADS – 3º Semestregit 
 
 ## 📅 Data
 - Data da criação: 04/08/2026

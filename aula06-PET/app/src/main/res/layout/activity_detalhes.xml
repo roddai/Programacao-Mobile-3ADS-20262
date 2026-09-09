@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Olá!"
+            android:text=""
             android:textSize="30sp"
             android:layout_marginBottom="40dp"
             />

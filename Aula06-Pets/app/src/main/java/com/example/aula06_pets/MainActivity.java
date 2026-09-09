@@ -10,8 +10,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Caes cao1, cao2, cao3;
-    Gatos gato1, gato2, gato3;
+    Pet cao1, cao2, cao3, gato1, gato2, gato3;
     TextView textInfo;
 
 
@@ -22,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /* Instancias */
-        cao1 = new Caes("Max", "Preto e Branco", "Boder Colllie", 4, "01/04/2022");
-        cao2 = new Caes("Thor", "Marrom e branco", "Bagle", 2, "07/11/2023");
-        cao3 = new Caes("Amora", "Branco e Marrom", "Shih Tzu", 4, "10/04/2026");
+        cao1 = new Pet("Max", "Preto e Branco", "Boder Colllie", 4, "01/04/2022");
+        cao2 = new Pet("Thor", "Marrom e branco", "Bagle", 2, "07/11/2023");
+        cao3 = new Pet("Amora", "Branco e Marrom", "Shih Tzu", 4, "10/04/2026");
 
-        gato1 = new Gatos("Marcelo", "Preto e Marrom", "Siames", 4, "01/04/2022");
-        gato2 = new Gatos("Tigresa", "Marrom e branco Zebra", "Exotico", 2, "07/11/2023");
-        gato3 = new Gatos("Bartholomeu", "Branco e preto", "Persa", 4, "10/04/2026");
+        gato1 = new Pet("Marcelo", "Preto e Marrom", "Siames", 4, "01/04/2022");
+        gato2 = new Pet("Tigresa", "Marrom e branco Zebra", "Exotico", 2, "07/11/2023");
+        gato3 = new Pet("Bartholomeu", "Branco e preto", "Persa", 4, "10/04/2026");
 
         Button button1 = findViewById(R.id.button1);
 

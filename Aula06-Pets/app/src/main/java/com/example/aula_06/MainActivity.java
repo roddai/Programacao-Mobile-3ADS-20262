@@ -13,7 +13,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1, btn2, btn3, btn4, btn5, btn6;
-
     Pet pet1, pet2, pet3, pet4, pet5, pet6;
 
     @Override

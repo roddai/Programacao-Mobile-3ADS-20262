@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent irParaTelaDetalhe = new Intent(MainActivity.this, DetalhesActivity.class);
                 irParaTelaDetalhe.putExtra("Detalhes",Thor.getInfo());
+                irParaTelaDetalhe.putExtra("Detalhes",Thor.getInfo());
                 startActivity(irParaTelaDetalhe);
             }
         });

@@ -3,8 +3,8 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Julia Gomes Basilio
+- RA: 25028157
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data

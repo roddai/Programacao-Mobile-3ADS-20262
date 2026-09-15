@@ -10,6 +10,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView resultado;
@@ -34,7 +36,34 @@ public class MainActivity extends AppCompatActivity {
         imagePapel = findViewById(R.id.imagePapel);
         imageTesoura = findViewById(R.id.imageTesoura);
 
-
-
     }
+
+    public void jogar(String escolhaDoUsuario){
+        String[] opcoes = {"pedra","papel","tesoura"};
+
+        int num = new Random().nextInt(3);
+        String escolhaDaMaquina = opcoes[num];
+
+        switch (escolhaDaMaquina){
+            case "pedra":
+                imageMaquina.setImageResource(R.drawable.pedra);
+                break;
+            case "papel":
+                imageMaquina.setImageResource(R.drawable.papel);
+                break;
+            case "tesoura":
+                imageMaquina.setImageResource(R.drawable.tesoura);
+                break;
+        }
+
+        if (escolhaDoUsuario.equals(escolhaDaMaquina)){
+            resultado.setText("Você Empateou!");
+        }else if(escolhaDoUsuario.equals("pedra") && escolhaDaMaquina.equals("papel") || escolhaDoUsuario.equals("papel") && escolhaDaMaquina.equals("tesoura") || escolhaDoUsuario.equals("tesoura") && escolhaDaMaquina.equals("pedra")){
+            resultado.setText("Você Perdeu!!!");
+        }else{
+            resultado.setText("Você Ganhou!!!");
+        }
+    }
+
+
 }

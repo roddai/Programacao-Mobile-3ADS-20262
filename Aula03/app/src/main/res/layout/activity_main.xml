@@ -83,7 +83,7 @@
         android:id="@+id/logoinstagram"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/instagramlogo"
         app:layout_constraintEnd_toEndOf="@id/logotwitter"
         app:layout_constraintStart_toStartOf="parent"

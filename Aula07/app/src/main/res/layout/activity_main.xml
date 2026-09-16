@@ -91,6 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtEscolhaS" />
 
+
     <ImageView
         android:id="@+id/imgPapel"
         android:layout_width="80dp"
@@ -101,7 +102,8 @@
         app:srcCompat="@drawable/papel"
         app:layout_constraintEnd_toStartOf="@id/imgTesoura"
         app:layout_constraintStart_toEndOf="@id/imgPedra"
-        app:layout_constraintTop_toBottomOf="@id/txtEscolhaS" />
+        app:layout_constraintTop_toBottomOf="@id/txtEscolhaS"
+        />
 
     <ImageView
         android:id="@+id/imgTesoura"

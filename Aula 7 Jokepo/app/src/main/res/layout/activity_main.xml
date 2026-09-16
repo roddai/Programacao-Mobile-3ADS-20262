@@ -47,7 +47,7 @@
         android:layout_width="150dp"
         android:layout_height="100dp"
         app:srcCompat="@drawable/maquina"
-        app:layout_constraintEnd_toStartf="@id/imgInterrogacao"
+        app:layout_constraintEnd_toStartOf="@id/imgInterrogacao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textTitulo"/>
 
@@ -57,7 +57,7 @@
         android:layout_height="100dp"
         app:srcCompat="@drawable/interrogacao"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndtOf="@id/imgMaquina"
+        app:layout_constraintStart_toEndOf="@id/imgMaquina"
         app:layout_constraintTop_toBottomOf="@id/Resultado"/>
 
     <ImageView
@@ -65,7 +65,7 @@
         android:layout_width="150dp"
         android:layout_height="100dp"
         app:srcCompat="@drawable/usuario_fem"
-        app:layout_constraintEnd_toStartf="@id/imgInterrogacao"
+        app:layout_constraintEnd_toStartOf="@id/imgInterrogacao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Resultado"/>
 
@@ -75,7 +75,7 @@
         android:layout_height="100dp"
         app:srcCompat="@drawable/interrogacao"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndtOf="@id/imgMaquina"
+        app:layout_constraintStart_toEndOf="@id/imgMaquina"
         app:layout_constraintTop_toBottomOf="@id/textTitulo"/>
 
     <ImageView

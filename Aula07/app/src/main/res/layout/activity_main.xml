@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JokenPo"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgMaquina"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/maquina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMaquina" />
+
+    <ImageView
+        android:id="@+id/imgPedra"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/pedra"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOfOf="@+id/imgPapel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+
+    <ImageView
+        android:id="@+id/imgPapel"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/papel"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgTesoura"
+        app:layout_constraintStart_toEndOf='@+id/imgPedra'
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+
+    <ImageView
+        android:id="@+id/imgTesoura"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/tesoura"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPapel"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

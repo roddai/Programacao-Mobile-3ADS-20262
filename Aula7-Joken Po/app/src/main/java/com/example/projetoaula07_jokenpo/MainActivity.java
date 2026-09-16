@@ -15,7 +15,8 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     TextView txtResultado;
-    ImageView imgMaquina,imgPedra,imgPapel,imgTesoura;
+    ImageView imgPlayer, jogadaPlayer, jogadaMaquina,imgPedra,imgPapel,imgTesoura,
+            imgHomi, imgMule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,18 @@ public class MainActivity extends AppCompatActivity {
 
         txtResultado = findViewById(R.id.resultado);
 
-        imgMaquina = findViewById(R.id.imageMaquina);
+        imgPlayer = findViewById(R.id.imagePlayer);
+        jogadaPlayer = findViewById(R.id.escolhaPlayer);
+        jogadaMaquina = findViewById(R.id.escolhaMaquina);
         imgPedra = findViewById(R.id.imagePedra);
         imgPapel = findViewById(R.id.imagePapel);
         imgTesoura = findViewById(R.id.imageTesoura);
+
+        imgHomi = findViewById(R.id.imageHomi);
+        imgMule = findViewById(R.id.imageMulher);
+
+        imgHomi.setOnClickListener(V -> imgPlayer.setImageResource(R.drawable.usuario_masc));
+        imgMule.setOnClickListener(V -> imgPlayer.setImageResource(R.drawable.usuario_fem));
 
         imgPedra.setOnClickListener(v -> jogar("pedra"));
         imgPapel.setOnClickListener(v -> jogar("papel"));
@@ -49,27 +58,32 @@ public class MainActivity extends AppCompatActivity {
 
         switch (escolhaMaquina)
         {
-            case "pedra":
-                imgMaquina.setImageResource(R.drawable.pedra);
+            case "pedra": jogadaMaquina.setImageResource(R.drawable.pedra);
                 break;
-
-            case "papel":
-                imgMaquina.setImageResource(R.drawable.papel);
+            case "papel": jogadaMaquina.setImageResource(R.drawable.papel);
                 break;
+            case "tesoura": jogadaMaquina.setImageResource(R.drawable.tesoura);
+                break;
+        }
 
-            case "tesoura":
-                imgMaquina.setImageResource(R.drawable.tesoura);
+        switch (escolhaPlayer)
+        {
+            case "pedra": jogadaPlayer.setImageResource(R.drawable.pedra);
+                break;
+            case "papel": jogadaPlayer.setImageResource(R.drawable.papel);
+                break;
+            case "tesoura": jogadaPlayer.setImageResource(R.drawable.tesoura);
                 break;
         }
 
         if (escolhaPlayer.equals(escolhaMaquina)) {
-            txtResultado.setText("Empate");
+            txtResultado.setText("Empate, bah que pena");
         } else if ((escolhaPlayer.equals("pedra") && escolhaMaquina.equals("tesoura")) ||
                     (escolhaPlayer.equals("papel") && escolhaMaquina.equals("pedra")) ||
                     (escolhaPlayer.equals("tesoura") && escolhaMaquina.equals("papel"))){
-            txtResultado.setText("Você ganhou");
+            txtResultado.setText("Você ganhou, yepiii!!!");
         } else {
-            txtResultado.setText("Você perdeu, otário");
+            txtResultado.setText("Você perdeu, otário!!!");
         }
     }
 }

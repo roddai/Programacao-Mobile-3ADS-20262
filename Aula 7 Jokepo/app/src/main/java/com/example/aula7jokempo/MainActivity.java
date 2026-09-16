@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public void jogar(String escolhaDoUsuario){
         String[] opcoes = {"pedra", "papel","tesoura"};
 
+
         int numero = new Random().nextInt(3);
         String escolhadaMaquina = opcoes[numero];
 

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView resultado;
 
-    ImageView imageMaquina, imagePedra, imagePapel, imageTesoura;
+    ImageView imageMaquina, imagePedra, imagePapel, imageTesoura, imagePlayer1, imagePlayer2, imagePlayer, imageEscPlayer, imageEscMaquina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +36,21 @@ public class MainActivity extends AppCompatActivity {
         imagePedra = findViewById(R.id.imagePedra);
         imagePapel = findViewById(R.id.imagePapel);
         imageTesoura = findViewById(R.id.imageTesoura);
+        imagePlayer1 = findViewById(R.id.imagePlayer1);
+        imagePlayer2 = findViewById(R.id.imagePlayer2);
+        imageEscPlayer = findViewById(R.id.imageEscPlayer);
+        imagePlayer = findViewById(R.id.imagePlayer);
+        imageEscMaquina = findViewById(R.id.imageEscMaquina);
+
+        imagePlayer1.setOnClickListener(v-> imagePlayer.setImageResource(R.drawable.usuario_fem));
+        imagePlayer2.setOnClickListener(v-> imagePlayer.setImageResource(R.drawable.usuario_masc));
+        imagePapel.setOnClickListener(v-> imageEscPlayer.setImageResource(R.drawable.papel));
+        imageTesoura.setOnClickListener(v-> imageEscPlayer.setImageResource(R.drawable.tesoura));
 
         imagePedra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                imageEscPlayer.setImageResource(R.drawable.pedra);
                 String escolhaDoUsuario = "pedra";
                 jogar(escolhaDoUsuario);
             }});
@@ -49,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 @Override
                 public void onClick (View v){
+                imageEscPlayer.setImageResource(R.drawable.papel);
                 String escolhaDoUsuario = "papel";
                 jogar(escolhaDoUsuario);
             }});
@@ -56,8 +68,9 @@ public class MainActivity extends AppCompatActivity {
         imageTesoura.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                     String escolhaDoUsuario = "tesoura";
-                     jogar(escolhaDoUsuario);
+                    imageEscPlayer.setImageResource(R.drawable.tesoura);
+                    String escolhaDoUsuario = "tesoura";
+                    jogar(escolhaDoUsuario);
                 }});
     }
 
@@ -69,18 +82,18 @@ public class MainActivity extends AppCompatActivity {
 
         switch (escolhaDaMaquina){
             case "pedra":
-                imageMaquina.setImageResource(R.drawable.pedra);
+                imageEscMaquina.setImageResource(R.drawable.pedra);
                 break;
             case "papel":
-                imageMaquina.setImageResource(R.drawable.papel);
+                imageEscMaquina.setImageResource(R.drawable.papel);
                 break;
             case "tesoura":
-                imageMaquina.setImageResource(R.drawable.tesoura);
+                imageEscMaquina.setImageResource(R.drawable.tesoura);
                 break;
         }
 
         if (escolhaDoUsuario.equals(escolhaDaMaquina)){
-            resultado.setText("Você Empateou!");
+            resultado.setText("Você Empatou!");
         }else if(escolhaDoUsuario.equals("pedra") && escolhaDaMaquina.equals("papel") || escolhaDoUsuario.equals("papel") && escolhaDaMaquina.equals("tesoura") || escolhaDoUsuario.equals("tesoura") && escolhaDaMaquina.equals("pedra")){
             resultado.setText("Você Perdeu!!!");
         }else{

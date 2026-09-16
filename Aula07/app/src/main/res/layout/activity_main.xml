@@ -16,7 +16,7 @@
         android:textColor="@color/black"
         android:textSize="50dp"
         android:textStyle="bold"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,8 +26,18 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:srcCompat="@drawable/maquina"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="50dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+    <ImageView
+        android:id="@+id/imageEscMaquina"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        app:srcCompat="@drawable/interrogacao"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"/>
 
     <TextView
@@ -43,36 +53,99 @@
         app:layout_constraintTop_toBottomOf="@+id/imageMaquina" />
 
     <ImageView
-        android:id="@+id/imagePapel"
-        android:layout_width="100dp"
+        android:id="@+id/imagePlayer"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/usuario_fem"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado"/>
+
+    <ImageView
+        android:id="@+id/imageEscPlayer"
+        android:layout_width="150dp"
         android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        app:srcCompat="@drawable/interrogacao"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado"/>
+
+    <TextView
+        android:id="@+id/escolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha sua jogada:"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado" />
+
+    <ImageView
+        android:id="@+id/imagePapel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:layout_constraintTop_toBottomOf="@+id/escolha"
         app:srcCompat="@drawable/papel" />
 
     <ImageView
         android:id="@+id/imageTesoura"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginLeft="65dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imagePapel"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:layout_constraintTop_toBottomOf="@+id/escolha"
         app:srcCompat="@drawable/tesoura" />
 
     <ImageView
         android:id="@+id/imagePedra"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="65dp"
         app:layout_constraintEnd_toEndOf="@+id/imagePapel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:layout_constraintTop_toBottomOf="@+id/escolha"
         app:srcCompat="@drawable/pedra" />
+
+    <TextView
+        android:id="@+id/player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha seu personagem:"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escolha" />
+
+    <ImageView
+        android:id="@+id/imagePlayer1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/usuario_fem"
+        android:layout_marginHorizontal="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player"/>
+
+    <ImageView
+        android:id="@+id/imagePlayer2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/usuario_masc"
+        android:layout_marginHorizontal="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

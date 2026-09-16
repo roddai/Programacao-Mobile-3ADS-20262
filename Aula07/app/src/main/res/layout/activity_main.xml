@@ -3,32 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:padding="40dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtTitulo"
+        android:id="@+id/textTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="JokePo"
-        android:textSize="50dp"
+        android:text="JoKenpo!"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgMaquina"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/maquina"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
     <TextView
-        android:id="@+id/txtResultado"
+        android:id="@+id/Resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Resultado"
@@ -36,7 +28,55 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgMaquina" />
+        app:layout_constraintTop_toBottomOf="@id/imgMaquina" />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha um simbolo"
+        android:textSize="24dp"
+        android:layout_marginTop="24dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgFemi" />
+
+    <ImageView
+        android:id="@+id/imgMaquina"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/maquina"
+        app:layout_constraintEnd_toStartOf="@id/imgInterrogacao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo"/>
+
+    <ImageView
+        android:id="@+id/imgInterrogacao2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/interrogacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMaquina"
+        app:layout_constraintTop_toBottomOf="@id/Resultado"/>
+
+    <ImageView
+        android:id="@+id/imgFemi"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/usuario_fem"
+        app:layout_constraintEnd_toStartOf="@id/imgInterrogacao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Resultado"/>
+
+    <ImageView
+        android:id="@+id/imgInterrogacao"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/interrogacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMaquina"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo"/>
 
     <ImageView
         android:id="@+id/imgPedra"
@@ -44,9 +84,9 @@
         android:layout_height="100dp"
         app:srcCompat="@drawable/pedra"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgPapel"
+        app:layout_constraintEnd_toStartOf="@id/imgPapel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@id/textResultado" />
 
     <ImageView
         android:id="@+id/imgPapel"
@@ -54,9 +94,9 @@
         android:layout_height="100dp"
         app:srcCompat="@drawable/papel"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgTesoura"
-        app:layout_constraintStart_toEndOf="@+id/imgPedra"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintEnd_toStartOf="@id/imgTesoura"
+        app:layout_constraintStart_toEndOf="@id/imgPedra"
+        app:layout_constraintTop_toBottomOf="@id/textResultado" />
 
     <ImageView
         android:id="@+id/imgTesoura"
@@ -65,7 +105,39 @@
         app:srcCompat="@drawable/tesoura"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgPapel"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintStart_toEndOf="@id/imgPapel"
+        app:layout_constraintTop_toBottomOf="@id/textResultado" />
+
+    <TextView
+        android:id="@+id/textPersonagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="escolha o seu personagem"
+        android:layout_marginTop="14dp"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPapel" />
+
+    <ImageView
+        android:id="@+id/imgFem"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/usuario_fem"
+        android:layout_marginTop="12sp"
+        app:layout_constraintEnd_toStartOf="@id/imgMasc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textPersonagem" />
+
+    <ImageView
+        android:id="@+id/imgMasc"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/usuario_masc"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgFem"
+        app:layout_constraintTop_toBottomOf="@id/textPersonagem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txtResultado;
 
-    ImageView imgMaquina, imgPedra, imgPapel, imgTesoura;
+    ImageView imgMaquina, imgPedra, imgPapel, imgTesoura, imgMulher, imgHomem, imgMulher2, imgInterrogacao1, imgInterrogacao2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,18 @@ public class MainActivity extends AppCompatActivity {
         imgPedra = findViewById(R.id.imgPedra);
         imgPapel = findViewById(R.id.imgPapel);
         imgTesoura = findViewById(R.id.imgTesoura);
+        imgMulher = findViewById(R.id.imgMulher);
+        imgHomem = findViewById(R.id.imgHomem);
+        imgMulher2 = findViewById(R.id.imgMulher2);
+        imgInterrogacao1 = findViewById(R.id.imgInterrogacao1);
+        imgInterrogacao2 = findViewById(R.id.imgInterrogacao2);
+
+
+        imgPedra.setOnClickListener(v -> jogar ("pedra"));
+        imgPapel.setOnClickListener(v -> jogar ("papel"));
+        imgTesoura.setOnClickListener(v -> jogar ("tesoura"));
+        imgMulher.setOnClickListener(v -> imgMulher2.setImageResource(R.drawable.usuario_fem));
+        imgHomem.setOnClickListener(v -> imgMulher2.setImageResource(R.drawable.usuario_masc));
 
     }
 
@@ -47,14 +59,29 @@ public class MainActivity extends AppCompatActivity {
 
         switch (escolhaDaMaquina) {
             case "pedra":
-                imgMaquina.setImageResource(R.drawable.pedra);
+                imgInterrogacao1.setImageResource(R.drawable.pedra);
                 break;
             case "papel":
-                imgMaquina.setImageResource(R.drawable.papel);
+                imgInterrogacao1.setImageResource(R.drawable.papel);
                 break;
             case "tesoura":
-                imgMaquina.setImageResource(R.drawable.tesoura);
+                imgInterrogacao1.setImageResource(R.drawable.tesoura);
                 break;
+
+
+        }
+
+        switch (escolhaDoUsuario) {
+            case "pedra":
+                imgInterrogacao2.setImageResource(R.drawable.pedra);
+                break;
+            case "papel":
+                imgInterrogacao2.setImageResource(R.drawable.papel);
+                break;
+            case "tesoura":
+                imgInterrogacao2.setImageResource(R.drawable.tesoura);
+                break;
+
         }
 
         if (escolhaDoUsuario.equals(escolhaDaMaquina)) {

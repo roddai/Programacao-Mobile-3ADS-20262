@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         imgPapel = findViewById(R.id.imgPapel);
         imgPedra = findViewById(R.id.imgPedra);
         imgTesoura = findViewById(R.id.imgTesoura);
+
+        imgPedra.setOnClickListener(v -> jogar("pedra"));
+        imgPapel.setOnClickListener(v -> jogar("papel"));
+        imgTesoura.setOnClickListener(v -> jogar("tesoura"));
     }
 
     public void jogar(String escolhaDoUsuario){

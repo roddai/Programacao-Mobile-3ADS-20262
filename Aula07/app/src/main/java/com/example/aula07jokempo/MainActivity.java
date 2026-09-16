@@ -14,9 +14,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView txtResultado;
-
-    ImageView imgMaquina, imgPedra, imgPapel, imgTesoura;
+    TextView textResultado;
+    ImageView imgMaquina, imgPapel, imgPedra, imgTesoura;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,45 +27,50 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        txtResultado = findViewById(R.id.txtResultado);
 
+        textResultado = findViewById(R.id.txtResultado);
         imgMaquina = findViewById(R.id.imgMaquina);
         imgPedra = findViewById(R.id.imgPedra);
         imgPapel = findViewById(R.id.imgPapel);
-        imgTesoura =  findViewById(R.id.imgTesoura);
+        imgTesoura = findViewById(R.id.imgTesoura);
 
-        imgPedra.setOnClickListener( v -> jogar( "pedra"));
-        imgPapel.setOnClickListener( v -> jogar( "papel"));
-        imgTesoura.setOnClickListener( v -> jogar( "tesoura"));
-
+        imgTesoura.setOnClickListener(v -> jogar("tesoura"));
+        imgPapel.setOnClickListener(v -> jogar("papel"));
+        imgPedra.setOnClickListener(v -> jogar("pedra"));
     }
 
-    public void jogar(String escolhaDoUsuario) {
-        String[] opcoes = {"Pedra", "Papel", "Tesoura"};
+
+    public void jogar (String escolhadDousuario) {
+        String[] opcoes = {"pedra", "papel", "tesoura"};
 
         int numero = new Random().nextInt(3);
-        String escolhadaMaquina = opcoes[numero];
 
-        switch (escolhadaMaquina) {
+        String escolhaDaMquina = opcoes [numero]; // ele vai ver em opções o que tem lá e ver o numero que tem no random. 0,1 ou 2.
+
+        switch (escolhaDaMquina) {
             case "pedra":
                 imgMaquina.setImageResource(R.drawable.pedra);
                 break;
+
             case "papel":
                 imgMaquina.setImageResource(R.drawable.papel);
                 break;
-            case "tesouro":
-                imgMaquina.setImageResource(R.drawable.papel);
+
+            case "tesoura":
+                imgMaquina.setImageResource(R.drawable.tesoura);
                 break;
-        }
-        if (escolhaDoUsuario.equals(escolhadaMaquina)) {
-            txtResultado.setText("Empate");
-        } else if ((escolhaDoUsuario.equals("pedra") && escolhadaMaquina.equals("tesoura")) ||
-                (escolhaDoUsuario.equals("papel") && escolhadaMaquina.equals("tesoura")) ||
-                (escolhaDoUsuario.equals("tesoura") && escolhadaMaquina.equals("papel"))) {
-            txtResultado.setText("Você ganhou!!");
-        } else {
-            txtResultado.setText("Você perdeu!!");
+
         }
 
+        if (escolhadDousuario.equals(escolhaDaMquina)) {
+            textResultado.setText("Empate!");
+        } else if ((escolhadDousuario.equals("pedra") && escolhaDaMquina.equals("tesoura")) ||
+                (escolhadDousuario.equals("papel") && escolhaDaMquina.equals("pedra")) ||
+                ((escolhadDousuario.equals("tesoura") && escolhaDaMquina.equals("papel")))) {
+            textResultado.setText("Você Ganhou");
+        } else {
+            textResultado.setText("Você Perdeu");
+
+        }
     }
 }

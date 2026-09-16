@@ -14,8 +14,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textResultado;
-    ImageView imgMaquina, imgPedra, imgPapel, imgTesoura;
+    TextView textResultado, textPersonagem;
+    ImageView imgMaquina, imgPedra, imgPapel, imgTesoura, imgMasc, imgFem, imgFemi, imgInterrogacao, imgInterrogacao2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,20 @@ public class MainActivity extends AppCompatActivity {
         imgPapel = findViewById(R.id.imgPapel);
         imgTesoura = findViewById(R.id.imgTesoura);
 
+        textPersonagem = findViewById(R.id.textPersonagem);
+
+        imgFem = findViewById(R.id.imgFem);
+        imgFemi = findViewById(R.id.imgFemi);
+        imgMasc = findViewById(R.id.imgMasc);
+
+
+
         imgPedra.setOnClickListener(v -> jogar("pedra"));
         imgPapel.setOnClickListener(v -> jogar("papel"));
         imgTesoura.setOnClickListener(v -> jogar("tesoura"));
+
+        imgMasc.setOnClickListener(v-> imgFemi.setImageResource(R.drawable.usuario_masc));
+        imgFem.setOnClickListener(v-> imgFemi.setImageResource(R.drawable.usuario_fem));
     }
 
     public void jogar(String escolhaDoUsuario){

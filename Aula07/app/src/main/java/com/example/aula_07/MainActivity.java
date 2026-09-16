@@ -15,7 +15,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     TextView txtResultado;
-    ImageView imgPedra, imgPapel, imgTesoura, imgMaquina;
+    ImageView imgPedra, imgPapel, imgTesoura, imgMaquina, imgUser, imgBotResultado, imgUserResultado, imgPerson1, imgPerson2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +30,20 @@ public class MainActivity extends AppCompatActivity {
 
         txtResultado = findViewById(R.id.txtResultado);
 
-        imgMaquina = findViewById(R.id.imgMaquina);
+        imgBotResultado = findViewById(R.id.imgBotResultado);
+        imgUser = findViewById(R.id.imgUser);
+        imgUserResultado = findViewById(R.id.imgUserResultado);
         imgPedra = findViewById(R.id.imgPedra);
         imgPapel = findViewById(R.id.imgPapel);
         imgTesoura = findViewById(R.id.imgTesoura);
+        imgPerson1 = findViewById(R.id.imgPerson1);
+        imgPerson2 = findViewById(R.id.imgPerson2);
 
         imgPedra.setOnClickListener(v -> Jogar("Pedra"));
         imgPapel.setOnClickListener(v -> Jogar("papel"));
         imgTesoura.setOnClickListener(v -> Jogar("tesoura"));
-
+        imgPerson1.setOnClickListener(v -> imgUser.setImageResource(R.drawable.usuario_fem));
+        imgPerson2.setOnClickListener(v -> imgUser.setImageResource(R.drawable.usuario_masc));
     }
 
     public void Jogar(String escolhaUser) {
@@ -49,15 +54,29 @@ public class MainActivity extends AppCompatActivity {
 
         switch(escolhaBot) {
             case "pedra":
-                imgMaquina.setImageResource(R.drawable.pedra);
+                imgBotResultado.setImageResource(R.drawable.pedra);
                 break;
 
             case "papel":
-                imgMaquina.setImageResource(R.drawable.papel);
+                imgBotResultado.setImageResource(R.drawable.papel);
                 break;
 
             case "tesoura":
-                imgMaquina.setImageResource(R.drawable.tesoura);
+                imgBotResultado.setImageResource(R.drawable.tesoura);
+                break;
+        }
+
+        switch(escolhaUser) {
+            case "pedra":
+                imgUserResultado.setImageResource(R.drawable.pedra);
+                break;
+
+            case "papel":
+                imgUserResultado.setImageResource(R.drawable.papel);
+                break;
+
+            case "tesoura":
+                imgUserResultado.setImageResource(R.drawable.tesoura);
                 break;
         }
 
@@ -70,6 +89,5 @@ public class MainActivity extends AppCompatActivity {
         } else {
             txtResultado.setText("Você Perdeu!");
         }
-
     }
 }

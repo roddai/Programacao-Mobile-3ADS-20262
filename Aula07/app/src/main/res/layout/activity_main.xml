@@ -6,6 +6,7 @@
     android:padding="40dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lapis"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,60 +14,135 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="JoKenPo"
-        android:textSize="50dp"
+        android:textSize="40dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgMaquina"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         app:srcCompat="@drawable/maquina"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgBotResultado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <ImageView
+        android:id="@+id/imgBotResultado"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/interrogacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMaquina"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/interrogacao"
+        app:layout_constraintEnd_toStartOf="@id/imgBotResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtResultado" />
+
+    <ImageView
+        android:id="@+id/imgUserResultado"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/interrogacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMaquina"
+        app:layout_constraintTop_toBottomOf="@id/txtResultado" />
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MY HANDS SHALL RELISH ENDING YOU HERE AND NOW"
+        android:text="Resultado:"
         android:textSize="25dp"
         android:textStyle="italic"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgMaquina" />
 
+    <TextView
+        android:id="@+id/txtOpcoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha sua jogada:"
+        android:layout_marginBottom="300dp"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha seu personagem:"
+        android:layout_marginTop="25dp"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPapel" />
+
     <ImageView
         android:id="@+id/imgPedra"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="25dp"
         app:srcCompat="@drawable/pedra"
         app:layout_constraintEnd_toStartOf="@id/imgPapel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@id/txtOpcoes" />
 
     <ImageView
         android:id="@+id/imgPapel"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="25dp"
         app:srcCompat="@drawable/papel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@id/txtOpcoes" />
 
     <ImageView
         android:id="@+id/imgTesoura"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="25dp"
         app:srcCompat="@drawable/tesoura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imgPapel"
-        app:layout_constraintTop_toBottomOf="@id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@id/txtOpcoes" />
+
+    <ImageView
+        android:id="@+id/imgPerson1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/usuario_fem"
+        app:layout_constraintEnd_toStartOf="@id/imgBotResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPerson" />
+
+    <ImageView
+        android:id="@+id/imgPerson2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/usuario_masc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMaquina"
+        app:layout_constraintTop_toBottomOf="@id/txtPerson" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

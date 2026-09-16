@@ -13,19 +13,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="JoKenPo!"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:textStyle="bold"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgMaquina"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/maquina"
+        android:id="@+id/imgInterrogacao"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/interrogacao"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMaquina"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <ImageView
+        android:id="@+id/imgMaquina"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="120dp"
+        app:srcCompat="@drawable/maquina"
+        app:layout_constraintEnd_toEndOf="@id/imgMaquina"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <TextView
@@ -35,38 +46,102 @@
         android:text="Resultado"
         android:textSize="24dp"
         android:textStyle="italic"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgMaquina" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <ImageView
+        android:id="@+id/imgInterrogacao2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/interrogacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Persona"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+
+    <ImageView
+        android:id="@+id/Persona"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="120dp"
+        app:srcCompat="@drawable/usuario_fem"
+        app:layout_constraintEnd_toEndOf="@id/Persona"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+
+
+    <TextView
+        android:id="@+id/txtEscolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha um símbolo"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Persona" />
 
     <ImageView
         android:id="@+id/imgPedra"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:srcCompat="@drawable/pedra"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/imgPapel"
         app:layout_constraintEnd_toStartOf="@id/imgPedra"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEscolha" />
 
     <ImageView
         android:id="@+id/imgPapel"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:srcCompat="@drawable/papel"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEscolha" />
 
     <ImageView
         android:id="@+id/imgTesoura"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:srcCompat="@drawable/tesoura"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imgPapel"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEscolha" />
+
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha seu Personagem"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        android:layout_marginTop="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEscolha" />
+
+    <ImageView
+        android:id="@+id/userMasc"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/usuario_masc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/userFem"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsuario" />
+
+    <ImageView
+        android:id="@+id/userFem"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="120dp"
+        app:srcCompat="@drawable/usuario_fem"
+        app:layout_constraintEnd_toEndOf="@id/userFem"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsuario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

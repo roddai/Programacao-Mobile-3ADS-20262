@@ -25,7 +25,7 @@
         android:id="@+id/imageMaquina"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        tools:srcCompat="@drawable/maquina"
+        app:srcCompat="@drawable/maquina"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"/>
@@ -47,31 +47,32 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
-        tools:srcCompat="@drawable/papel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"/>
+        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:srcCompat="@drawable/papel" />
 
     <ImageView
         android:id="@+id/imageTesoura"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="65dp"
-        tools:srcCompat="@drawable/tesoura"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imagePapel"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"/>
+        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:srcCompat="@drawable/tesoura" />
+
     <ImageView
         android:id="@+id/imagePedra"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="65dp"
-        tools:srcCompat="@drawable/pedra"
         app:layout_constraintEnd_toEndOf="@+id/imagePapel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"/>
+        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:srcCompat="@drawable/pedra" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.aula07;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,6 +37,28 @@ public class MainActivity extends AppCompatActivity {
         imagePapel = findViewById(R.id.imagePapel);
         imageTesoura = findViewById(R.id.imageTesoura);
 
+        imagePedra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String escolhaDoUsuario = "pedra";
+                jogar(escolhaDoUsuario);
+            }});
+
+        imagePapel.setOnClickListener(new View.OnClickListener()
+
+            {
+                @Override
+                public void onClick (View v){
+                String escolhaDoUsuario = "papel";
+                jogar(escolhaDoUsuario);
+            }});
+
+        imageTesoura.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                     String escolhaDoUsuario = "tesoura";
+                     jogar(escolhaDoUsuario);
+                }});
     }
 
     public void jogar(String escolhaDoUsuario){

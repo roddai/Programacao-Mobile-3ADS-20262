@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/fundo">
+    android:background="@color/fundo"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/title"
@@ -76,13 +77,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Escolha sua jogada:"
-        android:layout_marginTop="160dp"
+        android:layout_marginBottom="260dp"
         android:textColor="@color/black"
         android:textSize="24dp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <ImageView
         android:id="@+id/imagePapel"

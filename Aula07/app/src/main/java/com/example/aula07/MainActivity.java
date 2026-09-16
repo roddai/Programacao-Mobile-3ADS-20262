@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         imagePlayer1.setOnClickListener(v-> imagePlayer.setImageResource(R.drawable.usuario_fem));
         imagePlayer2.setOnClickListener(v-> imagePlayer.setImageResource(R.drawable.usuario_masc));
-        imagePapel.setOnClickListener(v-> imageEscPlayer.setImageResource(R.drawable.papel));
-        imageTesoura.setOnClickListener(v-> imageEscPlayer.setImageResource(R.drawable.tesoura));
 
         imagePedra.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:layout_margin="40dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FECAP PET!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_cachorros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cães"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="125dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/caob"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="175dp"
+        android:src="@drawable/bruno"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/cao1"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="175dp"
+        android:src="@drawable/cao1"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/cao2"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="175dp"
+        android:src="@drawable/cao2"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnc_bruno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        android:textSize="10sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="235dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnc_luna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        android:textSize="10sp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="235dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnc_madonna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        android:textSize="10sp"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="235dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_gatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gatos"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="315dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gato1"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="365dp"
+        android:src="@drawable/gato1"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gato2"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="365dp"
+        android:src="@drawable/gato2"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gato3"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="365dp"
+        android:src="@drawable/gato3"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btng_mimi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        android:textSize="10sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="425dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btng_garfield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        android:textSize="10sp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="425dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btng_marcia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        android:textSize="10sp"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="425dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textResultado, textPersonagem;
         ImageView imgMaquina, imgPedra, imgPapel, imgTesoura, imgMasc, imgFem, imgFemi, imgInterrogacao, imgInterrogacao2;
 
-        @Overridegit
+        @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             EdgeToEdge.enable(this);

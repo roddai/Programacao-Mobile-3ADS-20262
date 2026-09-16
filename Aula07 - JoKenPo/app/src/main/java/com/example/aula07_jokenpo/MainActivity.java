@@ -15,7 +15,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     TextView txtResultado;
-    ImageView imgMaquina, imgPedra, imgPapel, imgTesoura;
+    ImageView imgInterrogacao, imgInterrogacao2, imgPedra, imgPapel, imgTesoura, imgPersona, imgFeminina, imgMasculina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +30,21 @@ public class MainActivity extends AppCompatActivity {
 
         txtResultado = findViewById(R.id.txtResultado);
 
-        imgMaquina = findViewById(R.id.imgMaquina);
+        imgInterrogacao = findViewById(R.id.imgInterrogacao);
+        imgInterrogacao2 = findViewById(R.id.imgInterrogacao2);
+        imgPersona = findViewById(R.id.imgPersona);
         imgPapel = findViewById(R.id.imgPapel);
         imgPedra = findViewById(R.id.imgPedra);
         imgTesoura = findViewById(R.id.imgTesoura);
+        imgFeminina = findViewById(R.id.imgFeminina);
+        imgMasculina = findViewById(R.id.imgMasculina);
+
 
         imgPedra.setOnClickListener(v -> jogar("pedra"));
         imgPapel.setOnClickListener(v -> jogar("papel"));
         imgTesoura.setOnClickListener(v -> jogar("tesoura"));
+        imgFeminina.setOnClickListener(v -> imgPersona.setImageResource(R.drawable.usuario_fem));
+        imgMasculina.setOnClickListener(v -> imgPersona.setImageResource(R.drawable.usuario_masc));
     }
 
     public void jogar(String escolhaDoUsuario){
@@ -48,14 +55,21 @@ public class MainActivity extends AppCompatActivity {
 
         switch (escolhaDaMaquina) {
             case "pedra":
-                imgMaquina.setImageResource(R.drawable.pedra);
+                imgInterrogacao.setImageResource(R.drawable.pedra);
                 break;
             case "papel":
-                imgMaquina.setImageResource(R.drawable.papel);
+                imgInterrogacao.setImageResource(R.drawable.papel);
                 break;
             case "tesoura":
-                imgMaquina.setImageResource(R.drawable.tesoura);
+                imgInterrogacao.setImageResource(R.drawable.tesoura);
                 break;
+        }
+        if (escolhaDoUsuario.equals("pedra")) {
+            imgInterrogacao2.setImageResource(R.drawable.pedra);
+        } else if (escolhaDoUsuario.equals("papel")) {
+            imgInterrogacao2.setImageResource(R.drawable.papel);
+        } else if (escolhaDoUsuario.equals("tesoura")) {
+            imgInterrogacao2.setImageResource(R.drawable.tesoura);
         }
 
         if (escolhaDoUsuario.equals(escolhaDaMaquina)) {
@@ -67,5 +81,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             txtResultado.setText("Você perdeu!!!");
         }
-    }
+
+        }
 }

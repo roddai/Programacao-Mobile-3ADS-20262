@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnInicio;
     private Button btnAgenda;
+    private Button btnCertificados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnInicio = findViewById(R.id.btnInicio);
         btnAgenda = findViewById(R.id.btnAgenda);
+        btnCertificados = findViewById(R.id.btnCertificados);
 
         btnInicio.setOnClickListener(v -> {
             irParaInicio();
@@ -28,15 +30,31 @@ public class MainActivity extends AppCompatActivity {
         btnAgenda.setOnClickListener(v -> {
             irParaAgenda();
         });
+
+        btnCertificados.setOnClickListener(v -> {
+            irParaCertificados();
+        });
     }
 
     private void irParaInicio() {
-        Intent inicio = new Intent(MainActivity.this, Certificados.class);
-        startActivity(inicio);
+
     }
 
     private void irParaAgenda() {
-        Intent agenda = new Intent(MainActivity.this, Agenda.class);
+
+        Intent agenda =
+                new Intent(MainActivity.this,
+                        Agenda.class);
+
         startActivity(agenda);
+    }
+
+    private void irParaCertificados() {
+
+        Intent certificados =
+                new Intent(MainActivity.this,
+                        Certificados.class);
+
+        startActivity(certificados);
     }
 }

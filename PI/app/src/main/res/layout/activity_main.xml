@@ -18,12 +18,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgLogo"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:contentDescription="Logo"
             android:src="@drawable/imglogo"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -60,6 +60,7 @@
             android:layout_height="70dp"
             android:text="inicio"
             android:textSize="12dp"
+            android:backgroundTint="#140D52"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btnAgenda"
             app:layout_constraintTop_toTopOf="parent"
@@ -71,6 +72,7 @@
             android:layout_height="70dp"
             android:text="Agenda"
             android:textSize="12dp"
+            android:backgroundTint="#140D52"
             app:layout_constraintStart_toEndOf="@id/btnInicio"
             app:layout_constraintEnd_toStartOf="@id/btnCertificados"
             app:layout_constraintTop_toTopOf="parent"
@@ -82,6 +84,7 @@
             android:layout_height="70dp"
             android:text="Conquista"
             android:textSize="10dp"
+            android:backgroundTint="#140D52"
             app:layout_constraintStart_toEndOf="@id/btnAgenda"
             app:layout_constraintEnd_toStartOf="@id/btnPerfil"
             app:layout_constraintTop_toTopOf="parent"
@@ -93,6 +96,7 @@
             android:layout_height="70dp"
             android:text="Perfil"
             android:textSize="12dp"
+            android:backgroundTint="#140D52"
             app:layout_constraintStart_toEndOf="@id/btnCertificados"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

@@ -1,24 +1,47 @@
 package com.example.pi;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class Agenda extends AppCompatActivity {
+
+    private Button btnInicio;
+    private Button btnAgenda;
+    private Button btnCertificados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_agenda);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        btnInicio = findViewById(R.id.btnInicio);
+        btnAgenda = findViewById(R.id.btnAgenda);
+        btnCertificados = findViewById(R.id.btnCertificados);
+
+        btnInicio.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    Agenda.this,
+                    MainActivity.class);
+
+            startActivity(intent);
+            finish();
+        });
+
+        btnAgenda.setOnClickListener(v -> {
+        });
+
+        btnCertificados.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    Agenda.this,
+                    Certificados.class);
+
+            startActivity(intent);
+            finish();
         });
     }
 }

@@ -1,24 +1,52 @@
 package com.example.pi;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class Certificados extends AppCompatActivity {
+
+    private Button btnInicio;
+    private Button btnAgenda;
+    private Button btnCertificados;
+    private Button btnPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_certificados);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        btnInicio = findViewById(R.id.btnInicio);
+        btnAgenda = findViewById(R.id.btnAgenda);
+        btnCertificados = findViewById(R.id.btnCertificados);
+        btnPerfil = findViewById(R.id.btnPerfil);
+
+        btnInicio.setOnClickListener(v -> {
+            startActivity(new Intent(
+                    Certificados.this,
+                    MainActivity.class));
+            finish();
+        });
+
+        btnAgenda.setOnClickListener(v -> {
+            startActivity(new Intent(
+                    Certificados.this,
+                    Agenda.class));
+            finish();
+        });
+
+        btnCertificados.setOnClickListener(v -> {
+        });
+
+        btnPerfil.setOnClickListener(v -> {
+            startActivity(new Intent(
+                    Certificados.this,
+                    Perfil.class));
+            finish();
         });
     }
 }

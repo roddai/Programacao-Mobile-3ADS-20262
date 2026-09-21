@@ -12,10 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IniciandoPI">
         <activity
-            android:name=".Agenda"
+            android:name=".Visualizar"
             android:exported="false" />
         <activity
-            android:name=".Certificados"
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".BaixarPDF"
+            android:exported="false" />
+        <activity
+            android:name=".Baixar"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -26,6 +32,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Agenda"
+            android:exported="false" />
+        <activity
+            android:name=".Certificados"
+            android:exported="false" />
     </application>
 
 </manifest>

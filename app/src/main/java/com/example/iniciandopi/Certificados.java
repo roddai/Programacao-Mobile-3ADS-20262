@@ -9,9 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Certificados extends AppCompatActivity {
 
-    private Button btnInicio;
-    private Button btnAgenda;
-    private Button btnCertificados;
+    public Button btnInicio, btnAgenda, btnCertificados;
+    public Button btnPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,26 +21,26 @@ public class Certificados extends AppCompatActivity {
         btnInicio = findViewById(R.id.btnInicio);
         btnAgenda = findViewById(R.id.btnAgenda);
         btnCertificados = findViewById(R.id.btnCertificados);
+        btnPerfil = findViewById(R.id.btnPerfil);
 
-        btnInicio.setOnClickListener(v -> {
-
-            Intent intent = new Intent(
-                    Certificados.this,
-                    MainActivity.class);
-
+        btnInicio.setOnClickListener(v -> {Intent intent = new Intent(Certificados.this, MainActivity.class);
             startActivity(intent);
             finish();
         });
 
-        btnAgenda.setOnClickListener(v -> {
-
-            Intent intent = new Intent(
-                    Certificados.this,
-                    Agenda.class);
-
+        btnAgenda.setOnClickListener(v -> {Intent intent = new Intent(Certificados.this, Agenda.class);
             startActivity(intent);
             finish();
         });
 
+        btnPerfil.setOnClickListener(v -> {Intent intent = new Intent(Certificados.this, Perfil.class);
+            startActivity(intent);
+            finish();
+        });
+
+        btnCertificados.setOnClickListener(v -> {Intent intent = new Intent(Certificados.this, Perfil.class);
+            startActivity(intent);
+            finish();
+        });
     }
 }

@@ -3,15 +3,13 @@ package com.example.iniciandopi;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnInicio;
-    private Button btnAgenda;
-    private Button btnCertificados;
+    public Button btnInicio, btnAgenda, btnCertificados;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void irParaInicio() {
+    public void irParaInicio() {
 
     }
 
-    private void irParaAgenda() {
+    public void irParaAgenda() {
 
         Intent agenda =
                 new Intent(MainActivity.this,
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(agenda);
     }
 
-    private void irParaCertificados() {
+    public void irParaCertificados() {
 
         Intent certificados =
                 new Intent(MainActivity.this,

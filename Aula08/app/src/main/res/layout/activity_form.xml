@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/form"
+    android:background="@color/back"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".FormActivity"
+    android:padding="80dp">
+
+    <TextView
+        android:id="@+id/title_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formulário"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/btnt"
+        android:text=" Digite seu nome: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_02" />
+
+    <EditText
+        android:id="@+id/input_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/btnt"
+        android:text=" Digite sua idade: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_01" />
+
+    <CheckBox
+        android:id="@+id/check_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opção 1."
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/input_02"
+        app:layout_constraintTop_toBottomOf="@+id/input_02" />
+
+
+    <CheckBox
+        android:id="@+id/check_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opção 2."
+        android:layout_marginTop="2dp"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/input_02"
+        app:layout_constraintTop_toBottomOf="@+id/check_01" />
+
+    <RadioGroup
+        android:id="@+id/group_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/check_01"
+        app:layout_constraintTop_toBottomOf="@+id/check_02" />
+
+        <RadioButton
+            android:id="@+id/radioBtn_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sim"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/check_01"
+            app:layout_constraintTop_toBottomOf="@+id/check_02" />
+
+        <RadioButton
+            android:id="@+id/radioBtn_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/check_01"
+            app:layout_constraintTop_toBottomOf="@+id/radioBtn_01" />
+    </RadioGroup>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

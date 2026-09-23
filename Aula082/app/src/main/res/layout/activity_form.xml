@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etNome" />
 
     <CheckBox
-        android:id="@+id/chOpcao1"
+        android:id="@+id/cbOpcao1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Opção 1"
@@ -49,13 +49,13 @@
         app:layout_constraintTop_toBottomOf="@+id/etIdade" />
 
     <CheckBox
-        android:id="@+id/chOpcao2"
+        android:id="@+id/cbOpcao2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Opção 2"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chOpcao1" />
+        app:layout_constraintTop_toBottomOf="@+id/cbOpcao1" />
 
     <RadioGroup
         android:id="@+id/rgSimNao"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chOpcao2">
+        app:layout_constraintTop_toBottomOf="@+id/cbOpcao2">
 
         <RadioButton
             android:id="@+id/rbSim"
@@ -89,14 +89,14 @@
         app:layout_constraintTop_toBottomOf="@+id/rgSimNao" />
 
     <Spinner
-        android:id="@+id/spinnerCores"
+        android:id="@+id/SpinnerCores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSpinnerLabel"/>
 
     <ImageView
-        android:id="@+id/imageview"
+        android:id="@+id/imageView"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
@@ -113,7 +113,7 @@
         android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageview"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
 
     <TextView
         android:id="@+id/tvRatingLabel"

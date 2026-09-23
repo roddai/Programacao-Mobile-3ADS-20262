@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/resultado"
     android:padding="30dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ResultadoActivity">
 
     <TextView
         android:id="@+id/tvResultadoTitle"
@@ -24,17 +24,17 @@
         android:id="@+id/tvResultado"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textSize="16dp"
+        android:textSize="12sp"
         android:padding="8dp"
+        android:text=""
         app:layout_constraintTop_toBottomOf="@id/tvResultadoTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="btnVoltar"
+        app:layout_constraintBottom_toTopOf="@id/btnVoltar"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="16dp" />
 
     <Button
-
         android:id="@+id/btnVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,8 +42,9 @@
         android:layout_marginTop="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

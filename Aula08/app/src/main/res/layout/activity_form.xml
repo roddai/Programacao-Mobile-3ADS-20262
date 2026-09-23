@@ -14,7 +14,7 @@
         tools:context=".FormActivity"
         android:background="@color/back"
         android:paddingHorizontal="70dp"
-        android:paddingVertical="10dp">
+        android:paddingVertical="40dp">
 
         <TextView
             android:id="@+id/title_02"
@@ -157,7 +157,7 @@
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/spinner_01" />
+            app:layout_constraintTop_toBottomOf="@+id/spinner_01" />
 
         <RatingBar
             android:id="@+id/ratingBar"

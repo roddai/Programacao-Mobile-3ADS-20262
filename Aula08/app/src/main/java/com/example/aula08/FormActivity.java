@@ -39,7 +39,7 @@ public class FormActivity extends AppCompatActivity {
         Button btnCarregarFoto = findViewById(R.id.btn_02);
         imageView = findViewById(R.id.image_01);
 
-        String[] cores = {"Vermelho", "Azul", "Verde"};
+        String[] cores = {"Vermelho", "Azul", "Verde", "Rosa"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cores);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_01.setAdapter(adapter);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -40,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etNome"/>
 
     <CheckBox
-        android:id="@+id/chOpcao1"
+        android:id="@+id/cbOpcao1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Opção 1"
@@ -49,13 +50,13 @@
         app:layout_constraintTop_toBottomOf="@+id/etIdade"/>
 
     <CheckBox
-        android:id="@+id/chOpcao2"
+        android:id="@+id/cbOpcao2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Opção 2"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chOpcao1"/>
+        app:layout_constraintTop_toBottomOf="@+id/cbOpcao1"/>
 
     <RadioGroup
         android:id="@+id/rgSimNao"
@@ -63,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chOpcao2">
+        app:layout_constraintTop_toBottomOf="@+id/cbOpcao2">
 
         <RadioButton
             android:id="@+id/rbSim"

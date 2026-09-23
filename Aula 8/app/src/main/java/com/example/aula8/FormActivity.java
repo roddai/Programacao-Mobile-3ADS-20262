@@ -76,7 +76,7 @@ public class FormActivity extends AppCompatActivity {
                     "\nCor escolhida: " + corSelecionada +
                     "\nAvaliação: " + avaliacao;
 
-            Intent intent = new Intent(FormActivity.this, Resultado.class);
+            Intent intent = new Intent(FormActivity.this, ResultadoActivity.class);
             intent.putExtra("resultado", resultado);
             startActivity(intent);
         });

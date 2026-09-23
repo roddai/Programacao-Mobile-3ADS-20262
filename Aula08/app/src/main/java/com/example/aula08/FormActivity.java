@@ -33,11 +33,11 @@ public class FormActivity extends AppCompatActivity {
         RadioButton rbSim = findViewById(R.id.rbSim);
         RadioButton rbNao = findViewById(R.id.rbNao);
         RadioGroup rgSimNao = findViewById(R.id.rgSimNao);
-        Spinner spinnerCores = findViewById(R.id.spinnerCores);
+        Spinner spinnerCores = findViewById(R.id.spSpinnerCore);
         RatingBar ratingBar = findViewById(R.id.ratingBar);
         Button btnEnviar = findViewById(R.id.btnEnviar);
-        Button btnCarregarFoto = findViewById(R.id.btnCarregarFoto);
-        imageView = findViewById(R.id.imageView);
+        Button btnCarregarFoto = findViewById(R.id.btnCarregar);
+        imageView = findViewById(R.id.ImageWiew);
 
         String[] cores = {"Vermelho", "Azul", "Verde"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cores);

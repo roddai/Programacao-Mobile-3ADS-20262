@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="60dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/caixa_user"
+        android:layout_width="311dp"
+        android:layout_height="38dp"
+        android:background="@color/white"
+        android:hint="Digite seu nome aqui"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_fecap"
+         />
+
+    <TextView
+        android:id="@+id/texto_bem_vindo"
+        android:layout_width="326dp"
+        android:layout_height="45dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:text="Bem vindo ao meu app!"
+        android:textAlignment="center"
+        android:textColor="@color/purple"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/texto_redes"
+        android:layout_width="326dp"
+        android:layout_height="45dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:text="Visite nossas redes sociais!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="@id/logo_instagram"
+        />
+
+    <Button
+        android:layout_width="155dp"
+        android:layout_height="56dp"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/purple"
+        android:text="Entrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caixa_user" />
+
+    <ImageView
+        android:id="@+id/logo_fecap"
+        android:layout_width="130dp"
+        android:src="@drawable/logo_fecap_p"
+        android:layout_height="140dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto_bem_vindo"/>
+
+    <ImageView
+        android:id="@+id/logo_x"
+        android:layout_marginTop="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/logo_x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo_instagram"
+        android:layout_marginEnd="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo_instagram"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/logo_x"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo_linkedin"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo_linkedin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/logo_x"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

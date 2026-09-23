@@ -12,12 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aula8">
         <activity
-            android:name=".Resultado"
-            android:exported="false" />
-        <activity
-            android:name=".Form"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -26,6 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FormActivity"/>
+        <activity android:name=".Resultado"/>
     </application>
 
 </manifest>

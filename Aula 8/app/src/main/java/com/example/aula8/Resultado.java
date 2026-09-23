@@ -1,7 +1,8 @@
 package com.example.aula8;
 
 import android.os.Bundle;
-
+import android.widget.TextView;
+import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,5 +21,13 @@ public class Resultado extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        TextView tvResultado = findViewById(R.id.tvResultado);
+        Button btnVoltar = findViewById(R.id.btnVoltar);
+
+        String Resultado = getIntent().getStringExtra("resultado");
+        tvResultado.setText(Resultado);
+
+        btnVoltar.setOnClickListener(v-> finish());
     }
 }

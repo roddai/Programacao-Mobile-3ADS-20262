@@ -66,63 +66,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
-            android:id="@+id/btnInicio"
-            android:layout_width="95dp"
-            android:layout_height="70dp"
-            android:text="inicio"
-            android:textSize="12dp"
-            android:backgroundTint="#140D52"
-            android:layout_marginBottom="12dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnAgenda"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-        <Button
-            android:id="@+id/btnAgenda"
-            android:layout_width="95dp"
-            android:layout_height="70dp"
-            android:text="Agenda"
-            android:textSize="12dp"
-            android:backgroundTint="#140D52"
-            android:layout_marginBottom="12dp"
-            app:layout_constraintStart_toEndOf="@id/btnInicio"
-            app:layout_constraintEnd_toStartOf="@id/btnCertificados"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-        <Button
-            android:id="@+id/btnCertificados"
-            android:layout_width="95dp"
-            android:layout_height="70dp"
-            android:text="Conquista"
-            android:textSize="10dp"
-            android:backgroundTint="#140D52"
-            android:layout_marginBottom="12dp"
-            app:layout_constraintStart_toEndOf="@id/btnAgenda"
-            app:layout_constraintEnd_toStartOf="@id/btnPerfil"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-        <Button
-            android:id="@+id/btnPerfil"
-            android:layout_width="95dp"
-            android:layout_height="70dp"
-            android:text="Perfil"
-            android:textSize="12dp"
-            android:backgroundTint="#140D52"
-            android:layout_marginBottom="12dp"
-            app:layout_constraintStart_toEndOf="@id/btnCertificados"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/btnVoltar"
+        android:id="@+id/btnVoltarTelaBaixarPDF"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:text="Voltar"

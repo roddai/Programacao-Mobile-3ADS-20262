@@ -21,5 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Iniciando PI"
 include(":app")
-include(":app")
-include(":app")

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Perfil">
+
+    <TextView
+        android:id="@+id/TelaEmProducao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tela em produção"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cabecalho"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="#140D52"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLogo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:cardCornerRadius="28dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="6dp"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imglogo" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perfil"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/cardLogo"
+            app:layout_constraintTop_toTopOf="@id/cardLogo"
+            app:layout_constraintBottom_toBottomOf="@id/cardLogo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rodape"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#F5F5F5"
+        android:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnInicio"
+            android:layout_width="95dp"
+            android:layout_height="70dp"
+            android:text="inicio"
+            android:textSize="12dp"
+            android:backgroundTint="#140D52"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnAgenda"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btnAgenda"
+            android:layout_width="95dp"
+            android:layout_height="70dp"
+            android:text="Agenda"
+            android:textSize="12dp"
+            android:backgroundTint="#140D52"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintStart_toEndOf="@id/btnInicio"
+            app:layout_constraintEnd_toStartOf="@id/btnCertificados"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btnCertificados"
+            android:layout_width="95dp"
+            android:layout_height="70dp"
+            android:text="Conquista"
+            android:textSize="10dp"
+            android:backgroundTint="#140D52"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintStart_toEndOf="@id/btnAgenda"
+            app:layout_constraintEnd_toStartOf="@id/btnPerfil"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btnPerfil"
+            android:layout_width="95dp"
+            android:layout_height="70dp"
+            android:text="Perfil"
+            android:textSize="12dp"
+            android:backgroundTint="#140D52"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintStart_toEndOf="@id/btnCertificados"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Agenda">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cabecalho"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="#140D52"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLogo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:cardCornerRadius="28dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="6dp"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imglogo" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agenda próxima Etapa"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/cardLogo"
+            app:layout_constraintTop_toTopOf="@id/cardLogo"
+            app:layout_constraintBottom_toBottomOf="@id/cardLogo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rodape"
+        android:layout_width="411dp"
+        android:layout_height="110dp"
+        android:background="#F5F5F5"
+        android:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnInicio"
+            android:layout_width="95dp"
+            android:layout_height="70dp"
+            android:text="inicio"
+            android:textSize="12sp"
+            android:backgroundTint="#140D52"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnAgenda"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAgenda"
+            android:layout_width="95dp"
+            android:layout_height="70dp"
+            android:text="agenda"
+            android:textSize="12sp"
+            android:backgroundTint="#140D52"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnCertificados"
+            app:layout_constraintStart_toEndOf="@id/btnInicio"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCertificados"
+            android:layout_width="95dp"
+            android:layout_height="70dp"
+            android:text="conquista"
+            android:textSize="10sp"
+            android:backgroundTint="#140D52"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnPerfil"
+            app:layout_constraintStart_toEndOf="@id/btnAgenda"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnPerfil"
+            android:layout_width="95dp"
+            android:layout_height="70dp"
+            android:text="Perfil"
+            android:textSize="12sp"
+            android:backgroundTint="#140D52"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnCertificados"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollConteudo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/cabecalho"
+        app:layout_constraintBottom_toTopOf="@id/rodape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardAgenda1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/white"
+                android:elevation="12dp"
+                android:padding="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/txtData1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22 SET"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtTitulo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lógica de Programação - Parte 3"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtData1"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtHorario1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19h00 - 21h00"
+                    android:textColor="#173EA5"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtTitulo1"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtLocal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fatec Itaquera - Lab 04"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtHorario1"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardAgenda2"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/white"
+                android:elevation="8dp"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/cardAgenda1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/txtData2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 SET"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtTitulo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mentoria Individual de Carreira"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtData2"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtHorario2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18h30 - 19h30"
+                    android:textColor="#173EA5"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtTitulo2"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtLocal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Google Meet"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtHorario2"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardAgenda3"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/white"
+                android:elevation="8dp"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/cardAgenda2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/txtData3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01 OUT"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtTitulo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visita ao Campus do Insper"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtData3"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtHorario3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14h00 - 17h00"
+                    android:textColor="#173EA5"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtTitulo3"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtLocal3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Insper - Vila Olímpia"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtHorario3"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardAgenda4"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/white"
+                android:elevation="8dp"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/cardAgenda3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/txtData4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="07 OUT"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtTitulo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Workshop: Montando seu Currículo"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtData4"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtHorario4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19h00 - 21h00"
+                    android:textColor="#173EA5"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtTitulo4"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtLocal4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sede Próxima Etapa - Mooca"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtHorario4"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardAgenda5"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/white"
+                android:elevation="8dp"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/cardAgenda4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/txtData5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14 OUT"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtTitulo5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simulado de Entrevista"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtData5"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtHorario5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18h00 - 20h00"
+                    android:textColor="#173EA5"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtTitulo5"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtLocal5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Online"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtHorario5"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

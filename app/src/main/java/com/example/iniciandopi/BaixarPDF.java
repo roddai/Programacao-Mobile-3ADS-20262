@@ -1,5 +1,6 @@
 package com.example.iniciandopi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -27,7 +28,11 @@ public class BaixarPDF extends AppCompatActivity {
 
         btnVoltarTelaBaixarPDF = findViewById(R.id.btnVoltarTelaBaixarPDF);
 
-        btnVoltarTelaBaixarPDF.setOnClickListener(v -> finish());
+        btnVoltarTelaBaixarPDF.setOnClickListener(v -> {
+            Intent intent = new Intent(BaixarPDF.this, Certificados.class);
+            startActivity(intent);
+            finish();
+        });
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

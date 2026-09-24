@@ -1,5 +1,6 @@
 package com.example.iniciandopi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -26,8 +27,11 @@ public class Visualizar extends AppCompatActivity {
 
         btnVoltar = findViewById(R.id.btnVoltar);
 
-        btnVoltar.setOnClickListener(v -> finish());
-
+        btnVoltar.setOnClickListener((v -> {
+            Intent intent = new Intent(Visualizar.this, Certificados.class);
+            startActivity(intent);
+            finish();
+        }));
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

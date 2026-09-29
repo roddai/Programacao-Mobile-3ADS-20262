@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdio"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/joKenPo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JoKenPo"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageMaquina"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/maquina"
+        app:layout_constraintEnd_toStartOf="@id/escolhaMaquina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/joKenPo"/>
+
+    <ImageView
+        android:id="@+id/escolhaMaquina"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@drawable/interrogacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageMaquina"
+        app:layout_constraintTop_toBottomOf="@id/joKenPo"/>
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageMaquina" />
+
+    <ImageView
+        android:id="@+id/imagePlayer"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@drawable/usuario_fem"
+        app:layout_constraintEnd_toStartOf="@id/escolhaMaquina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultado"/>
+
+    <ImageView
+        android:id="@+id/escolhaPlayer"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@drawable/interrogacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageMaquina"
+        app:layout_constraintTop_toBottomOf="@id/resultado"/>
+
+    <TextView
+        android:id="@+id/escolhaJogada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha sua jogada:"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagePlayer" />
+
+    <ImageView
+        android:id="@+id/imagePedra"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pedra"
+        app:layout_constraintEnd_toStartOf="@id/imagePapel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaJogada"/>
+
+    <ImageView
+        android:id="@+id/imagePapel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/papel"
+        app:layout_constraintEnd_toStartOf="@id/imageTesoura"
+        app:layout_constraintStart_toEndOf="@id/imagePedra"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaJogada" />
+
+    <ImageView
+        android:id="@+id/imageTesoura"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/tesoura"
+        app:layout_constraintStart_toEndOf="@id/imagePapel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaJogada"/>
+
+    <TextView
+        android:id="@id/escolhaIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha seu jogador:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagePapel"
+        app:layout_constraintBottom_toTopOf="@id/imageHomi"/>
+
+    <ImageView
+        android:id="@+id/imageHomi"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/usuario_masc"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaIcon"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageMulher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/usuario_fem"
+        android:layout_marginRight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaIcon"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

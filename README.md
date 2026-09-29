@@ -3,8 +3,8 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Danilo Oliveira de Almeida
+- RA: 23011087
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data

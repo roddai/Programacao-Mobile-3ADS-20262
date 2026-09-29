@@ -2,83 +2,96 @@ package com.example.Aula09;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RatingBar;
 import android.widget.Spinner;
+import android.widget.Toast;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 public class FormActivity extends AppCompatActivity {
 
-    private ImageView imageView;
-    private ActivityResultLauncher<String> pickImageLauncher;
+    private EditText edtNome, edtIdade;
+    private RadioGroup rgTamanho;
+    private Spinner spnCor;
+    private CheckBox cbCamiseta, cbCalca, cbJaqueta;
+    private RatingBar rbAvaliacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
 
-        EditText etNome = findViewById(R.id.etNome);
-        EditText etIdade = findViewById(R.id.etIdade);
-        CheckBox cbOpcao1 = findViewById(R.id.cbOpcao1);
-        CheckBox cbOpcao2 = findViewById(R.id.cbOpcao2);
-        RadioButton rbSim = findViewById(R.id.rbSim);
-        RadioButton rbNao = findViewById(R.id.rbNao);
-        RadioGroup rgSimNao = findViewById(R.id.rgSimNao);
-        Spinner spinnerCores = findViewById(R.id.spSpinnerCore);
-        RatingBar ratingBar = findViewById(R.id.ratingBar);
+        // Liga as variáveis aos componentes do XML
+        edtNome = findViewById(R.id.edtNome);
+        edtIdade = findViewById(R.id.edtIdade);
+        rgTamanho = findViewById(R.id.rgTamanho);
+        spnCor = findViewById(R.id.spnCor);
+        cbCamiseta = findViewById(R.id.cbCamiseta);
+        cbCalca = findViewById(R.id.cbCalca);
+        cbJaqueta = findViewById(R.id.cbJaqueta);
+        rbAvaliacao = findViewById(R.id.rbAvaliacao);
         Button btnEnviar = findViewById(R.id.btnEnviar);
-        Button btnCarregarFoto = findViewById(R.id.btnCarregar);
-        imageView = findViewById(R.id.ImageWiew);
 
-        String[] cores = {"Vermelho", "Azul", "Verde"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cores);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerCores.setAdapter(adapter);
+        btnEnviar.setOnClickListener(v -> enviar());
+    }
 
-        pickImageLauncher = registerForActivityResult(
-                new ActivityResultContracts.GetContent(),
-                uri -> {
-                    if (uri != null) {
-                        imageView.setImageURI(uri);
-                    }
-                }
-        );
+    private void enviar() {
+        String nome = edtNome.getText().toString().trim();
+        String idade = edtIdade.getText().toString().trim();
 
-        btnCarregarFoto.setOnClickListener(v -> pickImageLauncher.launch("image/*"));
+        // Validações
+        if (nome.isEmpty()) {
+            edtNome.setError("Informe seu nome");
+            edtNome.requestFocus();
+            return;
+        }
+        if (idade.isEmpty()) {
+            edtIdade.setError("Informe sua idade");
+            edtIdade.requestFocus();
+            return;
+        }
 
-        btnEnviar.setOnClickListener(v -> {
+        // Tamanho escolhido (P, M ou G)
+        RadioButton rbSelecionado = findViewById(rgTamanho.getCheckedRadioButtonId());
+        String tamanho = rbSelecionado.getText().toString();
 
-            String nome = etNome.getText().toString();
-            String idade = etIdade.getText().toString();
+        // Cor escolhida no Spinner
+        String cor = spnCor.getSelectedItem().toString();
 
-            String opcoes = "";
-            if (cbOpcao1.isChecked()) opcoes += "Opção 1 ";
-            if (cbOpcao2.isChecked()) opcoes += "Opção 2";
+        // Peças marcadas
+        ArrayList<String> pecas = new ArrayList<>();
+        if (cbCamiseta.isChecked()) pecas.add("Camiseta");
+        if (cbCalca.isChecked()) pecas.add("Calça");
+        if (cbJaqueta.isChecked()) pecas.add("Jaqueta");
 
-            String simNao = rbSim.isChecked() ? "Sim" : rbNao.isChecked() ? "Não" : "N/A";
+        if (pecas.isEmpty()) {
+            Toast.makeText(this, "Escolha pelo menos uma peça", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-            String corSelecionada = spinnerCores.getSelectedItem().toString();
-            float avaliacao = ratingBar.getRating();
+        // Avaliação
+        float nota = rbAvaliacao.getRating();
+        if (nota == 0) {
+            Toast.makeText(this, "Avalie o atendimento", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-            String resultado = "Nome: " + nome +
-                    "\nIdade: " + idade +
-                    "\nOpções marcadas: " + opcoes +
-                    "\nEscolha Sim/Não: " + simNao +
-                    "\nCor escolhida: " + corSelecionada +
-                    "\nAvaliação: " + avaliacao;
-
-            Intent intent = new Intent(FormActivity.this, ResultadoActivity.class);
-            intent.putExtra("resultado", resultado);
-            startActivity(intent);
-        });
+        // Envia tudo para a tela de resultado
+        Intent intent = new Intent(this, ResultadoActivity.class);
+        intent.putExtra("nome", nome);
+        intent.putExtra("idade", idade);
+        intent.putExtra("tamanho", tamanho);
+        intent.putExtra("cor", cor);
+        intent.putExtra("pecas", TextUtils.join(", ", pecas));
+        intent.putExtra("nota", nota);
+        startActivity(intent);
     }
 }

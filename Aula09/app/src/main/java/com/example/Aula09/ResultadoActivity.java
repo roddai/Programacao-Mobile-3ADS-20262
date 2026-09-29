@@ -2,34 +2,40 @@ package com.example.Aula09;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class ResultadoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_resultado);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
-        TextView tvResultado = findViewById(R.id.tvResultado);
+        TextView txtResultado = findViewById(R.id.txtResultado);
+        RatingBar rbResultado = findViewById(R.id.rbResultado);
         Button btnVoltar = findViewById(R.id.btnVoltar);
 
-        String resultado = getIntent(). getStringExtra("resultado");
-        tvResultado.setText(resultado);
+        // Recebe os dados enviados pelo formulário
+        String nome = getIntent().getStringExtra("nome");
+        String idade = getIntent().getStringExtra("idade");
+        String tamanho = getIntent().getStringExtra("tamanho");
+        String cor = getIntent().getStringExtra("cor");
+        String pecas = getIntent().getStringExtra("pecas");
+        float nota = getIntent().getFloatExtra("nota", 0);
+
+        String texto = "Nome: " + nome +
+                "\nIdade: " + idade +
+                "\nTamanho: " + tamanho +
+                "\nCor: " + cor +
+                "\nPeças: " + pecas +
+                "\nAvaliação: " + (int) nota + " estrela(s)";
+
+        txtResultado.setText(texto);
+        rbResultado.setRating(nota);
 
         btnVoltar.setOnClickListener(v -> finish());
-
-
-}}
+    }
+}

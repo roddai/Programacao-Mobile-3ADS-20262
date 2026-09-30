@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blu">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blu"
+        android:padding="25dp"
+        tools:context=".FormActivity">
+
+        <TextView
+            android:id="@+id/tvFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formulário"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite seu nome"
+            android:layout_marginTop="10dp"
+            android:background="@color/lightBlu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFormTitle"/>
+
+        <EditText
+            android:id="@+id/etIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite sua idade"
+            android:layout_marginTop="20dp"
+            android:background="@color/lightBlu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etNome"/>
+
+        <!--
+        <CheckBox
+            android:id="@+id/cbOpcao1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opção 1"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etIdade" />
+
+        <CheckBox
+            android:id="@+id/cbOpcao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opção 2"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbOpcao1" />
+        -->
+
+        <RadioGroup
+            android:id="@+id/rgTamanhos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etIdade" >
+
+            <RadioButton
+                android:id="@+id/rbP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P"
+                app:layout_constraintEnd_toStartOf="@id/rbM"
+                app:layout_constraintTop_toBottomOf="@id/etIdade" />
+
+            <RadioButton
+                android:id="@+id/rbM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M"
+                app:layout_constraintEnd_toStartOf="@id/rbG"
+                app:layout_constraintTop_toBottomOf="@id/etIdade" />
+
+            <RadioButton
+                android:id="@+id/rbG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rbM"
+                app:layout_constraintTop_toBottomOf="@id/etIdade" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvSpinnerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escolha uma cor"
+            android:background="@color/lightBlu"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgTamanhos"/>
+
+        <Spinner
+            android:id="@+id/spinnerCores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightBlu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSpinnerLabel" />
+
+        <TextView
+            android:id="@+id/tvRatingLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avalie nosso app"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbJaqueta"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRatingLabel" />
+
+        <Button
+            android:id="@+id/btnProximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:backgroundTint="@color/btnBlu"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+        <CheckBox
+            android:id="@+id/cbCamiseta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camiseta"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toStartOf="@id/cbCalca"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSpinnerLabel" />
+
+        <CheckBox
+            android:id="@+id/cbCalca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calça"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSpinnerLabel" />
+
+        <CheckBox
+            android:id="@+id/cbJaqueta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jaqueta"
+            app:layout_constraintEnd_toStartOf="@id/cbCalca"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbCamiseta" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

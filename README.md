@@ -3,8 +3,8 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Henrique Jorge Martins Figueiredo
+- RA: 24026809
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data

@@ -33,7 +33,7 @@ public class FormActivity extends AppCompatActivity {
         RadioGroup rgSize = findViewById(R.id.rgSize);
         Spinner spinnerCores  = findViewById(R.id.spCores);
         RatingBar ratingBar = findViewById(R.id.ratingBar);
-        Button btnEnviar = findViewById(R.id.btnCadastrar);
+        Button btnEnviar = findViewById(R.id.btnproximo);
 
         String[] cores = {"Vermelho", "Azul", "Verde", "Preto", "Branco"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cores);

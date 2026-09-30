@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Projeto Aula 09</string>
+    <string-array name="cores">
+        <item>Azul</item>
+        <item>Vermelho</item>
+        <item>Verde</item>
+    </string-array>
 </resources>

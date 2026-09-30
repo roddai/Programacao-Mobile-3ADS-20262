@@ -2,18 +2,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:padding="30dp">
-    <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tvForms"
@@ -50,19 +47,28 @@
         android:id="@+id/cbopcao1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Opção 1"
+        android:text="Camiseta"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edIdade" />
+        app:layout_constraintTop_toBottomOf="@id/spinnerCores" />
 
     <CheckBox
         android:id="@+id/cbopcao2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Opção 1"
+        android:text="Jaqueta"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cbopcao1" />
+
+    <CheckBox
+        android:id="@+id/cbopcao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calça"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbopcao2" />
 
     <RadioGroup
         android:id="@+id/rgsn"
@@ -70,19 +76,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cbopcao2" >
+        app:layout_constraintTop_toBottomOf="@id/edIdade" >
 
     <RadioButton
-        android:id="@+id/rbSim"
+        android:id="@+id/rbp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sim"/>
+        android:text="P"/>
 
         <RadioButton
-        android:id="@+id/rbNao"
+        android:id="@+id/rbm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Não"/>
+        android:text="M"/>
+
+        <RadioButton
+        android:id="@+id/rbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G"/>
 
     </RadioGroup>
 
@@ -102,26 +114,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvSpinnerLabel"/>
 
-    <ImageView
-        android:id="@+id/iv"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinnerCores"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btCarregarFoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Carregar foto"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv"/>
-
     <TextView
         android:id="@+id/tvrating"
         android:layout_width="match_parent"
@@ -129,7 +121,7 @@
         android:text="Avalie nosso app:"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btCarregarFoto" />
+        app:layout_constraintTop_toBottomOf="@id/cbopcao3" />
 
     <RatingBar
         android:id="@+id/ratingstars"
@@ -143,7 +135,7 @@
         android:id="@+id/btcadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"
+        android:text="Enviar"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

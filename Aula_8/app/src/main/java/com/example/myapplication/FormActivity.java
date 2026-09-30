@@ -30,14 +30,13 @@ public class FormActivity extends AppCompatActivity {
         EditText etIdade = findViewById(R.id.edIdade);
         CheckBox cbOpcao1 = findViewById(R.id.cbopcao1);
         CheckBox cbOpcao2 = findViewById(R.id.cbopcao2);
-        RadioButton rbSim = findViewById(R.id.rbSim);
-        RadioButton rbNao = findViewById(R.id.rbNao);
+        RadioButton rbp = findViewById(R.id.rbp);
+        RadioButton rbm = findViewById(R.id.rbm);
+        RadioButton rbg = findViewById(R.id.rbg);
         RadioGroup rgSimNao = findViewById(R.id.rgsn);
         Spinner spinnerCores   = findViewById(R.id.spinnerCores);
         RatingBar ratingBar = findViewById(R.id.ratingstars);
         Button btnEnviar = findViewById(R.id.btcadastrar);
-        Button btnCarregarFoto = findViewById(R.id.btCarregarFoto);
-        imageView = findViewById(R.id.iv);
 
         String[] cores = {"Vermelho", "Azul", "Verde"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cores);
@@ -52,9 +51,6 @@ public class FormActivity extends AppCompatActivity {
                     }
                 }
         );
-
-        btnCarregarFoto.setOnClickListener(v -> pickImageLauncher.launch("image/*"));
-
         btnEnviar.setOnClickListener(v -> {
 
             String nome = etNome.getText().toString();
@@ -64,7 +60,7 @@ public class FormActivity extends AppCompatActivity {
             if (cbOpcao1.isChecked()) opcoes += "Opção 1 ";
             if (cbOpcao2.isChecked()) opcoes += "Opção 2";
 
-            String simNao = rbSim.isChecked() ? "Sim" : rbNao.isChecked() ? "Não" : "N/A";
+            String simNao = rbp.isChecked() ? "Tamanho: P" : rbm.isChecked() ? "Tamanho: M" : "Tamanho: G";
 
             String corSelecionada = spinnerCores.getSelectedItem().toString();
             float avaliacao = ratingBar.getRating();
@@ -72,7 +68,6 @@ public class FormActivity extends AppCompatActivity {
             String resultado = "Nome: " + nome +
                     "\nIdade: " + idade +
                     "\nOpções marcadas: " + opcoes +
-                    "\nEscolha Sim/Não: " + simNao +
                     "\nCor escolhida: " + corSelecionada +
                     "\nAvaliação: " + avaliacao;
 

@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aula09">
         <activity
+            android:name=".ActivityForm"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityResultado"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

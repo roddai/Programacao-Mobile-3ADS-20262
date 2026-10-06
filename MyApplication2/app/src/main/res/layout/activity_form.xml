@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/txSelecioneOSexo"
+        android:id="@+id/txtSelecioneOSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selecione o seu sexo:"
@@ -62,7 +62,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txSelecioneOSexo">
+        app:layout_constraintTop_toBottomOf="@id/txtSelecioneOSexo">
 
         <RadioButton
             android:id="@+id/rbFeminino"
@@ -87,7 +87,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/txSelecioneUmaCor"
+        android:id="@+id/txtSelecioneUmaCor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selecione uma cor:"
@@ -101,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txSelecioneUmaCor"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelecioneUmaCor"
         android:layout_marginTop="10dp"/>
 
     <CheckBox
@@ -127,6 +127,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbHistoria"
         android:text="Relações Públicas"/>
+
+    <TextView
+        android:id="@+id/txtAvaliacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:text="Avalie o nosso atendimento:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbRP"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAvaliacao"/>
+
+    <Button
+        android:id="@+id/bntEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:backgroundTint="@color/rosaescuro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar"/>
+
 
 
 

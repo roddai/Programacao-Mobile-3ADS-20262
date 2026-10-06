@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        Button btnIniciar = findViewById(R.id.bntIniciar);
+
+        btnIniciar.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, com.example.myapplication.FormActivity.class);
+            startActivity(intent);
         });
     }
 }

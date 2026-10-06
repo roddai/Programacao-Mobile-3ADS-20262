@@ -1,6 +1,8 @@
 package com.example.provani1;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -15,7 +17,10 @@ public class SegundaTela extends AppCompatActivity {
 
     RadioGroup group1, group2, group3;
 
+    Button btn2;
+
     TextView text3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +33,22 @@ public class SegundaTela extends AppCompatActivity {
             return insets;
         });
 
+        int val1 = 3;
+        int val2 = 6;
+
        group1 = findViewById(R.id.group1);
        group2 = findViewById(R.id.group2);
        group3 = findViewById(R.id.group3);
 
-       text3 = findViewById(R.id.text3);
+       btn2 = findViewById(R.id.btn2);
 
-       int resultado = group1.getCheckedRadioButtonId() + group2.getCheckedRadioButtonId() + group3.getCheckedRadioButtonId();
+       btn2.setOnClickListener(v -> {
+           int resultado = group1.getCheckedRadioButtonId() + (group2.getCheckedRadioButtonId()-val1) + (group3.getCheckedRadioButtonId()-val2);
 
-       text3.setText(resultado);
+           Intent intent = new Intent(SegundaTela.this,TerceiraTela.class);
+           intent.putExtra("resultado", resultado);
+           startActivity(intent);
+       });
 
     }
 }

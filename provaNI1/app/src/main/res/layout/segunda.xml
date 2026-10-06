@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Hello World!"
+        android:text="Que tipo de filme você prefere?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton1" />
+            android:text="Filmes engraçados e leves" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -110,5 +110,19 @@
             android:text="RadioButton3" />
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="60dp"
+        android:textSize="20sp"
+        android:text="Resultado."
+        android:textStyle="italic"
+        android:backgroundTint="@color/btnc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

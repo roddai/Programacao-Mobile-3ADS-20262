@@ -30,7 +30,7 @@ public class SegundaTela extends AppCompatActivity {
         btn2 = findViewById(R.id.btn2);
 
         int resultado = getIntent().getIntExtra("resultado", 0);
-        text1.setText(String.valueOf(resultado));
+        text1.setText(String.valueOf("A soma da: "+ resultado));
 
         btn2.setOnClickListener(v -> {
             finish();

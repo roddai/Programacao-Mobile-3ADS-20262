@@ -8,15 +8,27 @@
     tools:context=".ResultadoActivity">
 
     <TextView
+        android:id="@+id/txtResultado1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado:"
         android:textSize="30dp"
+        android:text="Resultado:"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="380dp"
+        android:layout_height="580dp"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado1"/>
 
     <Button
         android:id="@+id/bntVoltar"

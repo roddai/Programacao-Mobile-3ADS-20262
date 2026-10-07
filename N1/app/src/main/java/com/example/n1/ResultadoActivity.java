@@ -1,6 +1,8 @@
 package com.example.n1;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,28 @@ public class ResultadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_resultado);
+
+        TextView txtResultado = findViewById(R.id.txtResultado);
+        Button bntVoltar = findViewById(R.id.bntVoltar);
+
+
+        int pontuacao = getIntent().getIntExtra("pontuacao", 0);
+
+        String mensagem;
+
+        if (pontuacao <= 3) {
+            mensagem = "Você deve assistir uma comédia leve e divertida!";
+        } else if (pontuacao <= 6) {
+            mensagem = "Você deve assistir um filme de ação emocionante!";
+        } else {
+            mensagem = "Você deve assistir um suspense cheio de mistérios!";
+        }
+
+        txtResultado.setText(mensagem);
+
+
+        bntVoltar.setOnClickListener(v -> finish());
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

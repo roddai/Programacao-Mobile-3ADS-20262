@@ -30,9 +30,6 @@ public class ResultActivity extends AppCompatActivity {
         Msg = findViewById(R.id.tvMensagem);
         Voltar = findViewById(R.id.btnVoltar);
 
-
-        Voltar.setOnClickListener(v -> finish());
-
         soma = getIntent().getIntExtra("resultado",0);
 
         if ((soma >= 1) && (soma <=3))
@@ -43,6 +40,8 @@ public class ResultActivity extends AppCompatActivity {
         {Msg.setText("Você deve assistir um suspense cheio de mistérios!");}
         else if ((soma < 1) || (soma > 9))
         {Msg.setText("Ocorreu um erro na avaliação.\nResultado do quiz: "+soma);}
+
+        Voltar.setOnClickListener(v -> finish());
 
     }
 }

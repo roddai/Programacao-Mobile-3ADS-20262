@@ -16,7 +16,7 @@ public class QuizActivity extends AppCompatActivity {
 
     RadioGroup Perguntas1, Perguntas2, Perguntas3;
     RadioButton P1R1, P1R2, P1R3, P2R1, P2R2, P2R3, P3R1, P3R2, P3R3;
-    Button Enviar;
+    Button Enviar, Voltar;
 
     Integer soma = 0;
 

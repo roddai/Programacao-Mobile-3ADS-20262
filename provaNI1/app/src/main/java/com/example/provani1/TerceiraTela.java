@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class TerceiraTela extends AppCompatActivity {
-    TextView text6;
+    TextView text7;
 
     Button btn3;
 
@@ -26,11 +26,21 @@ public class TerceiraTela extends AppCompatActivity {
             return insets;
         });
 
-        text6 = findViewById(R.id.text6);
-
+        text7 = findViewById(R.id.text7);
         btn3 = findViewById(R.id.btn3);
 
-        text6.setText(String.valueOf(getIntent().getIntExtra("resultado", 0)));
+        int res = getIntent().getIntExtra("resultado", 0);
+
+        if(res>0 && res<4){
+            text7.setText("Você deve assistir uma comédia leve e divertida!");
+        }else if(res>=4 && res<7){
+            text7.setText("Você deve assistir um filme de ação emocionante!");
+        }else if(res>=7 && res<10){
+            text7.setText("Você deve assistir um suspense cheio de mistérios!");
+        }else{
+            text7.setText("Marque uma opção no formulário anterior!");
+        }
+
 
         btn3.setOnClickListener(v -> {
             finish();

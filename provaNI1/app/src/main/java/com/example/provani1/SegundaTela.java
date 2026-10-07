@@ -32,18 +32,22 @@ public class SegundaTela extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        int val1 = 3;
-        int val2 = 6;
-
-       group1 = findViewById(R.id.group1);
-       group2 = findViewById(R.id.group2);
-       group3 = findViewById(R.id.group3);
+        group1 = findViewById(R.id.group1);
+        group2 = findViewById(R.id.group2);
+        group3 = findViewById(R.id.group3);
 
        btn2 = findViewById(R.id.btn2);
 
        btn2.setOnClickListener(v -> {
-           int resultado = group1.getCheckedRadioButtonId() + (group2.getCheckedRadioButtonId()-val1) + (group3.getCheckedRadioButtonId()-val2);
+           int val1 = group1.getCheckedRadioButtonId();
+           int val2 = group2.getCheckedRadioButtonId();
+           int val3 = group3.getCheckedRadioButtonId();
+
+           if(val1>0){ val1=group1.getCheckedRadioButtonId(); }else{ val1=0; }
+           if(val2>3){ val2=val2-3; }else{ val2=0; }
+           if(val3>6){ val3=val3-6; }else{ val3=0; }
+
+           int resultado = val1+val2+val3;
 
            Intent intent = new Intent(SegundaTela.this,TerceiraTela.class);
            intent.putExtra("resultado", resultado);

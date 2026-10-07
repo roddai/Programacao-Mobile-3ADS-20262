@@ -10,24 +10,25 @@
     android:background="@color/back">
 
     <TextView
-        android:id="@+id/text1"
+        android:id="@id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="120dp"
         android:text="Recomendador de Filmes"
-        android:textSize="26sp"
+        android:textColor="@color/black"
         android:textStyle="bold"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:paddingHorizontal="30dp"
+        android:text="Compartilhe e receba recomendações de filme de outras pessoas que também estão a procura de um bom filme fim de tarde. Vamos explorar?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1" />
@@ -36,14 +37,14 @@
         android:id="@+id/btn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginHorizontal="60dp"
         android:textSize="20sp"
-        android:text="Iniciar."
+        android:text="Iniciar"
         android:textStyle="italic"
         android:backgroundTint="@color/btnc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text2" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

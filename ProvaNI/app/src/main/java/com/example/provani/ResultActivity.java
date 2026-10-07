@@ -1,6 +1,8 @@
 package com.example.provani;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ResultActivity extends AppCompatActivity {
+
+    TextView Msg;
+    Button Voltar;
+    Integer soma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,18 +26,23 @@ public class ResultActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Msg = findViewById(R.id.tvMensagem);
+        Voltar = findViewById(R.id.btnVoltar);
+
+
+        Voltar.setOnClickListener(v -> finish());
+
+        soma = getIntent().getIntExtra("resultado",0);
+
+        if ((soma >= 1) && (soma <=3))
+        {Msg.setText("Você deve assistir uma comédia leve e divertida!");}
+        else if ((soma > 3) && (soma <=6))
+        {Msg.setText("Você deve assistir um filme de ação emocionante!");}
+        else if ((soma > 6) && (soma <=9))
+        {Msg.setText("Você deve assistir um suspense cheio de mistérios!");}
+        else if ((soma < 1) || (soma > 9))
+        {Msg.setText("Ocorreu um erro na avaliação.\nResultado do quiz: "+soma);}
+
     }
 }
-
-
-
-   /* Intent intent = getIntent();
-
-    double resultado = intent.getDoubleExtra("tvResultado", 0.0);
-
-        tvResultado.setText(String.valueOf(resultado));
-}
-Intent intent = new Intent(MainActivity.this, ResultActivity.class);
-            intent.putExtra("tvResultado", resultado);
-startActivity(intent);
-}*/

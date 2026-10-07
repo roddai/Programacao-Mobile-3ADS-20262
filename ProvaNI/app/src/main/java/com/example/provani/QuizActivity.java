@@ -31,18 +31,14 @@ public class QuizActivity extends AppCompatActivity {
             return insets;
         });
 
-
-        Perguntas1 = findViewById(R.id.rgRespostas1);
         P1R1 = findViewById(R.id.rbR1resp1);
         P1R2 = findViewById(R.id.rbR1resp2);
         P1R3 = findViewById(R.id.rbR1resp3);
 
-        Perguntas2 = findViewById(R.id.rgRespostas2);
         P2R1 = findViewById(R.id.rbR2resp1);
         P2R2 = findViewById(R.id.rbR2resp2);
         P2R3 = findViewById(R.id.rbR2resp3);
 
-        Perguntas3 = findViewById(R.id.rgRespostas3);
         P3R1 = findViewById(R.id.rbR3resp1);
         P3R2 = findViewById(R.id.rbR3resp2);
         P3R3 = findViewById(R.id.rbR3resp3);
@@ -51,33 +47,29 @@ public class QuizActivity extends AppCompatActivity {
         Enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent irQuiz = new Intent(QuizActivity.this, ResultActivity.class);
+                Intent irRes = new Intent(QuizActivity.this, ResultActivity.class);
+                soma = 0;
 
-                if(P1R1.isChecked())
-                {soma+=1;}
-                if(P1R2.isChecked())
-                {soma+=2;}
-                if(P1R2.isChecked())
-                {soma+=3;}
+                if(P1R1.isChecked()){soma+=1;}
+                else if(P1R2.isChecked()){soma+=2;}
+                else if(P1R3.isChecked()){soma+=3;}
                 else
+                {soma+=0;}
 
-                if(P2R1.isChecked())
-                {soma+=1;}
-                if(P2R2.isChecked())
-                {soma+=2;}
-                if(P2R2.isChecked())
-                {soma+=3;}
-                else{soma+=0;}
+                if(P2R1.isChecked()){soma+=1;}
+                else if(P2R2.isChecked()){soma+=2;}
+                else if(P2R3.isChecked()){soma+=3;}
+                else
+                {soma+=0;}
 
-                if(P3R1.isChecked())
-                {soma+=1;}
-                if(P3R2.isChecked())
-                {soma+=2;}
-                if(P3R2.isChecked())
-                {soma+=3;}
-                else{soma+=0;}
+                if(P3R1.isChecked()){soma+=1;}
+                else if(P3R2.isChecked()){soma+=2;}
+                else if(P3R3.isChecked()){soma+=3;}
+                else
+                {soma+=0;}
 
-                startActivity(irQuiz);
+                irRes.putExtra("resultado", soma);
+                startActivity(irRes);
             }
         });
     }

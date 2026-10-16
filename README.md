@@ -3,12 +3,12 @@
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Cauã Aono
+- RA: 25028199
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data
-- Data da criação: 04/08/2026
+- Data da criação: 10/08/2026
 
 ## 📂 Estrutura do projeto
 

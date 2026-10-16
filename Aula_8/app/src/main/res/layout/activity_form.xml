@@ -1,0 +1,146 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvForms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formulário"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edNome"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:hint="Digite seu nome completo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvForms" />
+
+    <EditText
+        android:id="@+id/edIdade"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:hint="Digite sua idade"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edNome" />
+
+    <CheckBox
+        android:id="@+id/cbopcao1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camiseta"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCores" />
+
+    <CheckBox
+        android:id="@+id/cbopcao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jaqueta"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbopcao1" />
+
+    <CheckBox
+        android:id="@+id/cbopcao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calça"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbopcao2" />
+
+    <RadioGroup
+        android:id="@+id/rgsn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edIdade" >
+
+    <RadioButton
+        android:id="@+id/rbp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P"/>
+
+        <RadioButton
+        android:id="@+id/rbm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M"/>
+
+        <RadioButton
+        android:id="@+id/rbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvSpinnerLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escolha uma cor"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgsn" />
+
+    <Spinner
+        android:id="@+id/spinnerCores"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSpinnerLabel"/>
+
+    <TextView
+        android:id="@+id/tvrating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avalie nosso app:"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbopcao3" />
+
+    <RatingBar
+        android:id="@+id/ratingstars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stepSize="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvrating"/>
+
+    <Button
+        android:id="@+id/btcadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingstars"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

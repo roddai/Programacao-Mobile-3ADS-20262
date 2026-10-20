@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formulário"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Digite seu nome"
+            app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+        <EditText
+            android:id="@+id/etIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite sua idade"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/etNome" />
+
+        <RadioGroup
+            android:id="@+id/rgTamanho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/etIdade"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioButton
+                android:id="@+id/rbP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P" />
+
+            <RadioButton
+                android:id="@+id/rbM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M" />
+
+            <RadioButton
+                android:id="@+id/rbG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvCor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Escolha uma cor"
+            app:layout_constraintTop_toBottomOf="@id/rgTamanho"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/spCor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/cores"
+            app:layout_constraintTop_toBottomOf="@id/tvCor" />
+
+        <CheckBox
+            android:id="@+id/cbCamiseta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Camiseta"
+            app:layout_constraintTop_toBottomOf="@id/spCor"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/cbCalca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calça"
+            app:layout_constraintTop_toTopOf="@id/cbCamiseta"
+            app:layout_constraintStart_toEndOf="@id/cbCamiseta" />
+
+        <CheckBox
+            android:id="@+id/cbJaqueta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jaqueta"
+            app:layout_constraintTop_toBottomOf="@id/cbCamiseta"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAvalie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Avalie o atendimento"
+            app:layout_constraintTop_toBottomOf="@id/cbJaqueta"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            app:layout_constraintTop_toBottomOf="@id/tvAvalie"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Enviar"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

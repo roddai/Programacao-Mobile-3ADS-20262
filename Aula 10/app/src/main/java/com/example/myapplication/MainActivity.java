@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,12 +34,14 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Ajuste para telas modernas (notch/barras de sistema)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        View mainView = findViewById(R.id.main);
+        if (mainView != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(mainView, (v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+                return insets;
+            });
+        }
 
         // Inicialização dos componentes
         etCep = findViewById(R.id.etCep);
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         tvLogradouro = findViewById(R.id.tvLogradouro);
 
         btnBuscar.setOnClickListener(v -> {
-            // Limpa o CEP: Remove qualquer coisa que não seja número (ex: 08450-350 vira 08450350)
+            // Limpa o input: remove qualquer caractere que não seja número
             String cepLimpo = etCep.getText().toString().replaceAll("[^0-9]", "");
 
             if (cepLimpo.length() == 8) {
@@ -60,18 +63,28 @@ public class MainActivity extends AppCompatActivity {
 
     private void consultarCepReal(String cep) {
         // Feedback visual imediato
-        tvLogradouro.setText("Buscando dados na nuvem...");
-        btnBuscar.setEnabled(false); // Desabilita o botão para evitar múltiplos cliques
+        tvLogradouro.setText("Buscando dados (Rede Escola)...");
+        btnBuscar.setEnabled(false);
 
         new Thread(() -> {
+            HttpURLConnection conexao = null;
             try {
-                // ViaCEP aceita HTTPS, que é mais estável
-                URL url = new URL("https://viacep.com.br/ws/" + cep + "/json/");
-                HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
+                // TÉCNICA SÊNIOR PARA FIREWALL DE ESCOLA:
+                // 1. Usamos HTTP (porta 80) em vez de HTTPS para evitar bloqueios de certificados SSL ou inspeção profunda.
+                // 2. Definimos User-Agent para simular um navegador comum (muitos firewalls barram scripts "puros").
+                // 3. Aumentamos o Timeout para 20 segundos (redes escolares são instáveis).
+                URL url = new URL("http://viacep.com.br/ws/" + cep + "/json/");
+                conexao = (HttpURLConnection) url.openConnection();
                 conexao.setRequestMethod("GET");
-                conexao.setConnectTimeout(8000); // 8 segundos de limite
+                conexao.setConnectTimeout(20000); 
+                conexao.setReadTimeout(20000);
+                
+                // Simula um navegador Chrome no Windows
+                conexao.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
 
-                if (conexao.getResponseCode() == 200) {
+                int responseCode = conexao.getResponseCode();
+                
+                if (responseCode == HttpURLConnection.HTTP_OK) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
                     StringBuilder resposta = new StringBuilder();
                     String linha;
@@ -85,13 +98,13 @@ public class MainActivity extends AppCompatActivity {
                     if (json.has("erro")) {
                         atualizarInterface("⚠️ CEP não encontrado!", true);
                     } else {
-                        // Extração de todos os dados reais solicitados
+                        // Extração detalhada de todos os campos reais
                         String rua = json.optString("logradouro", "Não informado");
                         String bairro = json.optString("bairro", "Não informado");
                         String cidade = json.optString("localidade", "Não informado");
                         String uf = json.optString("uf", "N/A");
 
-                        // Formatação final elegante
+                        // Formatação final profissional
                         String resultadoFormatado = String.format(
                                 "📍 Logradouro: %s\n🏠 Bairro: %s\n🏙️ Cidade: %s\n🏳️ Estado: %s",
                                 rua, bairro, cidade, uf
@@ -100,12 +113,20 @@ public class MainActivity extends AppCompatActivity {
                         atualizarInterface(resultadoFormatado, true);
                     }
                 } else {
-                    atualizarInterface("Erro de conexão com o servidor.", true);
+                    atualizarInterface("Erro no servidor da escola: " + responseCode, true);
                 }
 
+            } catch (java.net.UnknownHostException e) {
+                Log.e("ERRO_CEP", "DNS fail", e);
+                atualizarInterface("O firewall da escola bloqueou o acesso. Dica: Use o roteador do seu celular.", true);
+            } catch (java.net.SocketTimeoutException e) {
+                Log.e("ERRO_CEP", "Timeout", e);
+                atualizarInterface("Tempo esgotado. A internet da escola está muito lenta.", true);
             } catch (Exception e) {
-                Log.e("ERRO_CEP", "Falha ao buscar", e);
-                atualizarInterface("Falha na rede. Verifique sua internet.", true);
+                Log.e("ERRO_CEP", "Falha geral", e);
+                atualizarInterface("Falha na rede. Verifique seu Wi-Fi ou firewall.", true);
+            } finally {
+                if (conexao != null) conexao.disconnect();
             }
         }).start();
     }

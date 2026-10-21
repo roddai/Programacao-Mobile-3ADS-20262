@@ -16,4 +16,6 @@
     <string name="label_ddd">DDD</string>
     <string name="resultado_logradouro">Aguardando busca...</string>
     <string name="vazio">-</string>
+    <string name="btn_salvar">Salvar Informações</string>
+    <string name="msg_salvo">Informações salvas com sucesso!</string>
 </resources>

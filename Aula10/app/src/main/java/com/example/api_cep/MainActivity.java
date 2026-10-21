@@ -34,7 +34,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private TextInputEditText etCep, etNumero, etComplemento;
-    private Button btnBuscar;
+    private Button btnBuscar, btnSalvar;
     
     // TextViews para os resultados vindos da API
     private TextView tvLogradouro, tvBairro, tvLocalidade, 
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         // Inicialização dos componentes de busca
         etCep = findViewById(R.id.etCep);
         btnBuscar = findViewById(R.id.btnBuscar);
+        btnSalvar = findViewById(R.id.btnSalvar);
 
         // Inicialização dos campos de resultado (API)
         tvLogradouro = findViewById(R.id.tvLogradouro);
@@ -85,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 etCep.setError("O CEP deve ter 8 dígitos");
             }
+        });
+
+        btnSalvar.setOnClickListener(v -> {
+            // Lógica para salvar as informações
+            String resultado = "Dados de " + tvLogradouro.getText() + " salvos com sucesso!";
+            Toast.makeText(this, resultado, Toast.LENGTH_LONG).show();
         });
     }
 
@@ -128,12 +135,10 @@ public class MainActivity extends AppCompatActivity {
         tvRegiao.setText(dados.getRegiao());
         tvDdd.setText(dados.getDdd());
         
-        // Se a API trouxer algum complemento, preenchemos, senão deixamos para o usuário
         if (dados.getComplemento() != null && !dados.getComplemento().isEmpty()) {
             etComplemento.setText(dados.getComplemento());
         }
 
-        // Foca no campo de número para o usuário continuar o preenchimento
         etNumero.requestFocus();
     }
 

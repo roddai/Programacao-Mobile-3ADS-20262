@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -24,9 +23,8 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextInputEditText etCep;
+    private TextInputEditText etCep, etRua, etNumero, etBairro, etCidade, etEstado, etComplemento, etRegiao, etDdd;
     private Button btnBuscar;
-    private TextView tvLogradouro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +44,15 @@ public class MainActivity extends AppCompatActivity {
         // Inicialização dos componentes
         etCep = findViewById(R.id.etCep);
         btnBuscar = findViewById(R.id.btnBuscar);
-        tvLogradouro = findViewById(R.id.tvLogradouro);
+        
+        etRua = findViewById(R.id.etRua);
+        etNumero = findViewById(R.id.etNumero);
+        etBairro = findViewById(R.id.etBairro);
+        etCidade = findViewById(R.id.etCidade);
+        etEstado = findViewById(R.id.etEstado);
+        etComplemento = findViewById(R.id.etComplemento);
+        etRegiao = findViewById(R.id.etRegiao);
+        etDdd = findViewById(R.id.etDdd);
 
         btnBuscar.setOnClickListener(v -> {
             // Limpa o input: remove qualquer caractere que não seja número
@@ -63,24 +69,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void consultarCepReal(String cep) {
         // Feedback visual imediato
-        tvLogradouro.setText("Buscando dados (Rede Escola)...");
         btnBuscar.setEnabled(false);
+        btnBuscar.setText("Buscando...");
 
         new Thread(() -> {
             HttpURLConnection conexao = null;
             try {
-                // TÉCNICA SÊNIOR PARA FIREWALL DE ESCOLA:
-                // 1. Usamos HTTP (porta 80) em vez de HTTPS para evitar bloqueios de certificados SSL ou inspeção profunda.
-                // 2. Definimos User-Agent para simular um navegador comum (muitos firewalls barram scripts "puros").
-                // 3. Aumentamos o Timeout para 20 segundos (redes escolares são instáveis).
+                // TÉCNICA SÊNIOR PARA REDE DE ESCOLA: Usamos HTTP e User-Agent para evitar bloqueios.
                 URL url = new URL("http://viacep.com.br/ws/" + cep + "/json/");
                 conexao = (HttpURLConnection) url.openConnection();
                 conexao.setRequestMethod("GET");
                 conexao.setConnectTimeout(20000); 
                 conexao.setReadTimeout(20000);
                 
-                // Simula um navegador Chrome no Windows
-                conexao.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
+                conexao.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36");
 
                 int responseCode = conexao.getResponseCode();
                 
@@ -96,47 +98,52 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject json = new JSONObject(resposta.toString());
 
                     if (json.has("erro")) {
-                        atualizarInterface("⚠️ CEP não encontrado!", true);
+                        mostrarErroNoMainThread("⚠️ CEP não encontrado!");
                     } else {
-                        // Extração detalhada de todos os campos reais
-                        String rua = json.optString("logradouro", "Não informado");
-                        String bairro = json.optString("bairro", "Não informado");
-                        String cidade = json.optString("localidade", "Não informado");
-                        String uf = json.optString("uf", "N/A");
+                        // Extração de todos os dados reais
+                        String rua = json.optString("logradouro", "");
+                        String bairro = json.optString("bairro", "");
+                        String cidade = json.optString("localidade", "");
+                        String uf = json.optString("uf", "");
+                        String complemento = json.optString("complemento", "");
+                        String regiao = json.optString("regiao", "");
+                        String ddd = json.optString("ddd", "");
 
-                        // Formatação final profissional
-                        String resultadoFormatado = String.format(
-                                "📍 Logradouro: %s\n🏠 Bairro: %s\n🏙️ Cidade: %s\n🏳️ Estado: %s",
-                                rua, bairro, cidade, uf
-                        );
-
-                        atualizarInterface(resultadoFormatado, true);
+                        runOnUiThread(() -> {
+                            // Preenchendo os EditTexts com os dados da API
+                            etRua.setText(rua);
+                            etBairro.setText(bairro);
+                            etCidade.setText(cidade);
+                            etEstado.setText(uf);
+                            etComplemento.setText(complemento);
+                            etRegiao.setText(regiao);
+                            etDdd.setText(ddd);
+                            
+                            // Foca no campo número para o usuário completar o cadastro
+                            etNumero.requestFocus();
+                            
+                            btnBuscar.setEnabled(true);
+                            btnBuscar.setText("buscar cep");
+                        });
                     }
                 } else {
-                    atualizarInterface("Erro no servidor da escola: " + responseCode, true);
+                    mostrarErroNoMainThread("Erro no servidor: " + responseCode);
                 }
 
-            } catch (java.net.UnknownHostException e) {
-                Log.e("ERRO_CEP", "DNS fail", e);
-                atualizarInterface("O firewall da escola bloqueou o acesso. Dica: Use o roteador do seu celular.", true);
-            } catch (java.net.SocketTimeoutException e) {
-                Log.e("ERRO_CEP", "Timeout", e);
-                atualizarInterface("Tempo esgotado. A internet da escola está muito lenta.", true);
             } catch (Exception e) {
-                Log.e("ERRO_CEP", "Falha geral", e);
-                atualizarInterface("Falha na rede. Verifique seu Wi-Fi ou firewall.", true);
+                Log.e("ERRO_CEP", "Falha na rede", e);
+                mostrarErroNoMainThread("Falha na rede. O firewall da escola pode estar bloqueando.");
             } finally {
                 if (conexao != null) conexao.disconnect();
             }
         }).start();
     }
 
-    private void atualizarInterface(String mensagem, boolean reativarBotao) {
+    private void mostrarErroNoMainThread(String mensagem) {
         runOnUiThread(() -> {
-            tvLogradouro.setText(mensagem);
-            if (reativarBotao) {
-                btnBuscar.setEnabled(true);
-            }
+            Toast.makeText(MainActivity.this, mensagem, Toast.LENGTH_LONG).show();
+            btnBuscar.setEnabled(true);
+            btnBuscar.setText("buscar cep");
         });
     }
 }

@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -27,9 +25,11 @@ import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextInputEditText editTextCep;
+    private TextInputEditText editTextCep, editTextLogradouro, editTextNumero, editTextComplemento,
+            editTextBairro, editTextCidade, editTextUf, editTextEstado, editTextRegiao, editTextDdd;
     private Button buttonBuscar;
-    private TextView textViewLogradouro;
+    private TextView textViewStatus;
+    
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
     private final Handler handler = new Handler(Looper.getMainLooper());
 
@@ -45,32 +45,38 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Inicializando todos os campos
         editTextCep = findViewById(R.id.editTextCep);
         buttonBuscar = findViewById(R.id.buttonBuscar);
-        textViewLogradouro = findViewById(R.id.textViewLogradouro);
+        
+        editTextLogradouro = findViewById(R.id.editTextLogradouro);
+        editTextNumero = findViewById(R.id.editTextNumero);
+        editTextComplemento = findViewById(R.id.editTextComplemento);
+        editTextBairro = findViewById(R.id.editTextBairro);
+        editTextCidade = findViewById(R.id.editTextCidade);
+        editTextUf = findViewById(R.id.editTextUf);
+        editTextEstado = findViewById(R.id.editTextEstado);
+        editTextRegiao = findViewById(R.id.editTextRegiao);
+        editTextDdd = findViewById(R.id.editTextDdd);
+        textViewStatus = findViewById(R.id.textViewStatus);
 
         buttonBuscar.setOnClickListener(v -> {
             String cep = editTextCep.getText().toString().trim();
             if (cep.length() == 8) {
                 buscarCep(cep);
             } else {
-                editTextCep.setError("Digite um CEP válido com 8 dígitos");
+                editTextCep.setError("CEP inválido");
             }
         });
     }
 
     private void buscarCep(String cep) {
-        textViewLogradouro.setText("Buscando...");
-        
+        textViewStatus.setText("Buscando...");
         executorService.execute(() -> {
-            String result = "";
             try {
-                // Utilizando HTTP para evitar problemas de SSL em dispositivos de teste
                 URL url = new URL("http://viacep.com.br/ws/" + cep + "/json/");
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
-                connection.setConnectTimeout(5000);
-                connection.setReadTimeout(5000);
 
                 if (connection.getResponseCode() == 200) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -80,47 +86,39 @@ public class MainActivity extends AppCompatActivity {
                         response.append(line);
                     }
                     reader.close();
-                    result = response.toString();
-                    
-                    JSONObject jsonObject = new JSONObject(result);
-                    if (jsonObject.has("erro")) {
-                        updateUI("CEP não encontrado.");
+
+                    JSONObject json = new JSONObject(response.toString());
+                    if (json.has("erro")) {
+                        updateUI(null, "CEP não encontrado.");
                     } else {
-                        String logradouro = jsonObject.optString("logradouro", "");
-                        String complemento = jsonObject.optString("complemento", "");
-                        String bairro = jsonObject.optString("bairro", "");
-                        String localidade = jsonObject.optString("localidade", "");
-                        String uf = jsonObject.optString("uf", "");
-                        String estado = jsonObject.optString("estado", "");
-                        String regiao = jsonObject.optString("regiao", "");
-                        String ddd = jsonObject.optString("ddd", "");
-                        
-                        StringBuilder sb = new StringBuilder();
-                        if (!logradouro.isEmpty()) sb.append("Logradouro: ").append(logradouro).append("\n");
-                        if (!complemento.isEmpty()) sb.append("Complemento: ").append(complemento).append("\n");
-                        if (!bairro.isEmpty()) sb.append("Bairro: ").append(bairro).append("\n");
-                        if (!localidade.isEmpty()) sb.append("Localidade: ").append(localidade).append("\n");
-                        if (!uf.isEmpty()) sb.append("UF: ").append(uf).append("\n");
-                        if (!estado.isEmpty()) sb.append("Estado: ").append(estado).append("\n");
-                        if (!regiao.isEmpty()) sb.append("Região: ").append(regiao).append("\n");
-                        if (!ddd.isEmpty()) sb.append("DDD: ").append(ddd);
-                        
-                        updateUI(sb.toString().trim());
+                        updateUI(json, "CEP localizado com sucesso!");
                     }
                 } else {
-                    updateUI("Erro na conexão: " + connection.getResponseCode());
+                    updateUI(null, "Erro na conexão.");
                 }
-                connection.disconnect();
-
             } catch (Exception e) {
-                e.printStackTrace();
-                updateUI("Erro ao buscar CEP: " + e.getMessage());
+                updateUI(null, "Erro: " + e.getMessage());
             }
         });
     }
 
-    private void updateUI(String message) {
-        handler.post(() -> textViewLogradouro.setText(message));
+    private void updateUI(JSONObject json, String status) {
+        handler.post(() -> {
+            textViewStatus.setText(status);
+            if (json != null) {
+                editTextLogradouro.setText(json.optString("logradouro"));
+                editTextBairro.setText(json.optString("bairro"));
+                editTextCidade.setText(json.optString("localidade"));
+                editTextUf.setText(json.optString("uf"));
+                editTextEstado.setText(json.optString("estado"));
+                editTextRegiao.setText(json.optString("regiao"));
+                editTextDdd.setText(json.optString("ddd"));
+                editTextComplemento.setText(json.optString("complemento"));
+                
+                // Foca no número para o usuário preencher
+                editTextNumero.requestFocus();
+            }
+        });
     }
 
     @Override

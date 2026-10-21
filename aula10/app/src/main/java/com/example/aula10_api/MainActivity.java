@@ -12,13 +12,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
 import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
@@ -31,9 +31,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextInputEditText etCep;
+    private TextInputEditText etCep, etLogradouro, etNumero, etComplemento, etBairro, etCidade, etUf, etEstado, etRegiao, etDdd;
     private MaterialButton btnBuscar;
-    private TextView tvLogradouro, tvBairro, tvCidade, tvEstado;
+    private TextView tvStatus;
+    private FloatingActionButton fabMenu;
     private ViaCepService viaCepService;
 
     @Override
@@ -42,21 +43,17 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        // Ajuste de Padding para o Layout Edge-to-Edge - Corrigido para main_layout
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_layout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // Inicializando componentes
-        etCep = findViewById(R.id.etCep);
-        btnBuscar = findViewById(R.id.btnBuscar);
-        tvLogradouro = findViewById(R.id.tvLogradouro);
-        tvBairro = findViewById(R.id.tvBairro);
-        tvCidade = findViewById(R.id.tvCidade);
-        tvEstado = findViewById(R.id.tvEstado);
+        // Inicialização dos Componentes
+        inicializarComponentes();
 
-        // Configuração do Retrofit (HTTP + Unsafe Client para rede da faculdade)
+        // Configuração do Retrofit (HTTP + Unsafe Client para ignorar proxy da faculdade)
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://viacep.com.br/") 
                 .client(getUnsafeOkHttpClient())
@@ -65,23 +62,43 @@ public class MainActivity extends AppCompatActivity {
 
         viaCepService = retrofit.create(ViaCepService.class);
 
+        // Ação do Botão Buscar
         btnBuscar.setOnClickListener(v -> {
             String cep = etCep.getText().toString().trim();
-            if (validarCep(cep)) {
+            if (cep.length() == 8) {
                 buscarCep(cep);
             } else {
-                etCep.setError("Digite um CEP válido");
+                etCep.setError("CEP deve ter 8 dígitos");
             }
+        });
+
+        // Ação do Botão Flutuante (Limpar campos)
+        fabMenu.setOnClickListener(v -> {
+            limparCampos();
+            etCep.setText("");
+            tvStatus.setText("Campos limpos");
+            Toast.makeText(this, "Formulário resetado", Toast.LENGTH_SHORT).show();
         });
     }
 
-    private boolean validarCep(String cep) {
-        return cep != null && cep.length() == 8 && cep.matches("\\d+");
+    private void inicializarComponentes() {
+        etCep = findViewById(R.id.etCep);
+        btnBuscar = findViewById(R.id.btnBuscar);
+        etLogradouro = findViewById(R.id.etLogradouro);
+        etNumero = findViewById(R.id.etNumero);
+        etComplemento = findViewById(R.id.etComplemento);
+        etBairro = findViewById(R.id.etBairro);
+        etCidade = findViewById(R.id.etCidade);
+        etUf = findViewById(R.id.etUf);
+        etEstado = findViewById(R.id.etEstado);
+        etRegiao = findViewById(R.id.etRegiao);
+        etDdd = findViewById(R.id.etDdd);
+        tvStatus = findViewById(R.id.tvStatus);
+        fabMenu = findViewById(R.id.fabMenu);
     }
 
     private void buscarCep(String cep) {
-        limparCampos();
-        tvLogradouro.setText("Buscando...");
+        tvStatus.setText("Buscando...");
         btnBuscar.setEnabled(false);
 
         viaCepService.buscarCep(cep).enqueue(new Callback<CepResponse>() {
@@ -91,34 +108,50 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     CepResponse res = response.body();
                     if (res.isErro()) {
-                        tvLogradouro.setText("CEP não encontrado.");
+                        tvStatus.setText("CEP não encontrado.");
+                        limparCampos();
                     } else {
-                        tvLogradouro.setText(res.getLogradouro());
-                        tvBairro.setText(res.getBairro());
-                        tvCidade.setText(res.getLocalidade());
-                        tvEstado.setText(res.getUf());
+                        preencherCampos(res);
+                        tvStatus.setText("CEP localizado com sucesso!");
                     }
                 } else {
-                    tvLogradouro.setText("Erro na resposta.");
+                    tvStatus.setText("Erro na resposta do servidor.");
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<CepResponse> call, @NonNull Throwable t) {
                 btnBuscar.setEnabled(true);
-                tvLogradouro.setText("Erro de conexão.");
-                Toast.makeText(MainActivity.this, "Falha na rede", Toast.LENGTH_SHORT).show();
+                tvStatus.setText("Erro: Verifique a conexão da faculdade.");
             }
         });
     }
 
-    private void limparCampos() {
-        tvLogradouro.setText("-");
-        tvBairro.setText("-");
-        tvCidade.setText("-");
-        tvEstado.setText("-");
+    private void preencherCampos(CepResponse res) {
+        etLogradouro.setText(res.getLogradouro());
+        etComplemento.setText(res.getComplemento());
+        etBairro.setText(res.getBairro());
+        etCidade.setText(res.getLocalidade());
+        etUf.setText(res.getUf());
+        etEstado.setText(res.getEstado());
+        etRegiao.setText(res.getRegiao());
+        etDdd.setText(res.getDdd());
+        etNumero.requestFocus(); // Move o foco para o número após carregar
     }
 
+    private void limparCampos() {
+        etLogradouro.setText("");
+        etComplemento.setText("");
+        etBairro.setText("");
+        etCidade.setText("");
+        etUf.setText("");
+        etEstado.setText("");
+        etRegiao.setText("");
+        etDdd.setText("");
+        etNumero.setText("");
+    }
+
+    // Cliente HTTP para contornar bloqueios de certificado da rede da faculdade
     private static OkHttpClient getUnsafeOkHttpClient() {
         try {
             final TrustManager[] trustAllCerts = new TrustManager[]{

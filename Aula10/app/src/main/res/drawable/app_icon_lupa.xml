@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Fundo Circular Profissional -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M54,54m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"/>
+
+    <!-- Ícone da Lupa (Material Design) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M73.5,70h-0.79l-0.28,-0.27C76.41,65.59 79,60.11 79,54.5c0,-12.42 -10.08,-22.5 -22.5,-22.5S34,42.08 34,54.5 44.08,77 56.5,77c5.61,0 11.09,-2.59 15.23,-6.57l0.27,0.28v0.79l15,14.99L91.49,83l-17.99,-13zM56.5,70c-8.56,0 -15.5,-6.94 -15.5,-15.5S47.94,39 56.5,39s15.5,6.94 15.5,15.5S65.06,70 56.5,70z"/>
+</vector>

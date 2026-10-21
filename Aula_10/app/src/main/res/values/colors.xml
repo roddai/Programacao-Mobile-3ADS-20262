@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Olive Palette (Required for Themes and Design) -->
+    <color name="olive_primary">#60622D</color>
+    <color name="olive_on_primary">#FFFFFF</color>
+    <color name="olive_primary_container">#E6E7A7</color>
+    <color name="olive_secondary">#5D6045</color>
+    <color name="olive_background">#F2F3EB</color>
+    <color name="olive_surface">#FFFFFF</color>
+    <color name="olive_outline">#777864</color>
+    <color name="olive_dark">#2C2D15</color>
+
+    <!-- UI Elements -->
+    <color name="input_bg">#F5F5F7</color>
+    <color name="input_hint">#9E9E9E</color>
+
+    <!-- Header Blobs inspired by the image -->
+    <color name="header_orange">#E67E5D</color>
+    <color name="header_gold">#D4AF37</color>
+    <color name="header_teal">#7CB3A1</color>
+
+    <!-- Compatibility Aliases -->
+    <color name="blob_orange">#E67E5D</color>
+    <color name="blob_gold">#D4AF37</color>
+    <color name="blob_teal">#7CB3A1</color>
+</resources>

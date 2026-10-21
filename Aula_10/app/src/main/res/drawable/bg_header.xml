@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="300dp"
+    android:viewportWidth="400"
+    android:viewportHeight="300">
+    <!-- Main Background -->
+    <path
+        android:fillColor="@color/header_orange"
+        android:pathData="M0,0h400v300h-400z" />
+
+    <!-- Gold Blob (Organic Shape) -->
+    <path
+        android:fillColor="@color/header_gold"
+        android:pathData="M-50,150c0,-82.8 67.2,-150 150,-150c82.8,0 150,67.2 150,150c0,82.8 -67.2,150 -150,150c-82.8,0 -150,-67.2 -150,-150z" />
+
+    <!-- Teal Blob (Organic Shape) -->
+    <path
+        android:fillColor="@color/header_teal"
+        android:pathData="M450,250c0,-82.8 -67.2,-150 -150,-150c-82.8,0 -150,67.2 -150,150c0,82.8 67.2,150 150,150c82.8,0 150,-67.2 150,-150z" />
+</vector>

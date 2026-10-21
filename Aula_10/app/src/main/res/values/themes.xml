@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Aula_10" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/olive_primary</item>
+        <item name="colorOnPrimary">@color/olive_on_primary</item>
+        <item name="colorPrimaryContainer">@color/olive_primary_container</item>
+        <item name="colorSecondary">@color/olive_secondary</item>
+        <item name="android:windowBackground">@color/olive_background</item>
+        <item name="colorSurface">@color/olive_surface</item>
+        <item name="colorOutline">@color/olive_outline</item>
+    </style>
+
+    <style name="Theme.Aula_10" parent="Base.Theme.Aula_10" />
+</resources>

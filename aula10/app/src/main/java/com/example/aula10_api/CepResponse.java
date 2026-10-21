@@ -1,0 +1,31 @@
+package com.example.aula10_api;
+
+public class CepResponse {
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private boolean erro;
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getLocalidade() {
+        return localidade;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+    
+    public boolean isErro() {
+        return erro;
+    }
+}

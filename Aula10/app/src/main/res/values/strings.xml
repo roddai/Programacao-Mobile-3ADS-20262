@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">API - CEP</string>
+    <string name="titulo_consulta_cep">Consulta de CEP</string>
+    <string name="hint_cep">Digite o CEP (8 dígitos)</string>
+    <string name="btn_buscar_cep">Buscar CEP</string>
+    <string name="label_logradouro">Logradouro:</string>
+    <string name="resultado_logradouro">Aguardando busca...</string>
+</resources>

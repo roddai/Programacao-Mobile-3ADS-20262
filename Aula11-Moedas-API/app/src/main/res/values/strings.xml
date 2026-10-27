@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Aula 11 moeda</string>
+    <string name="title_app">Conversor de Moedas</string>
+    <string name="hint_from">De (Moeda Origem)</string>
+    <string name="hint_to">Para (Moeda Destino)</string>
+    <string name="hint_value">Valor para converter</string>
+    <string name="btn_convert">Converter agora</string>
+    <string name="result_placeholder">O resultado aparecerá aqui</string>
+    <string name="currency_brl">BRL</string>
+    <string name="currency_usd">USD</string>
+    <string name="currency_eur">EUR</string>
+    <string name="default_value">1.00</string>
+</resources>

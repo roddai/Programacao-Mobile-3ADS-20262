@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consulta de Cotação"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etBaseCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Moeda Base (ex: USD, BRL, EUR)"
+            android:inputType="textCapCharacters"
+            android:maxLength="3" />
+
+        <Button
+            android:id="@+id/btnFetchRates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Cotações" />
+
+        <TextView
+            android:id="@+id/tvRatesDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:background="#F0F0F0"
+            android:text="Cotações serão exibidas aqui"
+            android:lineSpacingExtra="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="24dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conversor de Valores"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moeda do valor informado:"
+            android:layout_marginTop="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgSourceCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/rbBRL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BRL" android:checked="true"/>
+            <RadioButton android:id="@+id/rbUSD" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="USD"/>
+            <RadioButton android:id="@+id/rbEUR" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EUR"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Converter" />
+
+        <TextView
+            android:id="@+id/tvConversionResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:background="#E8F5E9"
+            android:text="Resultados da conversão aparecerão aqui"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -17,7 +17,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbeadfdd-7ddb-45e1-93a8-4c5ed1545092" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula04/Exemplo01/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula04/Exemplo01/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula04/Exemplo01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula04/Exemplo01/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula05/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula05/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula05/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula05/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula06-Pets/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula06-Pets/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula06-Pets/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula06-Pets/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula07 - JoKenPo/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula07 - JoKenPo/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula07 - JoKenPo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula07 - JoKenPo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aula08/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula08/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +39,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\23011355\.android\avd\emulator.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -38,12 +50,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Aula03-execício" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -54,29 +61,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\23011355\.gradle\wrapper\dists\gradle-9.1.0-bin\9agqghryom9wkf8r80qlhnts3\gradle-9.1.0" javaHome="C:\Program Files\Android\Android Studio\jbr" gradleVersion="9.1.0" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3I6iZyU2J2rT9a1VeTROpeEgnvc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "katielysilva",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;katielysilva&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Aula03-execício.app" />

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Aula11-Paises</string>
+    <string name="header_title">Atlas de Países</string>
+    <string name="header_subtitle">Explore informações pelo mundo</string>
+    <string name="search_title">Buscar país</string>
+    <string name="search_hint">Digite o nome de um país</string>
+    <string name="search_button">Buscar país</string>
+    <string name="initial_message">Pesquise um país para visualizar suas informações</string>
+    <string name="loading_message">Buscando informações do país...</string>
+    <string name="label_capital">Capital</string>
+    <string name="label_region">Região</string>
+    <string name="label_population">População</string>
+    <string name="data_source">Dados: REST Countries API</string>
+    <string name="error_empty">Digite o nome de um país para pesquisar.</string>
+    <string name="error_not_found">País não encontrado. Verifique o nome e tente novamente.</string>
+    <string name="error_connection">Não foi possível conectar ao serviço. Verifique sua internet e tente novamente.</string>
+    <string name="error_generic">Ocorreu um erro na consulta. Tente novamente.</string>
+    <string name="population_suffix">habitantes</string>
+</resources>

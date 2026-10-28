@@ -1,0 +1,163 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".FormActivity">
+
+        <TextView
+            android:id="@+id/TvPreferencias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preferências"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TvPergunta1"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="1. Que tipo de filme você prefere?"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvPreferencias" />
+
+        <RadioGroup
+            android:id="@+id/rgPergunta1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvPergunta1">
+
+            <RadioButton
+                android:id="@+id/rb1.a"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A) Filmes engraçados e leves" />
+
+            <RadioButton
+                android:id="@+id/rb1.b"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B) Filmes com muita ação" />
+
+            <RadioButton
+                android:id="@+id/rb1.c"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C) Filmes com mistério e suspense" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/TvPergunta2"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Quando você assiste um filme, você prefere?"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rgPergunta1" />
+
+
+        <RadioGroup
+            android:id="@+id/rgPergunta2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvPergunta2">
+
+            <RadioButton
+                android:id="@+id/rb2.a"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A) Relaxar e dar risada" />
+
+            <RadioButton
+                android:id="@+id/rb2.b"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B) Ficar animado com cenas intensas" />
+
+            <RadioButton
+                android:id="@+id/rb2.c"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C) Pensar e tentar descobrir o final" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/TvPergunta3"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Você prefere assistir filmes?"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rgPergunta2" />
+
+
+        <RadioGroup
+            android:id="@+id/rgPergunta3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvPergunta3">
+
+            <RadioButton
+                android:id="@+id/rb3.a"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A) Para se divertir" />
+
+            <RadioButton
+                android:id="@+id/rb3.b"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B) Para sentir adrenalina" />
+
+            <RadioButton
+                android:id="@+id/rb3.c"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C) Para refletir ou se surpreender" />
+
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/btnProximo"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Próximo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rgPergunta3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

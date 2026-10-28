@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FD"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Conversor de Moedas"
+        android:textColor="#1A237E"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Campo de Entrada: Moeda Base -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutMoeda"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Moeda Base (Ex: USD, BRL, EUR)"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        app:startIconDrawable="@android:drawable/ic_menu_today">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMoeda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:maxLength="3"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Entrada: Valor -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutValor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Valor a converter"
+        app:layout_constraintTop_toBottomOf="@id/layoutMoeda"
+        app:startIconDrawable="@android:drawable/ic_menu_edit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botão de Consulta -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConsultar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:text="Consultar Cotação"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="#1A237E"
+        app:layout_constraintTop_toBottomOf="@id/layoutValor" />
+
+    <!-- Card de Resultados -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardResultados"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnConsultar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/txtResultados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Preencha os dados e clique em consultar."
+                android:textColor="#37474F"
+                android:textSize="17sp"
+                android:lineSpacingExtra="8dp" />
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

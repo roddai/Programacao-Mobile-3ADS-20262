@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/main"
@@ -124,17 +125,17 @@
                     android:id="@+id/text_selected_base_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="USD"
                     android:textColor="@color/primary"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="USD" />
 
                 <TextView
                     android:id="@+id/text_selected_base_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dólar americano"
-                    android:textColor="@color/text_primary" />
+                    android:textColor="@color/text_primary"
+                    tools:text="Dólar americano" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -142,7 +143,7 @@
                     android:layout_marginTop="4dp"
                     android:text="@string/text_base_info"
                     android:textSize="12sp"
-                    android:fontStyle="italic" />
+                    android:textStyle="italic" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -222,6 +223,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:hint="@string/hint_value"
+                    android:importantForAutofill="no"
                     android:inputType="numberDecimal" />
 
                 <TextView

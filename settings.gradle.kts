@@ -12,7 +12,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
@@ -21,5 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Aula11-Moedas"
 include(":app")
-include(":app")
- 

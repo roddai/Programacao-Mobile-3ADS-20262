@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Busca CEP</string>
+    <string name="title_busca_cep">Busca CEP</string>
+    <string name="subtitle_busca_cep">Encontre endereços pelo CEP</string>
+    <string name="hint_cep">Digite o CEP (ex: 01001-000)</string>
+    <string name="btn_buscar">Buscar</string>
+
+    <string name="label_cep">CEP</string>
+    <string name="label_logradouro">Logradouro</string>
+    <string name="label_bairro">Bairro</string>
+    <string name="label_cidade">Cidade</string>
+    <string name="label_uf">UF</string>
+    <string name="label_ddd">DDD</string>
+
+    <string name="error_empty_cep">Digite um CEP para buscar</string>
+    <string name="error_invalid_cep">CEP inválido. Digite 8 números</string>
+    <string name="error_not_found">CEP não encontrado</string>
+    <string name="error_server">Serviço indisponível (código %1$d). Tente novamente.</string>
+    <string name="error_connection">Sem conexão com a internet. Verifique sua rede.</string>
+    <string name="error_timeout">A conexão demorou demais. Tente novamente.</string>
+    <string name="error_json">Erro ao ler os dados recebidos.</string>
+</resources>

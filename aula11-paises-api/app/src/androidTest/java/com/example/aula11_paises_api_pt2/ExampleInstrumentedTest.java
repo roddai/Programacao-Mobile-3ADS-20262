@@ -1,4 +1,4 @@
-package com.example.aula11_paises_api;
+package com.example.aula11_paises_api_pt2;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.aula11_paises_api", appContext.getPackageName());
+        assertEquals("com.example.aula11_paises_api_pt2", appContext.getPackageName());
     }
 }

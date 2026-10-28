@@ -1,4 +1,4 @@
-package com.example.aula11_paises_api;
+package com.example.aula11_paises_api_pt2;
 
 import org.junit.Test;
 

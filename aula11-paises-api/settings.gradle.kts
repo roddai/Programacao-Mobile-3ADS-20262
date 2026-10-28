@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Aula11-Paises-API"
+rootProject.name = "aula11-Paises-API-Pt2"
 include(":app")
+ 

@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">Aula11-Moedas</string>
+    <string name="app_name">Câmbio Fácil</string>
+    <string name="subtitle">Cotações e conversão de moedas</string>
+    <string name="desc_func">Consulte as cotações em tempo real e faça conversões rápidas entre Real, Dólar e Euro.</string>
+
+    <string name="title_consult">Consultar cotações</string>
+    <string name="label_base_currency">Moeda-base</string>
+    <string name="btn_consult">Consultar cotações</string>
+
+    <string name="label_selected_base">Moeda-base selecionada</string>
+    <string name="text_base_info">As cotações abaixo utilizam esta moeda como referência.</string>
+
+    <string name="title_rates">Cotações atuais</string>
+    <string name="label_brl">Real brasileiro</string>
+    <string name="label_usd">Dólar americano</string>
+    <string name="label_eur">Euro</string>
+    <string name="rate_template">1 %1$s equivale a %2$s %3$s</string>
+
+    <string name="title_convert">Converter valor</string>
+    <string name="desc_convert">Informe um valor e escolha a moeda de origem</string>
+    <string name="label_origin_currency">Moeda de origem</string>
+    <string name="hint_value">0,00</string>
+    <string name="btn_convert">Converter</string>
+
+    <string name="footer_source">Fonte: ExchangeRate-API</string>
+    <string name="loading">Buscando cotações...</string>
+
+    <string name="error_network">Não foi possível conectar à internet. Verifique sua conexão.</string>
+    <string name="error_generic">Não foi possível consultar as cotações. Tente novamente.</string>
+    <string name="error_parse">Não foi possível interpretar os dados recebidos.</string>
+    <string name="error_invalid_value">Informe um valor válido para converter.</string>
 </resources>

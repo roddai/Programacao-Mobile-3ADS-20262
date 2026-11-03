@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "mobile_app_teste";
+$dbname = "mobile_app";
 
 // Cria a conexão usando PDO para maior segurança contra SQL Injection
 try {

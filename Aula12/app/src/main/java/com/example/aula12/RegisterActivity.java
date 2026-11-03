@@ -17,7 +17,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText etNome, etEmail, etSenha;
     private Button btnCadastrar;
-    private static final String URL_REGISTER = "http://10.0.2.2/mobile_app_teste/register.php";
+    private static final String URL_REGISTER = "http://10.0.2.2/mobile_app/register.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

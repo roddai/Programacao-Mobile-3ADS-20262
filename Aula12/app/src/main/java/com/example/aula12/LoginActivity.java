@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail, etSenha;
     private Button btnEntrar, btnIrCadastro;
-    private static final String URL_LOGIN = "http://10.0.2.2/mobile_app_teste/login.php";
+    private static final String URL_LOGIN = "http://10.0.2.2/mobile_app/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

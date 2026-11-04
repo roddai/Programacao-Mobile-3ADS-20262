@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true"
+    tools:context=".FormularioActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#F4EFF6"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp">
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Formulário"
+                    android:textColor="#1C1B1F"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Nome -->
+                <EditText
+                    android:id="@+id/edtNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#79747E"
+                    android:hint="Digite seu nome"
+                    android:inputType="textPersonName"
+                    android:textColor="#1C1B1F"
+                    android:textColorHint="#49454F"
+                    android:textSize="14sp" />
+
+                <!-- Idade -->
+                <EditText
+                    android:id="@+id/edtIdade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="#79747E"
+                    android:hint="Digite sua idade"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textColor="#1C1B1F"
+                    android:textColorHint="#49454F"
+                    android:textSize="14sp" />
+
+                <!-- Tamanho: P / M / G -->
+                <RadioGroup
+                    android:id="@+id/rgTamanho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:checkedButton="@+id/rbP"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:buttonTint="#49454F"
+                        android:text="P"
+                        android:textColor="#1C1B1F"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:buttonTint="#49454F"
+                        android:text="M"
+                        android:textColor="#1C1B1F"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#49454F"
+                        android:text="G"
+                        android:textColor="#1C1B1F"
+                        android:textSize="13sp" />
+                </RadioGroup>
+
+                <!-- Cor -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Escolha uma cor"
+                    android:textColor="#49454F"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#79747E"
+                    app:strokeWidth="1dp">
+
+                    <Spinner
+                        android:id="@+id/spCor"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Peças -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbCamiseta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:buttonTint="#49454F"
+                        android:checked="true"
+                        android:text="Camiseta"
+                        android:textColor="#1C1B1F"
+                        android:textSize="13sp" />
+
+                    <CheckBox
+                        android:id="@+id/cbCalca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#49454F"
+                        android:checked="true"
+                        android:text="Calça"
+                        android:textColor="#1C1B1F"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cbJaqueta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#49454F"
+                    android:text="Jaqueta"
+                    android:textColor="#1C1B1F"
+                    android:textSize="13sp" />
+
+                <!-- Avaliação -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Avalie o atendimento"
+                    android:textColor="#49454F"
+                    android:textSize="13sp" />
+
+                <RatingBar
+                    android:id="@+id/rbAvaliacao"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:progressBackgroundTint="#BDBDBD"
+                    android:progressTint="#FFB300"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+                <!-- Enviar -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEnviar"
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#6E5A93"
+                    android:text="Enviar"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:cornerRadius="20dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+</ScrollView>

@@ -1,58 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cadastro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center"
-    android:background="@color/pink">
+    tools:context=".CadastroActivity">
 
     <TextView
+        android:id="@+id/tvTituloCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Criar Conta"
-        android:textSize="28sp"
+        android:text="Cadastro"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etNome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/edtNome"
-        android:layout_width="match_parent"
+        android:id="@+id/etNome"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nome Completo"
+        android:layout_marginTop="32dp"
+        android:hint="Nome"
         android:inputType="textPersonName"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/tvTituloCadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/edtEmail"
-        android:layout_width="match_parent"
+        android:id="@+id/etEmailCadastro"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/etNome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/edtPassword"
-        android:layout_width="match_parent"
+        android:id="@+id/etSenhaCadastro"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Palavra-passe"
+        android:layout_marginTop="16dp"
+        android:hint="Senha"
         android:inputType="textPassword"
-        android:layout_marginBottom="24dp" />
+        app:layout_constraintTop_toBottomOf="@id/etEmailCadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etConfirmarSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Confirmar senha"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/etSenhaCadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnCadastrar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Cadastrar"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/etConfirmarSenha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/txtIrParaLogin"
+        android:id="@+id/tvVoltarLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Já tem conta? Volte ao login"
-        android:textColor="#0066CC"
-        android:textSize="14sp" />
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:text="Já tem conta? Voltar ao login"
+        android:textColor="#1565C0"
+        app:layout_constraintTop_toBottomOf="@id/btnCadastrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

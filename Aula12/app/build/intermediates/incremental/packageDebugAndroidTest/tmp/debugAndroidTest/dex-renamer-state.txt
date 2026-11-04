@@ -1,0 +1,10 @@
+#Tue Nov 03 22:15:44 BRT 2026
+base.0=C\:\\Users\\25028157\\Documents\\Mobile\\Aula12\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=C\:\\Users\\25028157\\Documents\\Mobile\\Aula12\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=C\:\\Users\\25028157\\Documents\\Mobile\\Aula12\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\12\\classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=12/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

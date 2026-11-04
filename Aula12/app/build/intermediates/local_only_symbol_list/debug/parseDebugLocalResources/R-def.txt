@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color pink
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btnCadastrar
+id btnLogin
+id edtEmail
+id edtNome
+id edtPassword
+id main
+id txtIrParaCadastro
+id txtIrParaLogin
+layout activity_cadastro
+layout activity_login
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Aula12
+style Theme.Aula12
+xml backup_rules
+xml data_extraction_rules

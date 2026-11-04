@@ -1,0 +1,6 @@
+com.example.aula12.test.app-tracing-1.2.0-0 C:\Users\25028157\.gradle\caches\9.1.0\transforms\357f17c5e792f57b600a431c6467046b\workspace\transformed\tracing-1.2.0\res
+com.example.aula12.test.app-core-1.7.0-1 C:\Users\25028157\.gradle\caches\9.1.0\transforms\39648b104ccca73c4f013ef2a3cf23d2\workspace\transformed\core-1.7.0\res
+com.example.aula12.test.app-updated_navigation_xml-2 C:\Users\25028157\Documents\Mobile\Aula12\app\build\generated\updated_navigation_xml\debugAndroidTest
+com.example.aula12.test.app-packageDebugAndroidTestResources-3 C:\Users\25028157\Documents\Mobile\Aula12\app\build\intermediates\incremental\debugAndroidTest\packageDebugAndroidTestResources\merged.dir
+com.example.aula12.test.app-packageDebugAndroidTestResources-4 C:\Users\25028157\Documents\Mobile\Aula12\app\build\intermediates\incremental\debugAndroidTest\packageDebugAndroidTestResources\stripped.dir
+com.example.aula12.test.app-debugAndroidTest-5 C:\Users\25028157\Documents\Mobile\Aula12\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

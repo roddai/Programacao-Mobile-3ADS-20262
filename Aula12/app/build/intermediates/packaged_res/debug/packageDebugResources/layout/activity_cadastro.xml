@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/pink">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar Conta"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome Completo"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Palavra-passe"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/txtIrParaLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Já tem conta? Volte ao login"
+        android:textColor="#0066CC"
+        android:textSize="14sp" />
+
+</LinearLayout>

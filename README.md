@@ -1,10 +1,11 @@
+<<<<<<< HEAD
 # 📱 Programacao-Mobile-3ADS-20262
 
 Este é o repositório da disciplina **Programação Mobile**.
 
 ## 👨‍💻 Desenvolvedor
-- Nome: Rodrigo da Rosa
-- RA: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Nome: Julia Gomes Basilio
+- RA: 25028157
 - Curso: ADS – 3º Semestre
 
 ## 📅 Data
@@ -22,3 +23,6 @@ Este é o repositório da disciplina **Programação Mobile**.
 O APK de projetos pode ser encontrado na pasta `app/build/outputs/apk/debug/`
 
 ---
+=======
+# teste prova mobile 3ads
+>>>>>>> d010be45a1df73d1a8c3481487ed92e84bdc65ff

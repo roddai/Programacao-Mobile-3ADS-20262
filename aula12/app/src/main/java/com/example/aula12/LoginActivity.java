@@ -54,7 +54,8 @@ public class LoginActivity extends AppCompatActivity {
 
         // Ação do botão para ir para a tela de cadastro
         btnIrCadastro.setOnClickListener(v -> {
-            Toast.makeText(this, "Vamos criar a tela de cadastro agora!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 

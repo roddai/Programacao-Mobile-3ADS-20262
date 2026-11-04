@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Aula12</string>
+    <string name="login_titulo">Bem-vindo(a)</string>
+    <string name="login_subtitulo">Entre com seu e-mail e senha</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="login_sem_conta">Ainda não tem conta?</string>
+    <string name="btn_ir_cadastro">Cadastre-se</string>
+
+    <!-- Campos usados no Login e no Cadastro -->
+    <string name="hint_nome">Nome completo</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_confirmar_senha">Confirmar senha</string>
+
+    <!-- Tela de Registro -->
+    <string name="registro_titulo">Usuário autenticado com sucesso!</string>
+    <string name="btn_sair">Sair</string>
+
+    <!-- Tela de Cadastro -->
+    <string name="cadastro_titulo">Criar conta</string>
+    <string name="cadastro_subtitulo">Preencha os dados para se cadastrar</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_voltar_login">Voltar para o login</string>
+</resources>

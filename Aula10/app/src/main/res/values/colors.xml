@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Professional Palette -->
+    <color name="primary">#2563EB</color>
+    <color name="primary_dark">#1E40AF</color>
+    <color name="accent">#10B981</color>
+    <color name="background_start">#F8FAFC</color>
+    <color name="background_end">#E2E8F0</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_main">#1E293B</color>
+    <color name="text_hint">#64748B</color>
+</resources>

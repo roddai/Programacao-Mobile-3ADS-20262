@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Só vale na versão de debug (rodando pelo Android Studio):
+         confia no certificado do firewall Fortinet da rede da FECAP,
+         que intercepta o HTTPS de alguns sites, como a restcountries.com -->
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="@raw/fortinet_ca" />
+            <certificates src="system" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>

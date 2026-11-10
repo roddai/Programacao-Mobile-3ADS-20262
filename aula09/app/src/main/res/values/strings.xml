@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">aula09</string>
+
+    <string-array name="cores_array">
+        <item>Azul</item>
+        <item>Vermelho</item>
+        <item>Verde</item>
+        <item>Preto</item>
+        <item>Branco</item>
+    </string-array>
+</resources>

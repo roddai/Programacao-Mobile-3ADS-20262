@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">NI2-jogo-paises</string>
+    <string name="titulo_jogo">Adivinhe o País</string>
+
+    <!-- Login -->
+    <string name="subtitulo_login">Entre para começar a jogar</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="botao_entrar">Entrar</string>
+    <string name="botao_ir_cadastro">Não tem conta? Cadastre-se</string>
+    <string name="erro_email_nao_cadastrado">E-mail não cadastrado</string>
+    <string name="erro_senha_incorreta">Senha incorreta</string>
+
+    <!-- Cadastro -->
+    <string name="titulo_cadastro">Criar conta</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_cep">CEP (somente números)</string>
+    <string name="hint_rua">Rua</string>
+    <string name="hint_numero">Número</string>
+    <string name="hint_complemento">Complemento</string>
+    <string name="hint_bairro">Bairro</string>
+    <string name="hint_cidade">Cidade</string>
+    <string name="hint_estado">UF</string>
+    <string name="botao_cadastrar">Cadastrar</string>
+    <string name="erro_campo_obrigatorio">Campo obrigatório</string>
+    <string name="erro_preencha_campos">Preencha todos os campos</string>
+    <string name="erro_email_invalido">E-mail inválido</string>
+    <string name="erro_email_existente">Este e-mail já está cadastrado</string>
+    <string name="erro_cep_invalido">O CEP deve ter 8 números</string>
+    <string name="erro_cep_nao_encontrado">CEP não encontrado</string>
+    <string name="erro_cep_conexao">Não foi possível consultar o CEP. Verifique a internet.</string>
+    <string name="erro_salvar_usuario">Erro ao salvar o cadastro</string>
+    <string name="cadastro_sucesso">Cadastro realizado! Faça o login.</string>
+
+    <!-- Menu -->
+    <string name="boas_vindas">Olá, %1$s!</string>
+    <string name="botao_jogar">JOGAR</string>
+    <string name="botao_desempenho">MEU DESEMPENHO</string>
+    <string name="botao_sair">Sair da conta</string>
+    <string name="botao_ok">OK</string>
+    <string name="desempenho_sem_partidas">Você ainda não jogou nenhuma partida.</string>
+    <string name="desempenho_partidas">Partidas jogadas: %1$d</string>
+    <string name="desempenho_ultima">Última partida: %1$d pontos</string>
+    <string name="desempenho_total_acertos">Total de acertos: %1$d</string>
+    <string name="desempenho_total_erros">Total de erros: %1$d</string>
+    <string name="desempenho_aproveitamento">Aproveitamento: %1$d%%</string>
+
+    <!-- Jogo -->
+    <string name="carregando_paises">Carregando países…</string>
+    <string name="erro_carregar_paises">Não foi possível carregar os países.</string>
+    <string name="erro_poucos_paises">A API retornou poucos países. Confira a chave REST_COUNTRIES_KEY no local.properties.</string>
+    <string name="erro_bandeira">Não foi possível carregar a bandeira</string>
+    <string name="botao_tentar_novamente">Tentar novamente</string>
+    <string name="descricao_bandeira">Bandeira do país</string>
+    <string name="numero_pergunta">Pergunta %1$d de %2$d</string>
+    <string name="pontuacao">%1$d pontos</string>
+    <string name="resposta_correta">Correto! +%1$d pontos</string>
+    <string name="resposta_errada">Errado! A resposta era %1$s</string>
+    <string name="capital_do_pais">Capital: %1$s</string>
+    <string name="botao_proxima">Próxima pergunta</string>
+    <string name="botao_ver_resultado">Ver resultado</string>
+
+    <!-- Resultado -->
+    <string name="titulo_resultado">Fim de jogo!</string>
+    <string name="nome_jogador">Jogador: %1$s</string>
+    <string name="quantidade_acertos">Acertos: %1$d</string>
+    <string name="quantidade_erros">Erros: %1$d</string>
+    <string name="melhor_pontuacao">Melhor pontuação: %1$d pontos</string>
+    <string name="novo_recorde">Novo recorde!</string>
+    <string name="botao_jogar_novamente">Jogar novamente</string>
+    <string name="botao_voltar_menu">Voltar ao menu</string>
+</resources>

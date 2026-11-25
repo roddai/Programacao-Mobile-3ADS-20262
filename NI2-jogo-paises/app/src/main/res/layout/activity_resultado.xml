@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F7">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADIVINHE O PAÍS"
+                android:textColor="#007AFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:letterSpacing="0.12"
+                android:gravity="center"
+                android:layout_marginBottom="28dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏆"
+                android:textSize="64sp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Partida finalizada!"
+                android:textColor="#1D1D1F"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confira seu resultado"
+                android:textColor="#6E6E73"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginBottom="32dp" />
+
+            <TextView
+                android:id="@+id/txtPontuacaoFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 pontos"
+                android:textColor="#007AFF"
+                android:textStyle="bold"
+                android:textSize="42sp"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/txtAcertos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acertos: 0"
+                android:textColor="#1D1D1F"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/txtErros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Erros: 0"
+                android:textColor="#1D1D1F"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginBottom="36dp" />
+
+            <Button
+                android:id="@+id/btnJogarNovamente"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Jogar novamente"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:backgroundTint="#007AFF"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnVoltarMenu"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Voltar ao menu"
+                android:textAllCaps="false"
+                android:textColor="#007AFF"
+                android:textSize="16sp"
+                android:backgroundTint="#FFFFFF" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

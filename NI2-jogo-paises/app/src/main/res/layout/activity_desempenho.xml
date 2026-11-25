@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F7">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADIVINHE O PAÍS"
+                android:textColor="#007AFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:letterSpacing="0.12"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="28dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meu desempenho"
+                android:textColor="#1D1D1F"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acompanhe sua evolução no jogo."
+                android:textColor="#6E6E73"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seu recorde"
+                android:textColor="#6E6E73"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtRecorde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 pontos"
+                android:textColor="#007AFF"
+                android:textStyle="bold"
+                android:textSize="42sp"
+                android:layout_marginBottom="28dp" />
+
+            <TextView
+                android:id="@+id/txtTotalPartidas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Partidas jogadas: 0"
+                android:textColor="#1D1D1F"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/txtAproveitamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aproveitamento: 0%"
+                android:textColor="#1D1D1F"
+                android:textSize="18sp"
+                android:layout_marginBottom="32dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Histórico de partidas"
+                android:textColor="#1D1D1F"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/txtHistorico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nenhuma partida realizada ainda."
+                android:textColor="#6E6E73"
+                android:textSize="16sp"
+                android:lineSpacingExtra="8dp"
+                android:layout_marginBottom="36dp" />
+
+            <Button
+                android:id="@+id/btnVoltarMenu"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Voltar ao menu"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:backgroundTint="#007AFF"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

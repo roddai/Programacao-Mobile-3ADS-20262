@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F7">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADIVINHE O PAÍS"
+                android:textColor="#007AFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:letterSpacing="0.12"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌎"
+                android:textSize="64sp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pronto para jogar?"
+                android:textColor="#1D1D1F"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/txtNomeUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Olá, jogador!"
+                android:textColor="#6E6E73"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:layout_marginBottom="36dp" />
+
+            <Button
+                android:id="@+id/btnJogar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Começar a jogar"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:backgroundTint="#007AFF"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnDesempenho"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Meu desempenho"
+                android:textAllCaps="false"
+                android:textColor="#007AFF"
+                android:textSize="16sp"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnSair"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Sair da conta"
+                android:textAllCaps="false"
+                android:textColor="#6E6E73"
+                android:textSize="16sp"
+                android:backgroundTint="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
